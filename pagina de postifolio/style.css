@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+body {
+    background-color: rgb(27, 27, 27);
+    padding: 5px;
+    color: white;
+}
+
+nav {
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#menu-icon {
+    width: 90px;
+    display: none
+}
+
+#menu-opened {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    top: 60px;
+    margin: 5px;
+    padding: 3px;
+    list-style: none
+}
+
+#menu-opened li {
+    margin: 5px;
+}
+
+#menu-opened li a {
+    font-weight: 900;
+    text-decoration: none;
+    color: rgb(0, 0, 0)
+}
+
+#contacts {
+    display: flex;
+}
+
+#contacts img {
+    width: 50px;
+    margin-right: 20px;
+    cursor: pointer;
+    
+}
+
+#centralizer-container {
+    margin: 0 auto
+}
+
+#about {
+    justify-content: center
+}
+
+#presentation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#hello {
+    color: rgb(255, 255, 255);
+}
+
+#name {
+    color: rgb(69, 118, 224)
+}
+
+#doing {
+    color: rgb(255, 255, 255);
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 20px
+}
+
+#cv {
+    background-color: rgb(37, 93, 214);
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    cursor: pointer
+}
+
+#img-perfil {
+    border-radius: 50%
+}
+
+#projects h1 {
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+
+}
+
+#projects h2 {
+    margin-top: 10px;
+
+}
+
+#projects p {
+    margin: 5px 0 20px 0
+}
+
+@media (max-width:500px) {
+    body>* {
+        font-family: 'Roboto', sans-serif, 'Ubuntu', sans-serif
+    }
+
+    #menu-icon {
+        width: 60px;
+        display: flex;
+    }
+
+    #menu-opened {
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        background-color: rgb(255, 255, 255);
+        color: black;
+        font-size: 25px;
+        top: 60px;
+        margin: 8px;
+        padding: 3px;
+        list-style: none
+    }
+
+    #presentation,
+    #about {
+        padding: 10px;
+    }
+
+    #presentation {
+        display: flex;
+        flex-direction: column;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #hello {
+        font-size: 30px;
+    }
+
+    #name {
+        font-size: 70px;
+    }
+
+    #doing {
+        font-size: 30px;
+    }
+
+    #img-perfil {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    #cv {
+        width: fit-content;
+        font-size: 25px;
+        margin-top: 20px;
+    }
+
+}
+
+@media (min-width:501px) {
+    #centralizer-container {
+        width: 700px;
+
+    }
+
+
+}

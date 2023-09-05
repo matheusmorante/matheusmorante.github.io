@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:ital,wght@0,500;1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Matheus Morante</title>
+</head>
+<body>
+    <div id="centralizer-container">
+        <header>
+            <nav>
+                <img src="images/menu.png" id="menu-icon" alt="Ícone do menu de navegação">
+                <ul id="menu-opened">
+                    <li><a href="#about">Sobre mim</a></li>
+                    <li><a href="#projects">Projetos</a></li>
+                </ul>
+                <div id="contacts">
+                    <img src="images\linkedin.png">
+                    <img src="images\whatsapp.png">
+                    <img src="images\facebook.png">
+                </div>
+            </nav>
+        </header>
+        <section id="about">
+            <div id="presentation">
+                <div id="presentation-text">
+                    <p id="hello">Olá, meu nome é</p>
+                    <h1 id="name">Matheus Morante,</h1>
+                    <p id="doing">Estudante de TI</p>
+                    <p id="">
+                        Sou um entusiasta de tecnologia em geral. Meu foco principal é o
+                         desenvolvimento front-end, onde busco constantemente 
+                         aprimorar minhas habilidades em HTML, CSS, JavaScript, bibliotecas
+                         e frameworks. Estou empolgado em aprender e crescer 
+                         nesta área em constante evolução.
+                    </p>
+                    <div id="cv"><a>Baixar CV</a></div>
+                </div>
+                <img src="images/perfil.jpg" id="img-perfil">
+            </div>
+        </section>
+        <section id="projects">
+            <h1> Projetos</h1>
+            <ol>
+                <li>
+                    <h2>Calculadora</h2>
+                    <p>
+                        Nesse pequeno projeto, desenvolvi um cronõmetro 
+                        funcional com os principais botões - start, pause e 
+                        reset. Incrementei funções que ao mesmo tempo que 
+                        contasse cada segundo, os organizasse em horas, 
+                        minutos e segundos, os formatando com 0 na esquerda 
+                        quando fossem menor que 10. No decorrer deste, eu
+                         tornei mais consistente alguns conceitos importantes,
+                          como funções, formatação de texto e lógica de 
+                          programação.
+                    </p>
+                    <img src="">
+                </li>
+                <li>
+                    <h2>Cronômetro</h2>
+                    <p>
+                        Neste projeto, utilizei HTML, PHP e JavaScript para 
+                        criar uma calculadora funcional. Durante o 
+                        desenvolvimento, pude aprofundar meu conhecimento em 
+                        várias áreas essenciais da programação, incluindo:
+                        Utilização de tabelas HTML para criar a estrutura dos
+                         botões da calculadora; Aplicação de pseudoclasses para 
+                         estilizar os botões, facilitando a identificação de ações ao passar o mouse
+                         e clicar nele; Criação defunções e utilização do 
+                         evento "onclick" para implementar a lógica de cada 
+                         funcionalidade na calculadora. Foi fundamental o uso 
+                         do método "document.getElementById()" para obter e 
+                         manipular o conteúdo do botões e do visor, garantindo
+                          o funcionamento correto e o retorno dos 
+                         resultados esperados.
+                    </p>
+                </li>
+            </ol>
+        </section>
+    </div>
+    <script src="scripts.js"></script>
+</html>
