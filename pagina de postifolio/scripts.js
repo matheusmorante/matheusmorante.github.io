@@ -1,13 +1,13 @@
 var menu_icon = document.getElementById('menu-icon');
-var menu_opened = document.getElementById('menu-opened');
+var menu = document.getElementById('menu');
 
 function hiddenNavList() {
-    if (menu_opened.style.display === 'flex') {
-        menu_opened.style.display = 'none'
+    if (menu.style.display === 'flex') {
+        menu.style.display = 'none'
         console.log('Lista de navegação escondida')
     } 
     else {
-        menu_opened.style.display = 'flex'
+        menu.style.display = 'flex'
         console.log('Lista de navegação exibida')
     }
 }

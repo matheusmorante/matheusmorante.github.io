@@ -5,175 +5,405 @@
 }
 
 body {
+    font-family: 'Roboto', sans-serif, 'Ubuntu', sans-serif;
     background-color: rgb(27, 27, 27);
-    padding: 5px;
     color: white;
 }
 
-nav {
+#menu {
     display: flex;
-    width: 100vw;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: right;
 }
 
-#menu-icon {
-    width: 90px;
-    display: none
+#menu li {
+    list-style: none;
 }
 
-#menu-opened {
-    display: none;
-    position: absolute;
-    flex-direction: column;
-    background-color: rgb(255, 255, 255);
-    color: black;
-    top: 60px;
-    margin: 5px;
-    padding: 3px;
-    list-style: none
-}
-
-#menu-opened li {
-    margin: 5px;
-}
-
-#menu-opened li a {
-    font-weight: 900;
+#menu li a {
     text-decoration: none;
-    color: rgb(0, 0, 0)
+    color: white;
 }
 
-#contacts {
+h1 {
     display: flex;
-}
-
-#contacts img {
-    width: 50px;
-    margin-right: 20px;
-    cursor: pointer;
-    
-}
-
-#centralizer-container {
-    margin: 0 auto
-}
-
-#about {
-    justify-content: center
-}
-
-#presentation {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    justify-content: center;
 }
 
 #hello {
     color: rgb(255, 255, 255);
+    font-family: 'Source Code Pro', monospace;
 }
 
 #name {
-    color: rgb(69, 118, 224)
+    font-weight: 600;
+    color: rgb(62, 108, 207);
 }
 
 #doing {
     color: rgb(255, 255, 255);
-    font-family: 'Roboto', sans-serif;
-    margin-bottom: 20px
+    font-family: 'Source Code Pro', monospace;
 }
 
 #cv {
-    background-color: rgb(37, 93, 214);
+    background-color: rgb(31, 80, 184);
+    display: flex;
+    font-weight: bolder;
     color: white;
-    font-weight: bold;
-    padding: 5px;
-    cursor: pointer
+    cursor: pointer;
+    justify-content: center;
+    transition: 200ms;
 }
 
-#img-perfil {
-    border-radius: 50%
+#cv:hover {
+    background-color: rgb(66, 117, 228);
+    transform: translateY(-3px);
 }
 
-#projects h1 {
-    font-size: 32px;
+#skills ul {
+    display: flex;
+    text-align: center;
+    list-style: none;
+}
+
+#skills ul li {
+    border: 1px solid;
+    background-color: rgb(16, 54, 136);
+}
+
+.project-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.code-buttons,
+.test-buttons {
+    display: flex;
+    font-weight: bolder;
+    justify-content: center;
+}
+
+#projects ol li {
+    list-style: none;
+}
+
+.project-buttons a {
+    text-decoration: none;
+    color: white;
+}
+
+.code-buttons {
+    background-color: rgb(77, 77, 77);
+    transition: 200ms;
+}
+
+.test-buttons {
+    background-color: rgb(23, 114, 35);
+    transition: 200ms;
+}
+
+.code-buttons:hover {
+    background-color: rgb(97, 97, 97);
+    transform: translateY(-3px);
+}
+
+.test-buttons:hover {
+    background-color: rgb(47, 153, 61);
+    transform: translateY(-3px);
+}
+
+#contacts div {
     display: flex;
     justify-content: center;
-
+    
 }
 
-#projects h2 {
-    margin-top: 10px;
-
-}
-
-#projects p {
-    margin: 5px 0 20px 0
-}
-
-@media (max-width:500px) {
+@media (max-width: 768px) {
     body>* {
-        font-family: 'Roboto', sans-serif, 'Ubuntu', sans-serif
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 40px;
+        margin: 20px 0 20px 0
     }
 
     #menu-icon {
-        width: 60px;
+        width: 80px;
         display: flex;
     }
 
-    #menu-opened {
+    #menu {
         display: none;
         position: absolute;
         flex-direction: column;
         background-color: rgb(255, 255, 255);
         color: black;
-        font-size: 25px;
-        top: 60px;
-        margin: 8px;
-        padding: 3px;
-        list-style: none
+        font-size: 50px;
+        margin: 5px;
     }
 
-    #presentation,
-    #about {
+    #menu li {
         padding: 10px;
     }
 
-    #presentation {
+    #menu li:hover {
+        background-color: rgba(48, 100, 177, 0.404);
+    }
+
+    #menu li a {
+        font-weight: bolder;
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+    }
+
+    #about {
+        padding: 10px;
         display: flex;
         flex-direction: column;
         font-family: Arial, Helvetica, sans-serif;
     }
 
-    #hello {
+    #hello,
+    #doing {
+        font-size: 35px;
+    }
+
+    #name {
+        font-size: 80px;
+    }
+
+    #more {
+        margin: 30px 0 30px 0;
+    }
+
+    #img-perfil {
+        margin-top: 20px;
+    }
+
+    #cv {
+        padding: 15px;
         font-size: 30px;
+        justify-content: center;
+    }
+
+    section {
+        margin-top: 80px;
+    }
+
+    #skills ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+    }
+
+    #skills ul li {
+        border: 1px solid;
+        padding: 20px;
+        background-color: rgb(16, 54, 136);
+        margin-top: 10px;
+    }
+
+    #projects ol li {
+        margin-top: 40px;
+    }
+
+    #projects ol li>* {
+        margin-top: 15px;
+    }
+
+    #projects img {
+        width: 100%;
+    }
+
+    #contacts div {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px;
+    }
+
+    #contacts div img {
+        display: flex;
+        justify-content: center;
+        width: 100%
+    }
+
+    .code-buttons,
+    .test-buttons {
+        padding: 20px;
+        font-size: 30px;
+    }
+
+    .test-buttons {
+        margin-top: 15px;
+    }
+}
+
+@media (min-width: 769px) {
+    body {
+        font-size: 22px;
+    }
+
+    #centralizer-container {
+        width: 769px;
+        margin: 0 auto
+    }
+
+    #menu {
+        display: flex;
+    }
+
+    #menu li {
+        display: flex;
+        padding: 10px;
+        transition: 300ms;
+    }
+
+    .menu-item:hover {
+        background-color: rgba(23, 70, 158, 0.5);
+    }
+
+    #menu-icon {
+        display: none;
+    }
+
+    h1 {
+        font-size: 40px;
+        margin: 10px 0 10px 0
+    }
+
+    #about {
+        display: flex;
+        flex-direction: column;
+        padding: 0 10px 0 10px;
+        align-items: center;
+    }
+
+    #hello {
+        font-size: 50px;
+    }
+
+    #name {
+        font-size: 90px;
+    }
+
+    #doing {
+        font-size: 50px;
+    }
+
+    #img-perfil {
+        display: flex;
+        margin-top: 20px;
+        width: 505px
+    }
+
+    #more {
+        margin: 30px 0 30px 0;
+    }
+
+    #cv {
+        padding: 20px;
+        font-size: 40px;
+    }
+
+    #skills ul li {
+        padding: 15px;
+        margin: 10px;
+        width: 100%;
+    }
+
+    #skills ul li p {
+        margin: 10px;
+    }
+
+    section {
+        margin-top: 50px;
+    }
+
+    #projects ol li {
+        display: grid;
+        list-style: none;
+    }
+
+    .project-buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .code-buttons,
+    .test-buttons {
+        padding: 20px;
+        margin: 10px 0;
+        font-size: 30px
+    }
+
+    #projects li img {
+        width: 100%;
+    }
+
+    #contacts div img {
+        width: 180px;
+        padding: 40px;
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        font-size: 26px;
+    }
+
+    #centralizer-container {
+        width: 1200px;
+        margin: 0 auto
+    }
+
+    h1 {
+        font-size: 40px;
+        margin: 10px 0 10px 0
+    }
+
+    #about {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    #hello,
+    #doing {
+        font-size: 40px;
     }
 
     #name {
         font-size: 70px;
     }
 
-    #doing {
-        font-size: 30px;
-    }
-
-    #img-perfil {
-        width: 100%;
-        margin-top: 20px;
-    }
-
     #cv {
-        width: fit-content;
-        font-size: 25px;
-        margin-top: 20px;
+        padding: 30px 15px;
+        font-size: 40px;
     }
 
-}
+    #projects ol li {
+        margin-top: 890px;
+    }
+    
+    #projects ol li>* {
+        margin-top: 15px;
+    }
+    
+    #projects img {
+        width: 100%;
+    }
 
-@media (min-width:501px) {
-    #centralizer-container {
-        width: 700px;
-
+    .code-buttons,
+    .test-buttons {
+        font-size: 40px;
+        margin: 20px 0
     }
 
 
+    #contacts div img {
+        width: 280px;
+        padding: 80px;
+    }
 }
