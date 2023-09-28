@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -13,6 +16,7 @@ body {
 #menu {
     display: flex;
     justify-content: right;
+    align-items: center;
 }
 
 #menu li {
@@ -27,11 +31,12 @@ body {
 h1 {
     display: flex;
     justify-content: center;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 #hello {
     color: rgb(255, 255, 255);
-    font-family: 'Source Code Pro', monospace;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 #name {
@@ -41,7 +46,6 @@ h1 {
 
 #doing {
     color: rgb(255, 255, 255);
-    font-family: 'Source Code Pro', monospace;
 }
 
 #cv {
@@ -51,7 +55,7 @@ h1 {
     color: white;
     cursor: pointer;
     justify-content: center;
-    transition: 200ms;
+    transition: 300ms;
 }
 
 #cv:hover {
@@ -84,6 +88,7 @@ h1 {
 
 #projects ol li {
     list-style: none;
+    display: grid;
 }
 
 .project-buttons a {
@@ -93,12 +98,12 @@ h1 {
 
 .code-buttons {
     background-color: rgb(77, 77, 77);
-    transition: 200ms;
+    transition: 300ms;
 }
 
 .test-buttons {
     background-color: rgb(23, 114, 35);
-    transition: 200ms;
+    transition: 300ms;
 }
 
 .code-buttons:hover {
@@ -114,37 +119,34 @@ h1 {
 #contacts div {
     display: flex;
     justify-content: center;
-    
 }
 
 @media (max-width: 768px) {
     body>* {
-        font-size: 18px;
+        font-size: 1.4em;
         padding: 10px;
     }
 
     h1 {
-        font-size: 40px;
-        margin: 20px 0 20px 0
+        font-size: 2.0em;
+        margin: 10px 0
     }
 
     #menu-icon {
-        width: 80px;
-        display: flex;
+        width: 120px;
     }
 
     #menu {
         display: none;
         position: absolute;
-        flex-direction: column;
         background-color: rgb(255, 255, 255);
         color: black;
-        font-size: 50px;
+        font-size: 3em;
         margin: 5px;
     }
 
     #menu li {
-        padding: 10px;
+        padding: 20px;
     }
 
     #menu li:hover {
@@ -158,37 +160,46 @@ h1 {
     }
 
     #about {
-        padding: 10px;
+        padding: 0 20px;
         display: flex;
+        align-items: center;
         flex-direction: column;
         font-family: Arial, Helvetica, sans-serif;
     }
 
     #hello,
     #doing {
-        font-size: 35px;
+        font-size: 2.2em;
     }
 
     #name {
-        font-size: 80px;
+        font-size: 5em;
     }
 
-    #more {
-        margin: 30px 0 30px 0;
-    }
-
-    #img-perfil {
-        margin-top: 20px;
+    #description {
+        font-family: 'Roboto Condensed', sans-serif;
+        margin: 30px 0;
     }
 
     #cv {
-        padding: 15px;
-        font-size: 30px;
+        padding: 20px;
+        font-size: 1.5em;
         justify-content: center;
     }
 
+    #img-perfil {
+        display: flex;
+        width: 400px;
+        margin: 30px 0;
+
+    }
+
     section {
-        margin-top: 80px;
+        margin-bottom: 40px;
+    }
+
+    h2 {
+        font-size: 2em;
     }
 
     #skills ul {
@@ -213,7 +224,7 @@ h1 {
     }
 
     #projects img {
-        width: 100%;
+        width: 100%
     }
 
     #contacts div {
@@ -228,20 +239,25 @@ h1 {
         width: 100%
     }
 
+    .project-buttons {
+        margin: 10px 0;
+    }
+
     .code-buttons,
     .test-buttons {
-        padding: 20px;
-        font-size: 30px;
+        padding: 30px;
+        font-size: 1.8em;
     }
 
     .test-buttons {
-        margin-top: 15px;
+        margin-top: 10px;
     }
+
 }
 
 @media (min-width: 769px) {
     body {
-        font-size: 22px;
+        font-size: 1.6em;
     }
 
     #centralizer-container {
@@ -257,6 +273,7 @@ h1 {
         display: flex;
         padding: 10px;
         transition: 300ms;
+        font-size: 1.2em;
     }
 
     .menu-item:hover {
@@ -268,48 +285,54 @@ h1 {
     }
 
     h1 {
-        font-size: 40px;
-        margin: 10px 0 10px 0
+        font-size: 2.2em;
+        margin: 15px 0
     }
 
     #about {
         display: flex;
         flex-direction: column;
-        padding: 0 10px 0 10px;
+        padding: 0 10px;
         align-items: center;
     }
 
-    #hello {
-        font-size: 50px;
+    #hello,
+    #doing {
+        font-size: 2.5em;
     }
 
     #name {
-        font-size: 90px;
-    }
-
-    #doing {
-        font-size: 50px;
+        font-size: 7em;
     }
 
     #img-perfil {
         display: flex;
-        margin-top: 20px;
-        width: 505px
+        width: 600px;
+        margin: 40px 0;
     }
 
-    #more {
-        margin: 30px 0 30px 0;
+    #description {
+        margin: 30px 0;
     }
 
     #cv {
         padding: 20px;
-        font-size: 40px;
+        font-size: 2.0em
+    }
+
+    h2 {
+        font-size: 1.8em;
     }
 
     #skills ul li {
         padding: 15px;
         margin: 10px;
         width: 100%;
+        transition: 300ms;
+    }
+
+    #skills ul li:hover {
+        transform: scale(1.07);
     }
 
     #skills ul li p {
@@ -323,19 +346,30 @@ h1 {
     #projects ol li {
         display: grid;
         list-style: none;
+        margin-top: 30px;
+
+    }
+
+    #projects ol li>* {
+        margin-top: 10px;
     }
 
     .project-buttons {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 10px;
+        margin: 15px 0;
     }
 
     .code-buttons,
     .test-buttons {
         padding: 20px;
-        margin: 10px 0;
-        font-size: 30px
+        font-size: 1.4em;
+    }
+
+    #projects img {
+        display: flex;
+        width: 100%;
     }
 
     #projects li img {
@@ -350,7 +384,7 @@ h1 {
 
 @media (min-width: 1200px) {
     body {
-        font-size: 26px;
+        font-size: 1.8em;
     }
 
     #centralizer-container {
@@ -359,48 +393,73 @@ h1 {
     }
 
     h1 {
-        font-size: 40px;
-        margin: 10px 0 10px 0
+        font-size: 2.4em;
+        margin: 20px 0
     }
 
     #about {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 3fr;
         gap: 20px;
     }
 
     #hello,
     #doing {
-        font-size: 40px;
+        font-size: 2em;
     }
 
     #name {
-        font-size: 70px;
+        font-size: 4em;
     }
 
     #cv {
-        padding: 30px 15px;
-        font-size: 40px;
+        padding: 30px;
+        font-size: 1.5em;
+    }
+
+    #img-perfil {
+        display: flex;
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    section {
+        margin-top: 50px;
     }
 
     #projects ol li {
-        margin-top: 890px;
+        margin-bottom: 50px;
     }
-    
+
+    .project-container {
+        display: grid;
+        grid-template-columns: 2fr 5fr;
+        gap: 20px;
+
+    }
+
     #projects ol li>* {
         margin-top: 15px;
     }
-    
-    #projects img {
-        width: 100%;
+
+    .project-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .project-buttons {
+        margin: 20px 0;
     }
 
     .code-buttons,
     .test-buttons {
-        font-size: 40px;
-        margin: 20px 0
-    }
+        padding: 25px;
+        font-size: 1em;
 
+    }
 
     #contacts div img {
         width: 280px;
