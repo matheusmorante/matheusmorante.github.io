@@ -123,7 +123,7 @@ h1 {
 
 @media (max-width: 768px) {
     body>* {
-        font-size: 1.2em;
+        font-size: 1.0em;
         padding: 10px;
     }
 
@@ -133,7 +133,7 @@ h1 {
     }
 
     #menu-icon {
-        width: 120px;
+        width: 80px;
     }
 
     #menu {
@@ -160,7 +160,7 @@ h1 {
     }
 
     #about {
-        padding: 0 20px;
+        padding: 0 10px;
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -177,6 +177,7 @@ h1 {
     }
 
     #description {
+        font-size: 1.2em;
         font-family: 'Roboto Condensed', sans-serif;
         margin: 30px 0;
     }
