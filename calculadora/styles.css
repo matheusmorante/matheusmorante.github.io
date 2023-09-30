@@ -47,10 +47,7 @@ button {
     border: 1px solid #acacac;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 110px;
     /* Defina a altura desejada */
-    font-size: 55px;
     /* Defina o tamanho da fonte desejado */
 }
 
@@ -79,7 +76,7 @@ button:active {
 /* Define as regras de estilo para dispositivos com largura máxima de 767px (responsivo). */
 @media (max-width: 767px) {
 
-    /* Altera o fundo do corpo para uma cor mais clara. */
+    /* Altera o fundo do corpo para uma cor mais clara e aumenta o tamanho da fonte para dispositivos menores. */
     body {
         background-color: #505050;
         font-size: 60px;
@@ -88,8 +85,7 @@ button:active {
     /* Ajusta a margem e o preenchimento da calculadora para dispositivos menores. */
     #calculator {
         width: 100%;
-        padding: 10px;
-        /* Espaçamento interno */
+        padding: 10px; /* Espaçamento interno */
     }
 
     /* Redefine a altura e o tamanho da fonte do display para dispositivos menores, permitindo a quebra de palavra. */
@@ -98,11 +94,15 @@ button:active {
     }
 
     /* Aumenta o tamanho dos botões e adiciona um pequeno preenchimento para dispositivos menores. */
-
+    button {
+        height: 80px;
+        font-size: 45px;
+    }
 }
 
 /* Define as regras de estilo para dispositivos com largura igual ou maior que 768px (responsivo). */
 @media (min-width: 768px) {
+    /* Altera o fundo do corpo para uma cor mais escura e ajusta o tamanho da fonte para dispositivos maiores. */
     body {
         background-color: #1b1b1b;
         font-size: 55px;
@@ -111,12 +111,18 @@ button:active {
     /* Ajusta a margem e o preenchimento da calculadora para dispositivos maiores. */
     #calculator {
         width: 500px;
-        padding: 20px;
-        /* Espaçamento interno */
+        padding: 20px; /* Espaçamento interno */
     }
 
     /* Redefine a altura e o tamanho da fonte do display para dispositivos maiores, permitindo a quebra de palavra. */
     #display {
         height: 190px;
+    }
+
+    /* Define o tamanho dos botões para dispositivos maiores. */
+    button {
+        width: 100%;
+        height: 110px;
+        font-size: 55px;
     }
 }
