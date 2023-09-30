@@ -1,53 +1,64 @@
+/* Importa fontes do Google Fonts para uso posterior */
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
 
+/* Define regras de estilo para todos os elementos (*) na página */
 * {
     margin: 0;
     padding: 0;
     box-sizing: 0;
 }
 
+/* Estilo para o corpo (body) da página */
 body {
     font-family: 'Roboto', sans-serif, 'Ubuntu', sans-serif;
     background-color: rgb(27, 27, 27);
     color: white;
 }
 
+/* Estilo para links (âncoras) */
 a {
     color: white;
     text-decoration: none;
 }
 
+/* Estilo para a barra de menu (menu) */
 #menu {
     display: flex;
     justify-content: right;
     align-items: center;
 }
 
+/* Estilo para itens de lista não ordenada (li) dentro do menu */
 #menu li {
     list-style: none;
 }
 
+/* Estilo para cabeçalho nível 1 (h1) */
 h1 {
     display: flex;
     justify-content: center;
     font-family: 'Ubuntu', sans-serif;
 }
 
+/* Estilo para a seção "hello" */
 #hello {
     color: rgb(255, 255, 255);
     font-family: 'Ubuntu', sans-serif;
 }
 
+/* Estilo para o nome */
 #name {
     font-weight: 600;
     color: rgb(62, 108, 207);
 }
 
+/* Estilo para a seção "doing" */
 #doing {
     color: rgb(255, 255, 255);
 }
 
+/* Estilo para o botão de currículo (cv) */
 #cv {
     background-color: rgb(31, 80, 184);
     display: flex;
@@ -58,26 +69,31 @@ h1 {
     transition: 300ms;
 }
 
+/* Efeito de hover para o botão de currículo (cv) */
 #cv:hover {
     background-color: rgb(66, 117, 228);
     transform: translateY(-3px);
 }
 
+/* Estilo para a lista não ordenada (ul) dentro da seção "skills" */
 #skills ul {
     display: flex;
     text-align: center;
     list-style: none;
 }
 
+/* Estilo para itens de lista (li) dentro da seção "skills" */
 #skills ul li {
     border: 1px solid;
     background-color: rgb(16, 54, 136);
 }
 
+/* Estilo para o contêiner de botões de projeto */
 .project-btns-container {
     display: flex;
 }
 
+/* Estilo para botões de código (code-btns) e botões de teste (test-btns) */
 .code-btns,
 .test-btns {
     display: flex;
@@ -85,61 +101,76 @@ h1 {
     justify-content: center;
 }
 
+/* Estilo para itens de lista (li) dentro da seção "projects" */
 #projects ol li {
     list-style: none;
     display: grid;
 }
 
+/* Estilo para links dentro do contêiner de botões de projeto */
 .project-btns-container a {
     text-decoration: none;
     color: white;
 }
 
+/* Estilo para botões de código (code-btns) */
 .code-btns {
     background-color: rgb(77, 77, 77);
     transition: 300ms;
 }
 
+/* Estilo para botões de teste (test-btns) */
 .test-btns {
     background-color: rgb(23, 114, 35);
     transition: 300ms;
 }
 
+/* Efeito de hover para botões de código (code-btns) */
 .code-btns:hover {
     background-color: rgb(97, 97, 97);
     transform: translateY(-3px);
 }
 
+/* Efeito de hover para botões de teste (test-btns) */
 .test-btns:hover {
     background-color: rgb(47, 153, 61);
     transform: translateY(-3px);
 }
 
+/* Estilo para o contêiner de informações de contato (contacts) */
 #contacts div {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
 
+/* Estilo para links dentro do contêiner de informações de contato (contacts) */
 #contacts div a {
     display: flex;
     justify-content: center;
 }
 
-@media (max-width: 768px) {
+
+/* Media query para estilos responsivos em telas com largura máxima de 767px */
+@media (max-width: 767px) {
+
+    /* Ajusta o tamanho da fonte e o preenchimento para todos os elementos filhos diretos do corpo */
     body>* {
         font-size: 0.9em;
         padding: 10px;
     }
 
+    /* Ajusta o tamanho da fonte e a margem para o cabeçalho nível 1 (h1) */
     h1 {
         font-size: 2.0em;
-        margin: 10px 0
+        margin: 10px 0;
     }
 
+    /* Define o tamanho do ícone do menu */
     #menu-icon {
         width: 80px;
     }
 
+    /* Estilos para o menu quando a tela é pequena */
     #menu {
         display: none;
         position: absolute;
@@ -149,19 +180,23 @@ h1 {
         margin: 5px;
     }
 
+    /* Ajusta o preenchimento para itens de lista (li) dentro do menu */
     #menu li {
         padding: 20px;
     }
 
+    /* Define o estilo de fundo ao passar o mouse sobre itens do menu */
     #menu li:hover {
         background-color: rgba(48, 100, 177, 0.404);
     }
 
+    /* Ajusta o peso da fonte e a cor dos links dentro do menu */
     #menu li a {
         font-weight: bolder;
         color: rgb(0, 0, 0);
     }
 
+    /* Ajusta o preenchimento e a margem para a seção "about" */
     #about {
         padding: 0 10px;
         margin-top: 20px;
@@ -171,47 +206,56 @@ h1 {
         font-family: Arial, Helvetica, sans-serif;
     }
 
+    /* Ajusta o tamanho da fonte para as seções "hello" e "doing" */
     #hello,
     #doing {
         font-size: 2.2em;
     }
 
+    /* Ajusta o tamanho da fonte para o nome */
     #name {
         font-size: 5em;
     }
 
+    /* Ajusta o tamanho da fonte e a margem para a descrição */
     #description {
         font-size: 1.2em;
         font-family: 'Roboto Condensed', sans-serif;
         margin: 30px 0;
     }
 
+    /* Ajusta o preenchimento, o tamanho da fonte e o alinhamento para o botão de currículo (cv) */
     #cv {
         padding: 20px;
         font-size: 1.5em;
         justify-content: center;
     }
 
+    /* Ajusta o estilo da imagem de perfil */
     #img-perfil {
         display: flex;
         width: 90%;
         margin: 30px 0;
     }
 
+    /* Define a margem inferior para as seções */
     section {
         margin-bottom: 40px;
     }
 
+    /* Ajusta o tamanho da fonte para o cabeçalho nível 2 (h2) */
     h2 {
         font-size: 2em;
     }
 
+    /* Ajusta o layout da lista não ordenada (ul) dentro da seção "skills" para um layout de coluna */
     #skills ul {
         display: flex;
         flex-direction: column;
         list-style: none;
     }
 
+    /* Ajusta o estilo dos itens de lista (li) dentro da seção "skills" */
     #skills ul li {
         border: 1px solid;
         padding: 20px;
@@ -219,60 +263,73 @@ h1 {
         margin-top: 10px;
     }
 
+    /* Ajusta a margem superior para os itens de lista dentro da seção "projects" */
     #projects ol li {
         margin-top: 40px;
     }
 
+    /* Ajusta a margem superior para os elementos dentro dos itens de lista da seção "projects" */
     #projects ol li>* {
         margin-top: 15px;
     }
 
+    /* Define o tamanho da imagem para 100% da largura */
     #projects img {
-        width: 100%
+        width: 100%;
     }
 
+    /* Ajusta o layout do contêiner de botões de projeto para um layout de coluna */
     .project-btns-container {
         flex-direction: column;
         margin: 10px 0;
     }
 
+    /* Ajusta o preenchimento, o tamanho da fonte e o estilo dos botões de código (code-btns) e botões de teste (test-btns) */
     .code-btns,
     .test-btns {
         padding: 30px;
         font-size: 1.8em;
     }
 
+    /* Ajusta a margem superior para os botões de teste (test-btns) */
     .test-btns {
         margin-top: 10px;
     }
 
+    /* Define o espaçamento entre elementos dentro do contêiner de informações de contato (contacts) */
     #contacts div {
         gap: 50px;
     }
 
+    /* Define o estilo da imagem dentro do contêiner de informações de contato (contacts) */
     #contacts div img {
         display: flex;
         justify-content: center;
         width: 100%;
         margin-top: 20px;
     }
-
 }
 
+/* Media query para telas com largura mínima de 769px e até 1199px */
 @media (min-width: 769px) {
+
+    /* Ajusta o tamanho da fonte para o corpo */
     body {
         font-size: 1.2em;
     }
 
+    /* Define a largura e centraliza o contêiner principal */
     #centralizer-container {
         width: 769px;
-        margin: 0 auto
+        margin: 0 auto;
     }
 
+    /* Exibe o menu como uma barra horizontal */
     #menu {
         display: flex;
     }
 
+    /* Ajusta o estilo dos itens do menu */
     #menu li {
         display: flex;
         padding: 10px;
@@ -280,19 +337,23 @@ h1 {
         font-size: 1.0em;
     }
 
+    /* Define a cor de fundo ao passar o mouse sobre itens do menu */
     .menu-item:hover {
         background-color: rgba(23, 70, 158, 0.5);
     }
 
+    /* Oculta o ícone do menu */
     #menu-icon {
         display: none;
     }
 
+    /* Ajusta o tamanho da fonte e a margem para o cabeçalho nível 1 (h1) */
     h1 {
         font-size: 2.2em;
-        margin: 15px 0
+        margin: 15px 0;
     }
 
+    /* Configura a seção "about" para exibir seus elementos em uma coluna */
     #about {
         display: flex;
         flex-direction: column;
@@ -300,34 +361,41 @@ h1 {
         align-items: center;
     }
 
+    /* Ajusta o tamanho da fonte para "hello" e "doing" */
     #hello,
     #doing {
         font-size: 2.5em;
     }
 
+    /* Ajusta o tamanho da fonte para o nome */
     #name {
         font-size: 7em;
     }
 
+    /* Ajusta o estilo da imagem de perfil */
     #img-perfil {
         display: flex;
         width: 600px;
         margin: 40px 0;
     }
 
+    /* Ajusta a margem para a descrição */
     #description {
         margin: 30px 0;
     }
 
+    /* Ajusta o preenchimento e o tamanho da fonte para o botão de currículo (cv) */
     #cv {
         padding: 20px;
-        font-size: 2.0em
+        font-size: 2.0em;
     }
 
+    /* Ajusta o tamanho da fonte para o cabeçalho nível 2 (h2) */
     h2 {
         font-size: 1.8em;
     }
 
+    /* Ajusta o estilo dos itens de lista (li) na seção "skills" */
     #skills ul li {
         padding: 15px;
         margin: 10px;
@@ -335,28 +403,34 @@ h1 {
         transition: 300ms;
     }
 
+    /* Aplica uma transformação de escala ao passar o mouse sobre os itens de lista na seção "skills" */
     #skills ul li:hover {
         transform: scale(1.07);
     }
 
+    /* Ajusta a margem interna para os parágrafos (p) dentro dos itens de lista na seção "skills" */
     #skills ul li p {
         margin: 10px;
     }
 
+    /* Define a margem superior para as seções */
     section {
         margin-top: 50px;
     }
 
+    /* Ajusta o layout dos itens de lista na seção "projects" */
     #projects ol li {
         display: grid;
         list-style: none;
         margin-top: 30px;
     }
 
+    /* Define a margem superior para os elementos dentro dos itens de lista na seção "projects" */
     #projects ol li>* {
         margin-top: 10px;
     }
 
+    /* Configura o layout do contêiner de botões de projeto para uma grade de duas colunas */
     .project-btns-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -364,83 +438,102 @@ h1 {
         margin: 15px 0;
     }
 
+    /* Ajusta o preenchimento, o tamanho da fonte e o estilo dos botões de código (code-btns) e botões de teste (test-btns) */
     .code-btns,
     .test-btns {
         padding: 20px;
         font-size: 1.4em;
     }
 
+    /* Ajusta o tamanho da imagem para 100% da largura em projetos */
     #projects img {
         display: flex;
         width: 100%;
     }
 
+    /* Ajusta o tamanho da imagem para 100% da largura em elementos de lista na seção "projects" */
     #projects li img {
         width: 100%;
     }
 
+    /* Ajusta o tamanho da imagem dentro do contêiner de informações de contato */
     #contacts div img {
         width: 180px;
         padding: 40px;
     }
 }
 
+/* Media query para telas com largura mínima de 1200px */
 @media (min-width: 1200px) {
+
+    /* Ajusta o tamanho da fonte para o corpo */
     body {
         font-size: 1.4em;
     }
 
+    /* Define a largura e centraliza o contêiner principal */
     #centralizer-container {
         width: 1200px;
-        margin: 0 auto
+        margin: 0 auto;
     }
 
+    /* Ajusta o tamanho da fonte e a margem para o cabeçalho nível 1 (h1) */
     h1 {
         font-size: 2.4em;
-        margin: 20px 0
+        margin: 20px 0;
     }
 
+    /* Configura a seção "about" para exibir seus elementos em duas colunas */
     #about {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 20px;
     }
 
+    /* Ajusta o tamanho da fonte para "hello" e "doing" */
     #hello,
     #doing {
         font-size: 2em;
     }
 
+    /* Ajusta o tamanho da fonte para o nome */
     #name {
         font-size: 4em;
     }
 
+    /* Ajusta o preenchimento e o tamanho da fonte para o botão de currículo (cv) */
     #cv {
         padding: 30px;
         font-size: 1.5em;
     }
 
+    /* Centraliza a imagem de perfil */
     #img-perfil {
         display: flex;
         justify-content: center;
     }
 
+    /* Ajusta o tamanho da fonte para o cabeçalho nível 2 (h2) */
     h2 {
         font-size: 1.5em;
     }
 
+    /* Define a margem superior para as seções */
     section {
         margin-top: 50px;
     }
 
+    /* Ajusta a margem inferior para os itens de lista na seção "projects" */
     #projects ol li {
         margin-bottom: 50px;
     }
 
+    /* Define a margem superior para os elementos dentro dos itens de lista na seção "projects" */
     #projects ol li>* {
         margin-top: 15px;
     }
 
+    /* Configura o layout do contêiner de projeto para uma grade de duas colunas */
     .project-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -448,6 +541,7 @@ h1 {
         position: relative;
     }
 
+    /* Ajusta o layout do contêiner de botões de projeto para uma largura fixa e posicionamento absoluto na parte inferior */
     .project-btns-container {
         width: 600px;
         margin: 0;
@@ -455,13 +549,25 @@ h1 {
         bottom: 0;
     }
 
+    /* Ajusta o preenchimento, o tamanho da fonte e o estilo dos botões de código (code-btns) e botões de teste (test-btns) */
     .code-btns,
     .test-btns {
         padding: 25px;
         font-size: 1em;
-
     }
 
+    /* Define a largura da imagem para 100% da largura em projetos */
+    #projects img {
+        display: flex;
+        width: 100%;
+    }
+
+    /* Define a largura da imagem para 100% da largura em elementos de lista na seção "projects" */
+    #projects li img {
+        width: 100%;
+    }
+
+    /* Ajusta o tamanho da imagem dentro do contêiner de informações de contato */
     #contacts div img {
         width: 280px;
         padding: 40px;
