@@ -1,1 +1,0 @@
-var container_list = document.getElementById('container_list');
