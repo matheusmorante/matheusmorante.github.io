@@ -13,6 +13,11 @@ body {
     color: white;
 }
 
+a {
+    color: white;
+    text-decoration: none;
+}
+
 #menu {
     display: flex;
     justify-content: right;
@@ -21,11 +26,6 @@ body {
 
 #menu li {
     list-style: none;
-}
-
-#menu li a {
-    text-decoration: none;
-    color: white;
 }
 
 h1 {
@@ -74,13 +74,12 @@ h1 {
     background-color: rgb(16, 54, 136);
 }
 
-.project-buttons {
+.project-btns-container {
     display: flex;
-    flex-direction: column;
 }
 
-.code-buttons,
-.test-buttons {
+.code-btns,
+.test-btns {
     display: flex;
     font-weight: bolder;
     justify-content: center;
@@ -91,32 +90,37 @@ h1 {
     display: grid;
 }
 
-.project-buttons a {
+.project-btns-container a {
     text-decoration: none;
     color: white;
 }
 
-.code-buttons {
+.code-btns {
     background-color: rgb(77, 77, 77);
     transition: 300ms;
 }
 
-.test-buttons {
+.test-btns {
     background-color: rgb(23, 114, 35);
     transition: 300ms;
 }
 
-.code-buttons:hover {
+.code-btns:hover {
     background-color: rgb(97, 97, 97);
     transform: translateY(-3px);
 }
 
-.test-buttons:hover {
+.test-btns:hover {
     background-color: rgb(47, 153, 61);
     transform: translateY(-3px);
 }
 
 #contacts div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#contacts div a {
     display: flex;
     justify-content: center;
 }
@@ -155,12 +159,12 @@ h1 {
 
     #menu li a {
         font-weight: bolder;
-        text-decoration: none;
         color: rgb(0, 0, 0);
     }
 
     #about {
         padding: 0 10px;
+        margin-top: 20px;
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -190,9 +194,8 @@ h1 {
 
     #img-perfil {
         display: flex;
-        width: 350px;
+        width: 90%;
         margin: 30px 0;
-
     }
 
     section {
@@ -228,23 +231,22 @@ h1 {
         width: 100%
     }
 
-    .project-buttons {
+    .project-btns-container {
+        flex-direction: column;
         margin: 10px 0;
     }
 
-    .code-buttons,
-    .test-buttons {
+    .code-btns,
+    .test-btns {
         padding: 30px;
         font-size: 1.8em;
     }
 
-    .test-buttons {
+    .test-btns {
         margin-top: 10px;
     }
 
     #contacts div {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
         gap: 50px;
     }
 
@@ -349,22 +351,21 @@ h1 {
         display: grid;
         list-style: none;
         margin-top: 30px;
-
     }
 
     #projects ol li>* {
         margin-top: 10px;
     }
 
-    .project-buttons {
+    .project-btns-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 10px;
         margin: 15px 0;
     }
 
-    .code-buttons,
-    .test-buttons {
+    .code-btns,
+    .test-btns {
         padding: 20px;
         font-size: 1.4em;
     }
@@ -436,13 +437,6 @@ h1 {
         margin-bottom: 50px;
     }
 
-    .project-container {
-        display: grid;
-        grid-template-columns: 2fr 3fr;
-        gap: 20px;
-
-    }
-
     #projects ol li>* {
         margin-top: 15px;
     }
@@ -450,14 +444,19 @@ h1 {
     .project-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        position: relative;
     }
 
-    .project-buttons {
-        margin: 20px 0;
+    .project-btns-container {
+        width: 600px;
+        margin: 0;
+        position: absolute;
+        bottom: 0;
     }
 
-    .code-buttons,
-    .test-buttons {
+    .code-btns,
+    .test-btns {
         padding: 25px;
         font-size: 1em;
 
@@ -465,6 +464,6 @@ h1 {
 
     #contacts div img {
         width: 280px;
-        padding: 80px;
+        padding: 40px;
     }
 }

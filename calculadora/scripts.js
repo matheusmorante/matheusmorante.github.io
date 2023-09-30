@@ -32,20 +32,20 @@ function Return() {
         // Se estiver vazio ou só tiver espaços em branco, exibe uma mensagem de erro no visor
         display.innerHTML = "Erro";
     } else {
-         // Substitui todos os símbolos de "%" por "/100"
-         displayContent = displayContent.replace(/%/g, "/100");
-         // Substitui todos os símbolos de "×" por "*"
-         displayContent = displayContent.replace(/×/g, "*");
-         // Substitui todos os símbolos de "÷" por "/"
-         displayContent = displayContent.replace(/÷/g, "/");
-         try {
+        // Substitui todos os símbolos de "%" por "/100"
+        displayContent = displayContent.replace(/%/g, "/100");
+        // Substitui todos os símbolos de "×" por "*"
+        displayContent = displayContent.replace(/×/g, "*");
+        // Substitui todos os símbolos de "÷" por "/"
+        displayContent = displayContent.replace(/÷/g, "/");
+        try {
             // Tenta avaliar a expressão matemática e atualizar o visor com o resultado
             display.innerHTML = eval(displayContent);
             // Exibe o resultado da expressão no console para fins de depuração
-            console.log(displayContent);    
-         } catch (error) {
+            console.log(displayContent);
+        } catch (error) {
             // Em caso de erro na avaliação da expressão, exibe uma mensagem de erro no visor
             display.innerHTML = 'Erro'
-         }    
-    }     
+        }
+    }
 }

@@ -11,36 +11,31 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #111111;
-}
-
-/* Define estilos para tabelas, removendo as margens entre as células. */
-table {
-    border-collapse: collapse;
 }
 
 /* Estiliza a calculadora, definindo sua largura, centralizando horizontalmente e adicionando um fundo de cor escura. */
 #calculator {
     background-color: #505050;
-    width: 600px; /* Defina o tamanho desejado da calculadora */
-    padding: 20px; /* Espaçamento interno */
+    /* Defina o tamanho desejado da calculadora */
 }
 
 /* Estiliza o display da calculadora com quebra de palavra, alinhamento à direita, borda inferior e tamanho de fonte grande. */
 #display {
+    display: block;
+    align-content: start;
     word-break: break-all;
     text-align: right;
     font-family: 'Roboto', sans-serif;
     border-bottom: 2px solid rgb(177, 177, 177);
     color: #b1b0b0;
-    height: 170px; /* Defina a altura desejada */
-    font-size: 70px; /* Defina o tamanho da fonte desejado */
+    /* Defina o tamanho da fonte desejado */
 }
 
 /* Estiliza o contêiner de botões da calculadora, centralizando horizontalmente e definindo uma margem superior. */
 #btns-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Distribui os botões em 4 colunas */
+    grid-template-columns: repeat(4, 1fr);
+    /* Distribui os botões em 4 colunas */
     margin-top: 30px;
 }
 
@@ -53,8 +48,10 @@ button {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 110px; /* Defina a altura desejada */
-    font-size: 55px; /* Defina o tamanho da fonte desejado */
+    height: 110px;
+    /* Defina a altura desejada */
+    font-size: 55px;
+    /* Defina o tamanho da fonte desejado */
 }
 
 /* Estiliza os botões ao passar o mouse com um leve aumento de escala, uma borda mais espessa e sombra. */
@@ -79,33 +76,47 @@ button:active {
     background-color: rgb(88, 141, 202);
 }
 
-/* Define as regras de estilo para dispositivos com largura máxima de 768px (responsivo). */
-@media (max-width: 768px) {
+/* Define as regras de estilo para dispositivos com largura máxima de 767px (responsivo). */
+@media (max-width: 767px) {
 
     /* Altera o fundo do corpo para uma cor mais clara. */
     body {
         background-color: #505050;
+        font-size: 60px;
     }
 
     /* Ajusta a margem e o preenchimento da calculadora para dispositivos menores. */
     #calculator {
-        width: 100vw;
+        width: 100%;
         padding: 10px;
+        /* Espaçamento interno */
     }
 
     /* Redefine a altura e o tamanho da fonte do display para dispositivos menores, permitindo a quebra de palavra. */
     #display {
         height: 150px;
-        font-size: 60px;
-    }
-
-    #btns-container {
-        width: 100%;
     }
 
     /* Aumenta o tamanho dos botões e adiciona um pequeno preenchimento para dispositivos menores. */
-    button {
-        font-size: 50px;
-        height: 120px;
+
+}
+
+/* Define as regras de estilo para dispositivos com largura igual ou maior que 768px (responsivo). */
+@media (min-width: 768px) {
+    body {
+        background-color: #1b1b1b;
+        font-size: 55px;
+    }
+
+    /* Ajusta a margem e o preenchimento da calculadora para dispositivos maiores. */
+    #calculator {
+        width: 500px;
+        padding: 20px;
+        /* Espaçamento interno */
+    }
+
+    /* Redefine a altura e o tamanho da fonte do display para dispositivos maiores, permitindo a quebra de palavra. */
+    #display {
+        height: 190px;
     }
 }
