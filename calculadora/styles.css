@@ -9,7 +9,6 @@
 body {
     display: flex;
     justify-content: center;
-    align-items: center;
     height: 100vh;
 }
 
@@ -36,19 +35,16 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     /* Distribui os botões em 4 colunas */
-    margin-top: 30px;
 }
 
 /* Estiliza os botões com um fundo cinza claro, efeito de transição suave e tamanho de fonte grande. */
 button {
     display: flex;
     background-color: #bebebe;
-    transition: 0.2s ease-in;
+    transition: 0.3s;
     border: 1px solid #acacac;
     justify-content: center;
     align-items: center;
-    /* Defina a altura desejada */
-    /* Defina o tamanho da fonte desejado */
 }
 
 /* Estiliza os botões ao passar o mouse com um leve aumento de escala, uma borda mais espessa e sombra. */
@@ -79,50 +75,63 @@ button:active {
     /* Altera o fundo do corpo para uma cor mais clara e aumenta o tamanho da fonte para dispositivos menores. */
     body {
         background-color: #505050;
-        font-size: 60px;
+        align-items: end;
     }
 
     /* Ajusta a margem e o preenchimento da calculadora para dispositivos menores. */
     #calculator {
         width: 100%;
-        padding: 10px; /* Espaçamento interno */
+        padding: 10px;
+        /* Espaçamento interno */
     }
 
     /* Redefine a altura e o tamanho da fonte do display para dispositivos menores, permitindo a quebra de palavra. */
     #display {
         height: 150px;
+        font-size: 50px;
+    }
+
+    #btns-container {
+        margin-top: 20px;
     }
 
     /* Aumenta o tamanho dos botões e adiciona um pequeno preenchimento para dispositivos menores. */
     button {
         height: 80px;
-        font-size: 45px;
+        font-size: 35px;
     }
 }
 
 /* Define as regras de estilo para dispositivos com largura igual ou maior que 768px (responsivo). */
 @media (min-width: 768px) {
+
     /* Altera o fundo do corpo para uma cor mais escura e ajusta o tamanho da fonte para dispositivos maiores. */
     body {
         background-color: #1b1b1b;
-        font-size: 55px;
+        align-items: center;
     }
 
     /* Ajusta a margem e o preenchimento da calculadora para dispositivos maiores. */
     #calculator {
         width: 500px;
-        padding: 20px; /* Espaçamento interno */
+        padding: 30px;
+        /* Espaçamento interno */
     }
 
     /* Redefine a altura e o tamanho da fonte do display para dispositivos maiores, permitindo a quebra de palavra. */
     #display {
         height: 190px;
+        font-size: 55px;
+    }
+
+    #btns-container {
+        margin-top: 30px;
     }
 
     /* Define o tamanho dos botões para dispositivos maiores. */
     button {
         width: 100%;
         height: 110px;
-        font-size: 55px;
+        font-size: 45px;
     }
 }
