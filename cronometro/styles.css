@@ -1,19 +1,20 @@
-/* Define a cor de fundo do corpo da página */
+/* Define a cor de fundo do corpo da página e regras gerais para todos os elementos */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Correção: era "box-sizing: 0;" */
+    box-sizing: border-box; /* Define o modelo de caixa para incluir margens e bordas */
 }
 
+/* Define o estilo do corpo da página */
 body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100vh; /* Ocupa a altura total da janela de visualização */
 }
 
-/* Define o estilo do display */
+/* Define o estilo do display principal */
 #display {
     display: flex;
     justify-content: center;
@@ -24,34 +25,30 @@ body {
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-/* Define o estilo dos botões */
+/* Define o estilo dos botões de controle */
 #buttons {
     display: flex;
-    justify-content: center;
-    align-content: flex-end;
 }
 
-/* Define o estilo para os botões de inicio, pause e resete */
+/* Define o estilo para os botões de início, pausa e reset */
 #start,
 #pause,
 #reset {
-    display: flex;
-    justify-content: center;
     border-radius: 50%;
-    transition: 100ms;
+    transition: 100ms; /* Transição suave de 100 milissegundos para animações */
 }
 
-/* Define o estilo do botão de inicio */
+/* Define o estilo do botão de início */
 #start {
     background-color: rgb(50, 160, 65);
 }
 
-/* Define o estilo do botão de pause */
+/* Define o estilo do botão de pausa */
 #pause {
     background-color: rgb(83, 139, 245);
 }
 
-/* Define o estilo do botão de resete */
+/* Define o estilo do botão de reset */
 #reset {
     background-color: rgb(255, 87, 87);
 }
@@ -59,7 +56,7 @@ body {
 /* Define o estilo dos botões quando passam o mouse por cima */
 #start:hover {
     background-color: rgb(22, 114, 35);
-    transform: translateY(3px);
+    transform: translateY(3px); /* Efeito de levantamento quando hover */
 }
 
 #start:active {
@@ -84,7 +81,7 @@ body {
     background-color: rgb(255, 87, 87);
 }
 
-/* Define o estilo do cronômetro quando a tela tiver pelo menos 769 pixels de largura */
+/* Define o estilo do cronômetro quando a tela tiver largura menor que 768 pixels */
 @media (max-width: 767px) {
 
     body {
@@ -109,6 +106,7 @@ body {
     }
 }
 
+/* Define o estilo do cronômetro quando a tela tiver largura igual ou maior que 768 pixels */
 @media (min-width: 768px) {
 
     #display {
