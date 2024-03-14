@@ -1,0 +1,250 @@
+/* Define margem, preenchimento e modelo de caixa para todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo para o corpo da página */
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: linear-gradient(rgb(34, 139, 192), rgb(30, 105, 139));
+    height: 100vh;
+}
+
+/* Estilo para o cabeçalho */
+header {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+
+/* Estilo para a barra de navegação */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilos para contêineres de formulários e elementos de entrada */
+#task-form-container,
+form,
+input,
+.task,
+#edit-form-container {
+    border-radius: 12px;
+    background-color: rgb(255, 255, 255);
+}
+
+/* Estilo para o formulário */
+form {
+    display: flex;
+}
+
+/* Estilo para campos de entrada */
+input {
+    width: 100%;
+    border: none;
+    outline: 0;
+    background-color: rgb(212, 212, 212);
+}
+
+/* Estilo para a lista de tarefas */
+#to-do-list {
+    scroll-behavior: auto;
+}
+
+/* Estilo para uma tarefa individual */
+.task {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Estilo para o título da tarefa */
+.task-title {
+    display: flex;
+    align-items: center;
+    word-wrap: break-word;
+}
+
+/* Estilo para botões */
+button {
+    border: none;
+    background-color: rgb(5, 189, 45);
+}
+
+/* Estilo para botões quando o mouse passa por cima */
+button:hover {
+    cursor: pointer;
+}
+
+/* Estilo para tarefa concluída */
+.task-done {
+    text-decoration: line-through;
+    background-color: rgb(78, 78, 78);
+}
+
+/* Estilo para a imagem dentro dos botões */
+button img {
+    display: flex;
+}
+
+/* Estilo para o contêiner de botões de tarefa */
+.task-btns-container {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+}
+
+/* Estilo para botão de cancelar edição */
+#cancel-edit-btn {
+    background-color: rgb(133, 132, 132);
+}
+
+/* Estilo para botão de edição */
+.edit-btn {
+    background-color: rgb(75, 146, 240);
+}
+
+/* Estilo para botão de exclusão */
+.delete-btn {
+    background-color: rgb(240, 126, 126);
+}
+
+/* Classe para ocultar elementos */
+.hide {
+    display: none;
+}
+
+/* Estilos para mídia de tela com largura máxima de 767 pixels */
+@media (max-width: 767px) {
+    header {
+        height: 2.5rem;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    #home-btn {
+        width: 32px;
+        height: 32px;
+        margin-left: 0.5rem;
+    }
+
+    #task-form-container,
+    #edit-form-container {
+        padding: 0.5rem;
+        margin: 1rem 0.5rem;
+    }
+
+    #task-form-input, #edit-form-input {
+        padding-left: 10px;
+        margin-right: 10px;
+    }
+
+    img {
+        width: 25px;
+        height: 25px;
+    }
+
+    input {
+        padding-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+
+    button {
+        padding: 0.25rem;
+    }
+
+    #cancel-edit-btn {
+        margin-top: 0.5rem;
+        padding: 0.3rem;
+    }
+
+    #to-do-list {
+        max-height: 100vh;
+        margin: 1rem;
+    }
+
+    .task {
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .task-title {
+        padding: 0.5rem;
+        width: 100%;
+    }
+
+    .task-btns-container {
+        width: fit-content;
+    }
+
+    .task-btns-container button {
+        margin: 0.3rem;
+    }
+}
+
+/* Estilos para mídia de tela com largura mínima de 768 pixels */
+@media (min-width: 768px) {
+    body {
+        align-items: center;
+    }
+
+    nav,
+    #content {
+        width: 768px;
+    }
+
+    header {
+        padding: 5px;
+    }
+
+    #home-btn {
+        width: 32px;
+        height: 32px;
+    }
+
+    #task-form-container,
+    #edit-form-container {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    #submit-edit-btn img, #task-form-submit-btn img {
+        width: 25px;
+        height: 25px;
+    }
+
+    #task-form-input, #edit-form-input{
+        padding-left: 10px;
+        margin-right: 10px;
+    }
+
+    button {
+        padding: 5px;
+    }
+
+    #cancel-edit-btn {
+        margin-top: 10px;
+    }
+
+    .task {
+        padding: 5px;
+        margin-bottom: 0.7rem;
+    }
+
+    .task-title {
+        padding: 10px;
+        width: 80%;
+    }
+
+    .task-btns-container button {
+        margin: 5px;
+    }
+}

@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    <title>Lista de Atividades</title>
+    <!-- Ligação ao ficheiro de estilo externo -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Meta tag para tornar a página responsiva -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <!-- Cabeçalho da página -->
+    <header>
+        <!-- Barra de navegação -->
+        <nav>
+            <!-- Link para a página inicial (portfolio) -->
+            <a href="../../index.html">
+                <!-- Botão de navegação home com imagem -->
+                <img id="home-btn" src="images/home.png" alt="botão de navegação home">
+            </a>
+        </nav>
+    </header>
+
+    <!-- Conteúdo principal da página -->
+    <div id="content">
+        <!-- Container para o formulário de adicionar tarefa -->
+        <div id="task-form-container">
+            <form id="task-form">
+                <!-- Campo de input para a tarefa -->
+                <input id="task-form-input" placeholder="O que você irá fazer?">
+
+                <!-- Botão para submeter a tarefa -->
+                <button id="task-form-submit-btn">
+                    <!-- Ícone de adicionar tarefa -->
+                    <img src="images/add.png">
+                </button>
+            </form>
+        </div>
+
+        <!-- Container para o formulário de edição de tarefa -->
+        <div id="edit-form-container">
+            <form id="edit-form">
+                <!-- Exibição do ID da tarefa a ser editada -->
+                <span id="task-id-target-display"></span>
+
+                <!-- Campo de input para edição da tarefa -->
+                <input id="edit-form-input">
+
+                <!-- Botão para submeter a edição da tarefa -->
+                <button id="submit-edit-btn">
+                    <!-- Ícone de confirmação/done -->
+                    <img src="images/done.png">
+                </button>
+            </form>
+
+            <!-- Botão para cancelar a edição -->
+            <button id="cancel-edit-btn">Cancelar</button>
+        </div>
+    </div>
+
+    <!-- Lista de tarefas a fazer -->
+    <div id="to-do-list"></div>
+    
+    <!-- Ligação ao ficheiro de script JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

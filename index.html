@@ -1,185 +1,201 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <!-- Define o conjunto de caracteres e a escala inicial da página -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Link para o arquivo de estilo externo -->
-    <link rel="stylesheet" href="style.css">
-    
+    <link rel="stylesheet" href="css/style.css">
+
     <!-- Define o título da página -->
     <title>Matheus Morante</title>
 </head>
-<body>
-    <!-- Container centralizador -->
-    <div id="centralizer-container">
-        <!-- Cabeçalho da página -->
-        <header>
-            <!-- Navegação principal -->
-            <nav>
-                <!-- Ícone do menu de navegação (para dispositivos móveis) -->
-                <img src="images/menu.png" id="menu-icon" alt="Ícone do menu de navegação">
-                <!-- Lista de itens do menu -->
-                <ul id="menu">
-                    <!-- Item do menu - Sobre mim -->
-                    <li class="menu-item"><a href="#about">Sobre mim</a></li>
-                    <!-- Item do menu - Projetos -->
-                    <li class="menu-item"><a href="#projects">Projetos</a></li>
-                    <!-- Item do menu - Contato -->
-                    <li class="menu-item"><a href="#contacts">Contato</a></li>
-                </ul>
-            </nav>
-        </header>
-        
-        <!-- Seção "Sobre mim" -->
-        <section id="about">
-            <!-- Apresentação pessoal -->
-            <div id="presentation">
-                <p id="hello">Olá, meu nome é</p>
-                <p id="name">Matheus Morante,</p>
-                <p id="doing">Estudante de TI</p>
-                <!-- Descrição pessoal -->
-                <p id="description">
-                    Sempre fui apaixonado por tecnologia e, há 2 anos, comecei
-                    estudar a área. Atualmente, estou concentrado no
-                    desenvolvimento front-end, trabalhando para aprimorar
-                    minhas habilidades em HTML, CSS, JavaScript e suas
-                    bibliotecas e frameworks associadas. Estou entusiasmado
-                    em continuar aprendendo e crescer em um campo que
-                    está em constante evolução, e estou em busca de minha
-                    primeira oportunidade de trabalho para aplicar e expandir
-                    meus conhecimentos.
-                </p>
-                <!-- Botão para baixar o currículo -->
-                <div id="cv">
-                    <a href="https://drive.google.com/file/d/1JgdsenjWsEzuyq4UCBcbFFYCREapuyw1/view?usp=sharing">
-                        Baixar CV
-                    </a>
-                </div>
-            </div>
-            <!-- Imagem de perfil -->
-            <img src="images/perfil.png" id="img-perfil">
-        </section>
-        
-        <!-- Seção "Habilidades" -->
-        <section id="skills">
-            <h1>Habilidades</h1>
-            <ul>
-                <!-- Lista de habilidades com níveis de experiência -->
-                <li>
-                    <h2>HTML</h2>
-                    <p>Iniciante</p>
-                </li>
-                <li>
-                    <h2>CSS</h2>
-                    <p>Iniciante</p>
-                </li>
-                <li>
-                    <h2>JavaScript</h2>
-                    <p>Iniciante</p>
-                </li>
-            </ul>
-        </section>
-        
-        <!-- Seção "Projetos" -->
-        <section id="projects">
-            <h1>Projetos</h1>
-            <ol>
-                <!-- Item de projeto - Calculadora -->
-                <li>
-                    <h2>Calculadora</h2>
-                    <!-- Container do projeto -->
-                    <div class="project-container">
-                        <div>
-                            <!-- Descrição do projeto -->
-                            <p class="project-description">
-                                Nesse projeto, desenvolvi um cronômetro
-                                funcional com os principais botões - start, pause e
-                                reset. Incrementei funções que ao mesmo tempo que
-                                contasse cada segundo, os organizasse em horas,
-                                minutos e segundos, os formatando com 0 na esquerda
-                                quando fossem menor que 10. No decorrer deste, eu
-                                tornei mais consistente em alguns conceitos
-                                importantes, como funções, formatação de texto e lógica
-                                de programação. 
-                            </p>
-                            <!-- Botões para ver código e ação do projeto -->
-                            <div class="project-btns-container">
-                                <div class="code-btns">
-                                    <a href="https://github.com/matheusmorante/calculadora">
-                                        Ver Código
-                                    </a>
-                                </div>
-                                <div class="test-btns">
-                                    <a href="calculadora/index.html">
-                                        Veja em Ação
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Imagem do projeto -->
-                        <img src="images/calculadora.png">
-                    </div>
-                </li>
-                <!-- Item de projeto - Cronômetro -->
-                <li>
-                    <h2>Cronômetro</h2>
-                    <!-- Container do projeto -->
-                    <div class="project-container">
-                        <div>
-                            <!-- Descrição do projeto -->
-                            <p class="project-description">
-                                Neste projeto, foi desenvolvida uma calculadora
-                                funcional utilizando HTML, CSS e JavaScript. Durante
-                                o processo, foram aprimorados conhecimentos essenciais
-                                de programação, incluindo o uso de tabelas HTML para
-                                criar a estrutura dos botões da calculadora,
-                                aplicação de pseudoclasses para estilizar os botões
-                                e tornar as ações de passar o mouse e clicar mais
-                                identificáveis, criação de funções e uso do
-                                evento "onclick" para implementar a lógica das
-                                funcionalidades da calculadora. O método
-                                "document.getElementById()" foi fundamental
-                                para obter e manipular o conteúdo dos botões
-                                e do visor, assegurando o funcionamento
-                                correto e a obtenção dos resultados desejados.
-                            </p>
-                            <!-- Botões para ver código e ação do projeto -->
-                            <div class="project-btns-container">
-                                <div class="code-btns">
-                                    <a href="https://github.com/matheusmorante/cronometro">
-                                        Ver Código
-                                    </a>    
-                                </div>
-                                <div class="test-btns">
-                                    <a href="cronometro/index.html">
-                                        Veja em Ação
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Imagem do projeto -->
-                        <img src="images\cronometro.png">
-                    </div>
-                </li>
-            </ol>
-        </section>
-        
-        <!-- Seção "Contato" -->
-        <section id="contacts">
-            <h1>Contato</h1>
-            <div>
-                <!-- Links para perfis de redes sociais -->
-                <a href="https://github.com/matheusmorante"><img src="images\linkedin.png"></a>
-                <a href="https://api.whatsapp.com/send?phone=5541997493547"><img src="images\whatsapp.png"></a>
-                <a href="https://www.facebook.com/matheusmorante002/"><img src="images\facebook.png"></a>
-            </div>
-        </section>
-    </div>
-    
-    <!-- Inclusão do arquivo de script JavaScript -->
-    <script src="scripts.js"></script>
-</body>
-</html>
 
+<body>
+    <header>
+        <!-- Navegação principal -->
+        <nav>
+            <!-- Ícone do menu de navegação (para dispositivos móveis) -->
+            <img src="images/menu.png" id="menu-icon" alt="Ícone do menu de navegação">
+            <!-- Lista de itens do menu -->
+            <ul id="menu">
+                <!-- Item do menu - Sobre mim -->
+                <li class="menu-item"><a href="#about">Sobre mim</a></li>
+                <!-- Item do menu - Projetos -->
+                <li class="menu-item"><a href="#projects">Projetos</a></li>
+                <!-- Item do menu - Contato -->
+                <li class="menu-item"><a href="#contacts">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção "Sobre mim" -->
+    <section id="about">
+        <!-- Apresentação pessoal -->
+        <div id="presentation">
+            <p id="hello">Olá, meu nome é</p>
+            <p id="name">Matheus Morante,</p>
+            <p id="doing">Estudante de TI</p>
+            <!-- Descrição pessoal -->
+            <p id="description">
+                Sempre fui apaixonado por tecnologia e, há 2 anos, comecei
+                estudar a área. Atualmente, estou concentrado no
+                desenvolvimento front-end, trabalhando para aprimorar
+                minhas habilidades em HTML, CSS, JavaScript e suas
+                bibliotecas e frameworks associadas. Estou entusiasmado
+                em continuar aprendendo e crescer em um campo que
+                está em constante evolução, e estou em busca de minha
+                primeira oportunidade de trabalho para aplicar e expandir
+                meus conhecimentos.
+            </p>
+
+            <!-- Botão para baixar o currículo -->
+            <div id="cv">
+                <a href="https://drive.google.com/file/d/1JgdsenjWsEzuyq4UCBcbFFYCREapuyw1/view?usp=sharing">
+                    Baixar CV
+                </a>
+            </div>
+        </div>
+        <!-- Imagem de perfil -->
+        <img class="img-fluid" src="images/perfil.png" id="img-perfil">
+    </section>
+
+    <!-- Seção "Habilidades" -->
+    <section id="skills-section">
+        <h1>Habilidades</h1>
+
+        <div id="skills-area">
+            <div class="skill">
+                <div class="image-border">
+                    <img src="images/html.png" alt="logo html">
+                </div>
+                <h2>Básico</h2>
+            </div>
+
+            <div class="skill">
+                <div class="image-border">
+                    <img src="images/css.png" alt="logo html">
+                </div>
+                <h2>Básico</h2>
+            </div>
+
+            <div class="skill">
+                <div class="image-border js">
+                    <img id="img-js" src="images/js.png" alt="logo html">
+                </div>
+                <h2>Básico</h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção "Projetos" -->
+    <section id="projects">
+        <h1>Projetos</h1>
+        <ol>
+            <!-- Item de projeto - Calculadora -->
+            <li>
+                <h2>Calculadora</h2>
+                <!-- Container do projeto -->
+                <div class="project-container">
+                    <div>
+                        <!-- Descrição do projeto -->
+                        <p class="project-description">
+                            Nesse projeto, desenvolvi um cronômetro
+                            funcional com os principais botões - start, pause e
+                            reset. Incrementei funções que ao mesmo tempo que
+                            contasse cada segundo, os organizasse em horas,
+                            minutos e segundos, os formatando com 0 na esquerda
+                            quando fossem menor que 10. No decorrer deste, eu
+                            tornei mais consistente em alguns conceitos
+                            importantes, como funções, formatação de texto e lógica
+                            de programação.
+                        </p>
+                        <!-- Botões para ver código e ação do projeto -->
+                        <div class="project-btns-container">
+                            <div class="code-btns">
+                                <a href="https://github.com/matheusmorante/calculadora">
+                                    Ver Código
+                                </a>
+                            </div>
+
+                            <div class="test-btns">
+                                <a href="calculadora/index.html">
+                                    Veja em Ação
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Imagem do projeto -->
+                    <img src="images/calculadora.png">
+                </div>
+            </li>
+            <!-- Item de projeto - Cronômetro -->
+            <li>
+                <h2>Cronômetro</h2>
+                <!-- Container do projeto -->
+                <div class="project-container">
+                    <div>
+                        <!-- Descrição do projeto -->
+                        <p class="project-description">
+                            Neste projeto, foi desenvolvida uma calculadora
+                            funcional utilizando HTML, CSS e JavaScript. Durante
+                            o processo, foram aprimorados conhecimentos essenciais
+                            de programação, incluindo o uso de tabelas HTML para
+                            criar a estrutura dos botões da calculadora,
+                            aplicação de pseudoclasses para estilizar os botões
+                            e tornar as ações de passar o mouse e clicar mais
+                            identificáveis, criação de funções e uso do
+                            evento "onclick" para implementar a lógica das
+                            funcionalidades da calculadora. O método
+                            "document.getElementById()" foi fundamental
+                            para obter e manipular o conteúdo dos botões
+                            e do visor, assegurando o funcionamento
+                            correto e a obtenção dos resultados desejados.
+                        </p>
+
+                        <!-- Botões para ver código e ação do projeto -->
+                        <div class="project-btns-container">
+                            <div class="code-btns">
+                                <a href="https://github.com/matheusmorante/cronometro">
+                                    Ver Código
+                                </a>
+                            </div>
+
+                            <div class="test-btns">
+                                <a href="cronometro/index.html">
+                                    Veja em Ação
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Imagem do projeto -->
+                    <img src="images\cronometro.png">
+                </div>
+            </li>
+        </ol>
+    </section>
+
+    <!-- Seção "Contato" -->
+    <section id="contacts">
+        <h1>Contato</h1>
+        <div>
+            <!-- Links para perfis de redes sociais -->
+            <a href="https://github.com/matheusmorante"><img src="images\linkedin.png"></a>
+            <a href="https://api.whatsapp.com/send?phone=5541997493547"><img src="images\whatsapp.png"></a>
+            <a href="https://www.facebook.com/matheusmorante002/"><img src="images\facebook.png"></a>
+        </div>
+    </section>
+
+
+    <!-- Inclusão do arquivo de script JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
