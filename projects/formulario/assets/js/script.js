@@ -108,8 +108,8 @@ class ValidForm {
 
         if (passwordField.value !== RepeatPasswordField.value) {
             valid = false;
-            this.createError(passwordField, 'Campo senha e repetir senha precisam ser iguais');
-            this.createError(RepeatPasswordField, 'Campo senha e repetir senha precisam ser iguais');
+            this.createError(passwordField, 'Os campos senha e repetir senha precisam ser iguais');
+            this.createError(RepeatPasswordField, 'Os campos senha e repetir senha precisam ser iguais');
         }
 
         if (passwordField.value.length < 6 || passwordField.value.length > 12) {
