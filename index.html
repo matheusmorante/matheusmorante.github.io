@@ -2,187 +2,234 @@
 <html lang="pt-br">
 
 <head>
+    <!-- Define o conjunto de caracteres e a escala inicial da página -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário de Venda</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>Document</title>
+    <!-- Link para o arquivo de estilo externo -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Define o título da página -->
+    <title>Matheus Morante</title>
 </head>
 
 <body>
-    <form id="sales-form">
-        <div>
-            <div id="items-container">
-                <table id="items-table">
-                    <h3>Itens</h3>
-                    <tr>
-                        <th>Descrição</th>
-                        <th>Quantidade</th>
-                        <th>Preço Un.</th>
-                        <th>Desconto Un.</th>
-                        <th>Preço Final</th>
-                    </tr>
-                    <tr class="item-rows">
-                        <td><input name="item_description" id="item-description-input-1" class="item-description-inputs form-control"
-                                placeholder="Insira a descrição do item"></td>
-                        <td><input type="number" value="1" name="amount" id="amount-input-1" class="item-amount-inputs form-control"
-                                placeholder="Insira a quantidade"></td>
-                        <td><input type="number" name="price" id="price-input-1" class="item-price-inputs form-control"
-                                placeholder="Insira o preço"></td>
-                        <td><input type="number" name="discount" id="discount-input-1" class="item-discount-inputs form-control"
-                                placeholder="Insira o desconto"></td>
-                        <td id="final-price-td-1" class="item-final-price-tds"></td>
-                        <td><i id="add-item-btn" class="bi bi-cart-plus"></i></td>
-                    </tr>
-                    <tr id="items-summary-header">
-                        <th></th>
-                        <th>Quantidade total</th>
-                        <th></th>
-                        <th></th>
-                        <th>P. final total</th>
-                    </tr>
-                    <tr id="items-summary-row">
-                        <td></td>
-                        <td id="total-amount-td"></td>
-                        <td></td>
-                        <td></td>
-                        <td id="total-final-price-td"></td>
-                    </tr>
-                </table>
-            </div>
-            <div>
-                <h3>Pagamento</h3>
-                <table id="payment-table">
-                    <tr id="payment-methods-header">
-                        <th>Forma de pagamento</th>
-                        <th>Valor</th>
-                        <th>Status do pagamento</th>
-                    </tr>
-                    <tr class="payment-rows">
-                        <td>
-                            <select id="payment-method-select-1" class="payment-method-selects form-select" aria-label="Large select example">
-                                <option selected>Selecione</option>
-                                <option value="PIX">PIX</option>
-                                <option value="Dinheiro">Dinheiro</option>
-                                <option value="Cartão de débito">Cartão de Débito</option>
-                                <optgroup label="Cartão de crédito">
-                                    <option value="Cartão de crédito 1x">1x</option>
-                                    <option value="Cartão de crédito 2x">2x</option>
-                                    <option value="Cartão de crédito 3x">3x</option>
-                                    <option value="Cartão de crédito 4x">4x</option>
-                                    <option value="Cartão de crédito 5x">5x</option>
-                                    <option value="Cartão de crédito 6x">6x</option>
-                                    <option value="Cartão de crédito 7x">7x</option>
-                                    <option value="Cartão de crédito 8x">8x</option>
-                                    <option value="Cartão de crédito 9x">9x</option>
-                                    <option value="Cartão de crédito 10x">10x</option>
-                                </optgroup>
-                                <optgroup label="Boleto">
-                                    <option value="Boleto 1x">1x</option>
-                                    <option value="Boleto 2x">2x</option>
-                                    <option value="Boleto 3x">3x</option>
-                                    <option value="Boleto 4x">4x</option>
-                                    <option value="Boleto 5x">5x</option>
-                                    <option value="Boleto 6x">6x</option>
-                                    <option value="Boleto 7x">7x</option>
-                                    <option value="Boleto 8x">8x</option>
-                                    <option value="Boleto 9x">9x</option>
-                                    <option value="Boleto 10x">10x</option>
-                                </optgroup>
-                            </select>
-                        </td>
-                        <td>
-                            <input type="number" id="payment-value-input-1" class="payment-value-inputs form-control"
-                                placeholder="Insira o valor">
-                        </td>
-                        <td class="payment-status-td">
-                            <select id="payment-status-select-1" class="payment-status-selects form-select" aria-label="Large select example">
-                                <option value="Pago" selected>Pago</option>
-                                <option value="Pendente">Pendente</option>
-                            </select>
-                        </td>
-                        <td><i id="add-payment-method-btn" class="bi bi-plus-circle-dotted"></i></td>
-                    </tr>
-                    <tr id="remaining-value-tr">
-                        
-                        <th>Valor restante</th>
-                    </tr>
-                    <tr>
-                        
-                        <td id="remaining-value-td"></td>
-                    </tr>
-                    <tr></tr>
-                    <tr></tr>
+    <header>
+        <h1>Matheus</h1>
+        <!-- Navegação principal -->
+        <nav>
+            <!-- Ícone do menu de navegação (para dispositivos móveis) -->
+            <img src="assets/images/menu.png" id="menu-icon" alt="Ícone do menu de navegação">
+            <!-- Lista de itens do menu -->
+            <ul id="menu">
+                <!-- Item do menu - Sobre mim -->
+                <li class="menu-item"><a href="#about">Sobre mim</a></li>
+                <!-- Item do menu - Projetos -->
+                <li class="menu-item"><a href="#projects">Projetos</a></li>
+                <!-- Item do menu - Contato -->
+                <li class="menu-item"><a href="#contacts">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
 
-                </table>
+    <!-- Seção "Sobre mim" -->
+    <section id="home">
+        <!-- Apresentação pessoal -->
+        <div id="presentation">
+            <div id="heading">
+                Olá, meu nome é
+                <span class="apresentation-strings">Matheus Morante.</span>
+            </div>
+            <p id="description">Sou um estudante de programação se capacitando para
+                se torna um Desenvolvedor Full-Stack</p>
+
+            <!-- Botão para baixar o currículo -->
+            <div id="cv">
+                <a href="https://drive.google.com/file/d/1JgdsenjWsEzuyq4UCBcbFFYCREapuyw1/view?usp=sharing">
+                    Baixar CV
+                </a>
             </div>
         </div>
-        <div>
-            <h3>Dados do Cliente</h3>
+    </section>
 
-            <label for="first-name-input" class="form-label">Primeiro nome</label>
-            <input id="first-name-input" class="form-control" placeholder="Insira o seu primeiro nome">
-
-            <label for="last-name-input">Sobrenome</label>
-            <input id="last-name-input" class="form-control" placeholder="Insira o seu sobrenome">
-
-            <label for="phone-number-input">Celular/Telefone</label>
-            <input type="tel" id="phone-number-input" class="form-control" placeholder="Insira o número para contato">
-
-            <label for="phone-number-2-input">Celular/Telefone 2</label>
-            <input type="tel" id="phone-number-2-input" class="form-control"
-                placeholder="Insira, caso o cliente tenha, o segundo número para contato">
+    <section id="about-me-section">
+        <!-- Imagem de perfil -->
+        <img src="assets/images/perfil2.jpg" id="img-perfil">
+        <h1>Sobre mim</h1>
+        <p>
+            Sempre fui apaixonado pela liberdade que a tecnologia nos proporciona
+            para resolver os mais diversos problemas. Foi em 2022 que comecei a
+            estudar a área e, desde então, tenho trabalhado continuamente para
+            aprimorar minhas habilidades em programação. Estou entusiasmado em continuar aprendendo e
+            crescendo em um campo que está em constante evolução, e estou em busca
+            de minha primeira oportunidade de trabalho para aplicar e expandir
+            meus conhecimentos.
+        </p>
         </div>
+    </section>
+
+    <!-- Seção "Habilidades" -->
+    <section id="skills-section">
+        <h1>Habilidades</h1>
+
+        <div id="skills-container">
+            <div class="skills">
+                <div class="skill-headers">
+                    <div class="title">HTML</div>
+                    <div>80%</div>
+                </div>
+                <div class="progress" role="progressbar">
+                    <div class="progress-bar" style="width: 80%"></div>
+                </div>
+            </div>
+
+            <div class="skills">
+                <div class="skill-headers">
+                    <div class="title">CSS</div>
+                    <div>80%</div>
+                </div>
+                <div class="progress" role="progressbar">
+                    <div class="progress-bar" style="width: 80%"></div>
+                </div>
+            </div>
+            <div class="skills">
+                <div class="skill-headers">
+                    <div class="title">Javascript</div>
+                    <div>70%</div>
+                </div>
+                <div class="progress" role="progressbar">
+                    <div class="progress-bar" style="width: 70%"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h1>Projetos</h1>
+        <div id="project-card-grid">
+            <div id="calculator-project" class="project-cards">
+                <div>
+                    <h1>Calculadora</h1>
+                    <img src="assets/images/programation_language_icons/html.svg">
+                    <img src="assets/images/programation_language_icons/css.svg">
+                    <img src="assets/images/programation_language_icons/js.svg">
+                </div>
+            </div>
+            <div id="timer-project" class="project-cards">
+                <div>
+                    <h1>Cronômetro</h1>
+                    <img src="assets/images/programation_language_icons/html.svg">
+                    <img src="assets/images/programation_language_icons/css.svg">
+                    <img src="assets/images/programation_language_icons/js.svg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção "Projetos"
+    <section id="projects">
+            <h1>Projetos</h1>
+        <ol>
+            <div class="project-btns-container">
+                    <button class="see-code">Ver codigo</button>
+                    <button class="test-code">Veja em ação</button>
+                </div>
+            Nesse projeto, utilizei HTML, CSS e JavaScript. Com o JavasSriptdicionei funcionalidades
+                    como a de limpar visor, exclusão de caracteres, inserção de operadores e
+                    números e calculo do resultado. Alem disso, adicionei responsividade para
+                    dispositivos móveis e desktop.
+            <li>
+                <h2>Calculadora</h2>
+                <div class="project-container">
+                    <div>
+                        <p class="project-description">
+                            Nesse projeto, desenvolvi um cronômetro
+                            funcional com os principais botões - start, pause e
+                            reset. Incrementei funções que ao mesmo tempo que
+                            contasse cada segundo, os organizasse em horas,
+                            minutos e segundos, os formatando com 0 na esquerda
+                            quando fossem menor que 10. No decorrer deste, eu
+                            tornei mais consistente em alguns conceitos
+                            importantes, como funções, formatação de texto e lógica
+                            de programação.
+                        </p>
+                        <div class="project-btns-container">
+                            <div class="code-btns">
+                                <a href="https://github.com/matheusmorante/calculadora">
+                                    Ver Código
+                                </a>
+                            </div>
+
+                            <div class="test-btns">
+                                <a href="calculadora/index.html">
+                                    Veja em Ação
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="images/calculadora.png">
+                </div>
+            </li>
+            <li>
+                <h2>Cronômetro</h2>
+                <div class="project-container">
+                    <div>
+                        <p class="project-description">
+                            Neste projeto, foi desenvolvida uma calculadora
+                            funcional utilizando HTML, CSS e JavaScript. Durante
+                            o processo, foram aprimorados conhecimentos essenciais
+                            de programação, incluindo o uso de tabelas HTML para
+                            criar a estrutura dos botões da calculadora,
+                            aplicação de pseudoclasses para estilizar os botões
+                            e tornar as ações de passar o mouse e clicar mais
+                            identificáveis, criação de funções e uso do
+                            evento "onclick" para implementar a lógica das
+                            funcionalidades da calculadora. O método
+                            "document.getElementById()" foi fundamental
+                            para obter e manipular o conteúdo dos botões
+                            e do visor, assegurando o funcionamento
+                            correto e a obtenção dos resultados desejados.
+                        </p>
+
+                        <div class="project-btns-container">
+                            <div class="code-btns">
+                                <a href="https://github.com/matheusmorante/cronometro">
+                                    Ver Código
+                                </a>
+                            </div>
+
+                            <div class="test-btns">
+                                <a href="cronometro/index.html">
+                                    Veja em Ação
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <img src="images\cronometro.png">
+                </div>
+            </li>
+        </ol>
+    </section>
+-->
+    <!-- Seção "Contato" -->
+    <section id="contacts">
+        <h1>Contato</h1>
         <div>
-            <label for="cep-input" class="form-label">CEP</label>
-            <input id="cep-input" class="form-control">
+            <!-- Links para perfis de redes sociais -->
+            <a href="https://github.com/matheusmorante"><img src="assets/images\linkedin.png"></a>
+            <a href="https://api.whatsapp.com/send?phone=5541997493547"><img src="assets/images\whatsapp.png"></a>
+            <a href="https://www.facebook.com/matheusmorante002/"><img src="assets/images\facebook.png"></a>
+        </div>
+    </section>
 
-            <label for="logradouro-input">Logradouro</label>
-            <input id="logradouro-input" class="form-control" placeholder="Insira o logradouro">
 
-            <label for="address-number-input">Nº</label>
-            <input type="number" id="address-number-input" class="form-control"
-                placeholder="Insira o número de endereço">
-
-            <label for="complement-input">Complemento</label>
-            <input id="complement-input" class="form-control" placeholder="Ex: apto 32, bloco b ou casa n">
-
-            <label for="reference-input">Referencia</label>
-            <input id="reference-input" class="form-control" placeholder="Ex: ao lado do mercado JM, portão azul...">
-
-            <label for="bairro-input" class="form-label">Bairro</label>
-            <input id="bairro-input" class="form-control" placeholder="Insira o bairro">
-
-            <label for="city-input">Cidade</label>
-            <input id="city-input" class="form-control" placeholder="Insira a cidade">
-
-            <label for="place-type-input">Tipo do local</label>
-            <select id="place-type-input" class="form-select" aria-label="Large select example">
-                <option selected>Selecione</option>
-                <option value="Casa">Casa</option>
-                <option value="Apartamento">Apartamento</option>
-                <option value="Kitnet">Kitnet</option>
-                <option value="Condomínio Residencial">Condomínio Residencial</option>
-                <option value="Estabelecimento Comercial">Estabelecimento comercial</option>
-                <option value="Sitio/Chácara/Fazenda">Sitio/Chácara/Fazenda</option>
-                <option value="Outro">Outro</option>
-            </select>
-
-            <label for="observations-input" class="input-label">Observações</label>
-            <input id="observations-input" class="form-control"
-                placeholder="Insira alguma informação relevante para o entregador">
-
-            <button id="print-receipt-btn">Imprimir recibo</button>
-            <button id="print-order-delivery-btn">Imprimir pedido de entrega</button>
-            <button id="send-order-delivery-btn">Enviar pedido por Whatsapp</button>
-    </form>
-
-    <script src="assets/js/bundle.js"></script>
+    <!-- Inclusão do arquivo de script JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,610 @@
+:root {
+    --primary-color: #32ABFF;
+    --secondary-color: rgb(34, 34, 34);
+}
+
+/* Define regras de estilo para todos os elementos (*) na página */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+/* Estilo para o corpo (body) da página */
+body {
+    font-family: 'Roboto', sans-serif, 'Ubuntu', sans-serif;
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+body>* {
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Estilo para links (âncoras) */
+a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Estilo para a barra de menu (menu) */
+#menu {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+/* Estilo para itens de lista não ordenada (li) dentro do menu */
+#menu li {
+    list-style: none;
+}
+
+section>h1 {
+    display: flex;
+    justify-content: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* Estilo para a seção "hello" */
+#heading {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.apresentation-strings {
+    color: var(--primary-color);
+
+}
+
+/* Estilo para a seção "doing" */
+#description {
+    color: rgb(255, 255, 255);
+}
+
+/* Estilo para o botão de currículo (cv) */
+#cv {
+    border: 3px solid var(--primary-color);
+    border-radius: 10px;
+    display: flex;
+    font-weight: bolder;
+    color: white;
+    cursor: pointer;
+    justify-content: center;
+    transition: 300ms;
+}
+
+/* Efeito de hover para o botão de currículo (cv) */
+#cv:hover {
+    background-color: var(--primary-color);
+}
+
+#img-perfil {
+    border-radius: 50%;
+}
+
+#about-me-section p {
+    text-align: center;
+}
+
+.skills {
+    display: flex;
+    text-align: center;
+}
+
+.progress {
+    background-color: rgb(255, 255, 255);
+}
+
+.progressbar {
+    background-color: var(--primary-color);
+}
+
+#project-card-grid {
+    display: flex;
+    grid-column: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.project-cards {
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.project-cards:hover {
+    transition: 0.5s;
+    transform: scale(1.05);
+}
+
+.project-cards h1 {
+    font-size: 25px;
+}
+
+#calculator-project { 
+    background-image: linear-gradient(rgba(0, 0, 0, 0.29), rgba(0, 0, 0, 0.816)),
+        url("../images/project_card_background/calculadora.png");
+}
+
+#timer-project {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.29), rgba(0, 0, 0, 0.816)),
+        url("../images/project_card_background/cronometro.png");
+}
+
+.project-btns-container {
+    display: flex;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+}
+
+.project-btns-container button {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    color: white;
+    border: none;
+}
+
+.see-code {
+    background-color: #06641b;
+}
+
+.see-code:hover {
+    background-color: #099227;
+}
+
+.test-code {
+    background-color: #025bcf;
+}
+
+/* Estilo para itens de lista (li) dentro da seção "projects" */
+#projects ol li {
+    list-style: none;
+    display: grid;
+    padding: 0;
+}
+
+
+
+/* Estilo para botões de código (code-btns) */
+.code-btns {
+    background-color: rgb(77, 77, 77);
+    transition: 300ms;
+}
+
+/* Estilo para botões de teste (test-btns) */
+.test-btns {
+    background-color: rgb(23, 114, 35);
+    transition: 300ms;
+}
+
+/* Efeito de hover para botões de código (code-btns) */
+.code-btns:hover {
+    background-color: rgb(97, 97, 97);
+    transform: translateY(-3px);
+}
+
+/* Efeito de hover para botões de teste (test-btns) */
+.test-btns:hover {
+    background-color: rgb(47, 153, 61);
+    transform: translateY(-3px);
+}
+
+/* Estilo para o contêiner de informações de contato (contacts) */
+#contacts div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Estilo para links dentro do contêiner de informações de contato (contacts) */
+#contacts div a {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* Media query para estilos responsivos em telas com largura máxima de 767px */
+@media (max-width: 767px) {
+
+    /* Ajusta o tamanho da fonte e o preenchimento para todos os elementos filhos diretos do corpo */
+    body {
+        font-size: 16px;
+        padding: 10px;
+
+    }
+
+
+    /* Define o tamanho do ícone do menu */
+    #menu-icon {
+        width: 80px;
+    }
+
+    /* Estilos para o menu quando a tela é pequena */
+    #menu {
+        display: none;
+        position: absolute;
+        background-color: rgb(255, 255, 255);
+        color: black;
+        font-size: 30px;
+        margin: 5px;
+    }
+
+    /* Ajusta o preenchimento para itens de lista (li) dentro do menu */
+    #menu li {
+        padding: 10px;
+    }
+
+    /* Define o estilo de fundo ao passar o mouse sobre itens do menu */
+    #menu li:hover {
+        background-color: rgba(48, 100, 177, 0.404);
+    }
+
+    /* Ajusta o peso da fonte e a cor dos links dentro do menu */
+    #menu li a {
+        font-weight: bolder;
+        color: rgb(0, 0, 0);
+    }
+
+    /* Ajusta o preenchimento e a margem para a seção "home" */
+    #home {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* Ajusta o tamanho da fonte para as seções "hello" e "doing" */
+    #heading {
+        font-size: 25px;
+        margin: 0;
+    }
+
+    /* Ajusta o tamanho da fonte e a margem para a descrição */
+    #description {
+        font-size: 18px;
+        font-family: 'Roboto Condensed', sans-serif;
+        margin: 40px 0;
+    }
+
+    /* Ajusta o preenchimento, o tamanho da fonte e o alinhamento para o botão de currículo (cv) */
+    #cv {
+        padding: 20px;
+        font-size: 22px;
+    }
+
+    /* Ajusta o estilo da imagem de perfil */
+    #img-perfil {
+        width: 100%;
+        margin: 30px 0;
+    }
+
+    /* Define a margem inferior para as seções */
+    section {
+        margin-bottom: 70px;
+    }
+
+    section h1 {
+        font-size: 30px;
+        margin: 30px 0;
+    }
+
+    /* Ajusta o tamanho da fonte para o cabeçalho nível 2 (h2) */
+    .section-title {
+        font-size: 30px;
+    }
+
+    #skills-container {
+        gap: 45px;
+    }
+
+    .image-border {
+        padding: 20px;
+        border-radius: 50%;
+    }
+
+    .skills img {
+        width: 80px;
+    }
+
+    .skills h2 {
+        margin-top: 10px;
+    }
+
+    /* Ajusta a margem superior para os elementos dentro dos itens de lista da seção "projects" */
+    #projects ol li {
+        margin-bottom: 50px;
+    }
+
+    /* Define o tamanho da imagem para 100% da largura */
+    #projects img {
+        width: 100%;
+    }
+
+    /* Ajusta o preenchimento, o tamanho da fonte e o estilo dos botões de código (code-btns) e botões de teste (test-btns) */
+    .code-btns,
+    .test-btns {
+        padding: 20px;
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    /* Ajusta a margem superior para os botões de teste (test-btns) */
+    .test-btns {
+        margin-top: 10px;
+    }
+
+    /* Define o espaçamento entre elementos dentro do contêiner de informações de contato (contacts) */
+    #contacts div {
+        gap: 30px;
+    }
+
+    /* Define o estilo da imagem dentro do contêiner de informações de contato (contacts) */
+    #contacts div img {
+        width: 70px;
+    }
+}
+
+/* Media query para telas com largura mínima de 769px e até 1199px */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    /* Ajusta o tamanho da fonte para o corpo */
+    body {
+        font-size: 18px;
+    }
+
+    body>* {
+        width: 769px;
+    }
+
+    /* Exibe o menu como uma barra horizontal */
+
+
+    /* Ajusta o estilo dos itens do menu */
+    #menu li {
+        display: flex;
+        padding: 10px;
+        transition: 300ms;
+    }
+
+    /* Define a cor de fundo ao passar o mouse sobre itens do menu */
+    .menu-item:hover {
+        background-color: rgba(23, 70, 158, 0.5);
+    }
+
+    /* Oculta o ícone do menu */
+    #menu-icon {
+        display: none;
+    }
+
+    /* Ajusta o tamanho da fonte e a margem para o cabeçalho nível 1 (h1) */
+
+
+    /* Configura a seção "home" para exibir seus elementos em uma coluna */
+    #home {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    /* Ajusta o tamanho da fonte para "hello" e "doing" */
+    #heading {
+        font-size: 30px;
+    }
+
+    /* Ajusta o estilo da imagem de perfil */
+    #img-perfil {
+        display: flex;
+        width: 400px;
+    }
+
+    /* Ajusta a margem para a descrição */
+    #description {
+        margin: 30px 0;
+    }
+
+    /* Ajusta o preenchimento e o tamanho da fonte para o botão de currículo (cv) */
+    #cv {
+        padding: 20px;
+        font-size: 2.0em;
+    }
+
+    /* Ajusta o tamanho da fonte para o cabeçalho nível 2 (h2) */
+    h2 {
+        font-size: 1.8em;
+    }
+
+    section {
+        margin-bottom: 70px;
+    }
+
+    section h1 {
+        font-size: 40px;
+        margin: 50px 0;
+    }
+
+    #skills-container {
+        gap: 45px;
+    }
+
+    .image-border {
+        padding: 20px;
+    }
+
+    .skills img {
+        width: 80px;
+    }
+
+    .skills h2 {
+        margin-top: 10px;
+    }
+
+    /* Ajusta o layout dos itens de lista na seção "projects" */
+    #projects ol li {
+        display: grid;
+        list-style: none;
+        margin-bottom: 20px;
+    }
+
+    /* Define a margem superior para os elementos dentro dos itens de lista na seção "projects" */
+    #projects ol li>* {
+        margin-top: 10px;
+    }
+
+    .project-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        position: relative;
+    }
+
+    /* Configura o layout do contêiner de botões de projeto para uma grade de duas colunas */
+    .project-btns-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin: 20px 0;
+    }
+
+    /* Ajusta o preenchimento, o tamanho da fonte e o estilo dos botões de código (code-btns) e botões de teste (test-btns) */
+    .code-btns,
+    .test-btns {
+        padding: 10px;
+    }
+
+    /* Ajusta o tamanho da imagem para 100% da largura em projetos */
+    #projects img {
+        width: 100%;
+    }
+
+    /* Ajusta o tamanho da imagem dentro do contêiner de informações de contato */
+    #contacts div img {
+        width: 180px;
+    }
+}
+
+/* Media query para telas com largura mínima de 1200px */
+@media (min-width: 1024px) {
+
+    /* Ajusta o tamanho da fonte para o corpo */
+    body {
+        font-size: 18px;
+    }
+
+    body>* {
+        width: 1024px;
+    }
+
+    /* Ajusta o estilo dos itens do menu */
+    #menu li {
+        display: flex;
+        padding: 10px;
+        transition: 300ms;
+    }
+
+    /* Define a cor de fundo ao passar o mouse sobre itens do menu */
+    .menu-item:hover {
+        background-color: rgba(23, 70, 158, 0.5);
+    }
+
+    /* Oculta o ícone do menu */
+    #menu-icon {
+        display: none;
+    }
+
+     /* Define a margem superior para as seções */
+     section {
+        margin-bottom: 150px;
+    }
+
+    section>h1 {
+        font-size: 45px;
+        margin: 60px 0;
+    }
+
+    /* Configura a seção "home" para exibir seus elementos em uma coluna */
+    #home {
+        align-items: center;
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 3fr 2fr;
+
+    }
+
+    #heading {
+        font-size: 60px;
+        letter-spacing: 2px;
+        font-weight: 500;
+    }
+
+    /* Ajusta a margem para a descrição */
+    #description {
+        margin: 30px 0;
+    }
+
+    /* Ajusta o preenchimento e o tamanho da fonte para o botão de currículo (cv) */
+    #cv {
+        padding: 20px;
+        font-size: 2.0em;
+    }
+
+    /* Ajusta o estilo da imagem de perfil */
+    #img-perfil {
+        display: flex;
+        width: 200px;
+        margin: 0 auto;
+    }
+
+    /* Ajusta o tamanho da fonte para o cabeçalho nível 2 (h2) */
+    h2 {
+        font-size: 1.8em;
+    }
+
+    .image-border {
+        padding: 20px;
+    }
+
+    .skills {
+        display: block;
+        margin-bottom: 40px;
+        width: 100%;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .skill-headers {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    .skills h2 {
+        margin-top: 10px;
+    }
+
+    .progress {
+        height: 25px;
+    }
+
+    #project-card-grid {
+        gap: 20px;
+    }
+    
+   .project-cards {
+        width: 400px;
+        height: 200px;
+   }
+   
+    /* Ajusta o tamanho da imagem dentro do contêiner de informações de contato */
+    #contacts div img {
+        width: 130px;
+    }
+}
