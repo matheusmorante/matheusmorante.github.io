@@ -126,7 +126,7 @@ button img {
     display: none;
 }
 
-@media (max-width: 425px) {
+@media only screen and (max-width: 767px) {
     body {
         align-items: center;
     }
@@ -178,13 +178,14 @@ button img {
     }
 }
 
-@media (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
     body {
         align-items: center;
     }
 
     body > * {
-        width: 1024px;
+        width: 768px;
+        padding: 8px;
     }
 
     #task-form-container,
@@ -208,10 +209,6 @@ button img {
     .tasks {
         padding: 10px;
         margin: 10px 0;
-    }
-
-    .task-titles {
-        
     }
 
     .task-btns-container {
@@ -229,13 +226,14 @@ button img {
 }
 
 /* Estilos para mídia de tela com largura mínima de 768 pixels */
-@media (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
     body {
         align-items: center;
     }
 
     body > * {
         width: 1024px;
+        padding: 10px;
     }
 
     #task-form-container,
@@ -259,10 +257,6 @@ button img {
     .tasks {
         padding: 10px;
         margin: 10px 0;
-    }
-
-    .task-titles {
-      
     }
 
     .task-btns-container {
