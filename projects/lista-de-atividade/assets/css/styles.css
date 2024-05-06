@@ -1,3 +1,11 @@
+:root {
+    --bg-color: linear-gradient(rgb(34, 139, 192), rgb(30, 105, 139));
+    --done-color: rgb(11, 185, 35);
+    --edit-color: rgb(75, 146, 240);
+    --delete-color: rgb(240, 126, 126);
+}
+
+
 /* Define margem, preenchimento e modelo de caixa para todos os elementos */
 * {
     margin: 0;
@@ -8,24 +16,11 @@
 /* Estilo para o corpo da página */
 body {
     display: flex;
+    align-items: center;
     flex-direction: column;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background: linear-gradient(rgb(34, 139, 192), rgb(30, 105, 139));
+    background: var(--bg-color);
     height: 100vh;
-}
-
-/* Estilo para o cabeçalho */
-header {
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    justify-content: center;
-    width: 100vw;
-}
-
-/* Estilo para a barra de navegação */
-nav {
-    display: flex;
-    align-items: center;
 }
 
 /* Estilos para contêineres de formulários e elementos de entrada */
@@ -36,6 +31,10 @@ input,
 #edit-form-container {
     border-radius: 15px;
     background-color: rgb(255, 255, 255);
+}
+
+#edit-form-container {
+    position: relative;
 }
 
 /* Estilo para o formulário */
@@ -49,10 +48,6 @@ input {
     border: none;
     outline: 0;
     background-color: rgb(212, 212, 212);
-}
-
-form button {
-    background-color: rgb(11, 185, 35);
 }
 
 /* Estilo para a lista de tarefas */
@@ -87,7 +82,7 @@ button:hover {
 /* Estilo para tarefa concluída */
 .task-done {
     text-decoration: line-through;
-    background-color: rgba(78, 78, 78, 0.466);
+    background-color: var(--done-color)
 }
 
 /* Estilo para a imagem dentro dos botões */
@@ -108,7 +103,11 @@ button img {
 
 /* Estilo para botão de cancelar edição */
 #cancel-edit-btn {
+    position: absolute;
     background-color: rgb(133, 132, 132);
+    margin: 8px;
+    top: 0;
+    right: 0;
 }
 
 /* Estilo para botão de edição */
@@ -126,24 +125,11 @@ button img {
     display: none;
 }
 
-@media only screen and (max-width: 767px) {
-    body {
-        align-items: center;
-    }
-
+@media only screen and (min-width: 0px) {
+ 
     body > * {
         width: 100vw;
         padding: 8px;
-    }
-
-    #task-form-container,
-    #edit-form-container {
-        padding: 8px;
-        margin: 8px 0;
-    }
-
-    #submit-edit-btn , #task-form-submit-btn {
-        margin-left: 5px;
     }
 
     form {
@@ -152,6 +138,20 @@ button img {
 
     input{
         padding-left: 10px;
+    }
+
+    #task-form-container,
+    #edit-form-container {
+        padding: 8px;
+        margin: 8px 0;
+    }
+
+    #edit-form-container {
+        padding-top: 70px;
+    }
+
+    #submit-edit-btn , #task-form-submit-btn {
+        margin-left: 5px;
     }
 
     .tasks {
@@ -169,20 +169,16 @@ button img {
     }
 
     button {
-        padding: 3px;
+        padding: 5px;
+        font-size: 18px;
     }
     
     button i {
         width: 80px;
-        font-size: 18px;
     }
 }
 
 @media only screen and (min-width: 768px) {
-    body {
-        align-items: center;
-    }
-
     body > * {
         width: 768px;
         padding: 8px;
@@ -194,7 +190,11 @@ button img {
         margin: 20px 0;
     }
 
-    #submit-edit-btn , #task-form-submit-btn {
+    #edit-form-container {
+        padding-top: 90px;
+    }
+
+    #submit-edit-btn, #task-form-submit-btn {
         margin-left: 5px;
     }
 
@@ -202,7 +202,7 @@ button img {
         gap: 10px;
     }
 
-    input{
+    input {
         padding-left: 10px;
     }
 
@@ -216,12 +216,12 @@ button img {
     }
 
     button {
-        padding: 5px;
+        padding: 8px;
+        font-size: 22px;
     }
     
     button i {
-        width: 80px;
-        font-size: 22px;
+        width: 110px;
     }
 }
 
@@ -233,42 +233,5 @@ button img {
 
     body > * {
         width: 1024px;
-        padding: 10px;
-    }
-
-    #task-form-container,
-    #edit-form-container {
-        padding: 10px;
-        margin: 20px 0;
-    }
-
-    #submit-edit-btn , #task-form-submit-btn {
-        margin-left: 5px;
-    }
-
-    form {
-        gap: 10px;
-    }
-
-    input{
-        padding-left: 10px;
-    }
-
-    .tasks {
-        padding: 10px;
-        margin: 10px 0;
-    }
-
-    .task-btns-container {
-        gap: 10px;
-    }
-
-    button {
-        padding: 5px;
-    }
-    
-    button i {
-        width: 80px;
-        font-size: 22px;
     }
 }

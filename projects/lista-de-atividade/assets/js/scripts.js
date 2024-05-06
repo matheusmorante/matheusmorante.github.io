@@ -38,19 +38,13 @@ document.addEventListener('submit', e => {
 
             console.log('Edição submetida')
         };
-
-
     }
-
 })
 
 // Evento de clique em qualquer parte do documento
 document.addEventListener('click', e => {
     const targetEl = e.target;
     const task = targetEl.closest('.tasks');
-
-    taskId = task.id;
-    const taskTitle = task.querySelector('.task-titles').innerText;
 
     if (targetEl.classList.contains("done-btns") ||
         targetEl.closest('.done-btns')) {
@@ -64,7 +58,10 @@ document.addEventListener('click', e => {
         targetEl.closest('.edit-btns')) {
         // Exibe o formulário de edição e preenche com o texto da tarefa
         toggleElementsDisplay();
-        editFormInput.value = taskTitle;
+        const taskTitle = task.querySelector('.task-titles');
+        
+        editFormInput.value = taskTitle.innerText;
+        taskId = task.id;
 
         console.log('Editando')
     };
@@ -154,7 +151,7 @@ function updateTask(text, id) {
     const task = document.getElementById(id);
 
     taskTitle = task.querySelector(".task-titles");
-    taskTitle.innerText = text
+    taskTitle.innerText = text;
 };
 
 // Função para alternar a exibição dos elementos entre formulário de tarefas e de edição
