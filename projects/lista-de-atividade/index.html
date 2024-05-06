@@ -20,7 +20,6 @@
             <form id="task-form">
                 <!-- Campo de input para a tarefa -->
                 <input id="task-form-input" placeholder="O que você irá fazer?">
-
                 <!-- Botão para submeter a tarefa -->
                 <button type="submit">
                     <!-- Ícone de adicionar tarefa -->
@@ -30,15 +29,18 @@
         </div>
 
         <!-- Container para o formulário de edição de tarefa -->
-        <div id="edit-form-container">
-            <button id="cancel-edit-btn">
-                <i class="bi bi-x"></i>
-            </button>
+        <div id="overlay" class="hide"></div>
+
+        <div id="edit-form-container" class="hide">
+            <header id="edit-form-header">
+                <h3>Edição de tarefa</h3>
+                <i id="cancel-edit-btn" class="bi bi-x"></i>
+            </header>
             <form id="edit-form">
                 <!-- Campo de input para edição da tarefa -->
-                <input id="edit-form-input">
+                <input id="edit-form-input" placeholder="Insire o nome da nova tarefa">
                 <!-- Botão para submeter a edição da tarefa -->
-                <button type="submit" id="submit-edit-btn">
+                <button type="submit">
                     <!-- Ícone de confirmação/done -->
                     <i class="bi bi-plus-lg"></i>
                 </button>

@@ -7,11 +7,9 @@ const submitEditBtn = document.querySelector('#submit-edit-btn');
 const cancelEditBtn = document.querySelector('#cancel-edit-btn');
 const taskFormSubmitBtn = document.querySelector('#task-form-submit-btn');
 const tasksContainer = document.querySelector('#tasks-container');
+const overlay = document.querySelector('#overlay')
 let taskId; // ID da tarefa alvo
 let taskIdCounter = 0; // Contador de IDs de tarefas
-
-// Oculta o formulário de edição inicialmente
-editFormContainer.classList.add("hide");
 
 document.addEventListener('submit', e => {
     const targetEl = e.target;
@@ -31,12 +29,11 @@ document.addEventListener('submit', e => {
 
         if (editFormInputValue) {
             // Atualiza o texto da tarefa
-            updateTask(editFormInputValue, taskId)
+            updateTask(editFormInputValue, taskId);
 
-            // Alterna a exibição dos elementos
-            toggleElementsDisplay();
+            toggleEditForm();
 
-            console.log('Edição submetida')
+            console.log('Edição submetida');
         };
     }
 })
@@ -51,15 +48,15 @@ document.addEventListener('click', e => {
         // Marca a tarefa como concluída
         task.classList.toggle('task-done');
 
-        console.log('Tarefa feita')
+        console.log('Tarefa feita');
     };
 
     if (targetEl.classList.contains('edit-btns') ||
         targetEl.closest('.edit-btns')) {
+        toggleEditForm()
         // Exibe o formulário de edição e preenche com o texto da tarefa
-        toggleElementsDisplay();
         const taskTitle = task.querySelector('.task-titles');
-        
+
         editFormInput.value = taskTitle.innerText;
         taskId = task.id;
 
@@ -67,9 +64,9 @@ document.addEventListener('click', e => {
     };
 
     if (targetEl.id === 'cancel-edit-btn') {
-        toggleElementsDisplay();
+        toggleEditForm();
 
-        console.log('Edição cancelada')
+        console.log('Edição cancelada');
     };
 
     if (targetEl.classList.contains("delete-btns") ||
@@ -77,7 +74,7 @@ document.addEventListener('click', e => {
         // Remove a tarefa
         task.remove();
 
-        console.log('Tarefa removida')
+        console.log('Tarefa removida');
     };
 });
 
@@ -154,12 +151,9 @@ function updateTask(text, id) {
     taskTitle.innerText = text;
 };
 
-// Função para alternar a exibição dos elementos entre formulário de tarefas e de edição
-function toggleElementsDisplay() {
-    taskFormContainer.classList.toggle('hide');
+function toggleEditForm() {
+    overlay.classList.toggle('hide');
     editFormContainer.classList.toggle('hide');
-    tasksContainer.classList.toggle('hide')
 };
-
 
 
