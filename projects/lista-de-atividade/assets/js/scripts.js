@@ -143,6 +143,12 @@ function addTask(text) {
     taskFormInput.focus()
 };
 
+function createPagenation() {
+
+    const tasks = document.querySelectorAll('tasks')
+    
+}
+
 // Função para atualizar o texto de uma tarefa
 function updateTask(text, id) {
     const task = document.getElementById(id);

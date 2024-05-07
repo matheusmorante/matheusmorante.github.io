@@ -138,6 +138,12 @@ section>h1 {
         url("../images/project_card_background/cronometro.png");
 }
 
+#to-do-list-project {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.29), rgba(0, 0, 0, 0.816)),
+        url("../images/project_card_background/cronometro.png");
+
+}
+
 .project-btns-container {
     display: flex;
     width: 100%;

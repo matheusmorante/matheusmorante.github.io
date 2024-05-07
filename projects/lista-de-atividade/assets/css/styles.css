@@ -124,7 +124,6 @@ i {
     background-color: var(--done-btn-color);
 }
 
-
 /* Estilo para botão de edição */
 .edit-btns {
     background-color: var(--edit-btn-color);
@@ -210,7 +209,7 @@ i {
         padding: 10px;
     }
 
-    body>* {
+    body > *, #edit-form-container {
         width: 768px;
     }
 
