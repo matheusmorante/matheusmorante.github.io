@@ -17,7 +17,7 @@ body {
     color: white;
 }
 
-body>* {
+body > * {
     margin: 0 auto;
 }
 
@@ -40,7 +40,6 @@ header {
 
 /* Estilo para links (âncoras) */
 a {
-    color: white;
     text-decoration: none;
 }
 
@@ -75,14 +74,14 @@ section > h1,
 }
 
 /* Estilo para a seção "doing" */
-#description,
-#cv {
+a,
+.progress {
     color: rgb(255, 255, 255);
 }
 
 /* Estilo para o botão de currículo (cv) */
 #cv {
-    border: 3px solid var(--primary-color);
+    border: 1px solid var(--primary-color);
     border-radius: 10px;
     font-weight: bolder;
     cursor: pointer;
@@ -98,11 +97,6 @@ section > h1,
 #img-perfil {
     border-radius: 50%;
 }
-
-.progress {
-    background-color: rgb(255, 255, 255);
-}
-
 .progressbar {
     background-color: var(--primary-color);
 }
@@ -125,10 +119,6 @@ section > h1,
     transform: scale(1.05);
 }
 
-.projects h1 {
-    font-size: 25px;
-}
-
 #calculator-project {
     background-image: linear-gradient(rgba(0, 0, 0, 0.29), rgba(0, 0, 0, 0.816)),
         url("../images/project_card_background/calculadora.png");
@@ -145,15 +135,18 @@ section > h1,
 
 }
 
+
+.project-btns-container button,
 .project-btns-container {
     width: 100%;
+}
+
+.project-btns-container {
     position: absolute;
     bottom: 0px;
 }
 
 .project-btns-container button {
-    width: 100%;
-    padding: 12px;
     color: white;
     border: none;
 }
@@ -169,7 +162,6 @@ section > h1,
 .test-code {
     background-color: #025bcf;
 }
-
 
 /* Estilo para botões de código (code-btns) */
 .code-btns {
@@ -212,7 +204,7 @@ section > h1,
 
 
 /* Media query para estilos responsivos em telas com largura máxima de 767px */
-@media (max-width: 1023px) {
+@media (max-width: 767px) {
 
     /* Ajusta o tamanho da fonte e o preenchimento para todos os elementos filhos diretos do corpo */
     body {
@@ -225,7 +217,7 @@ section > h1,
 
     /* Define o tamanho do ícone do menu */
     #menu-icon {
-        width: 30px;
+        width: 40px;
     }
 
     /* Estilos para o menu quando a tela é pequena */
@@ -261,13 +253,11 @@ section > h1,
 
     /* Ajusta o tamanho da fonte para as seções "hello" e "doing" */
     #heading {
-        font-size: 95px;
-        margin: 0;
+        font-size: 20px;
     }
 
     /* Ajusta o tamanho da fonte e a margem para a descrição */
     #description {
-        font-size: 22px;
         font-family: 'Roboto Condensed', sans-serif;
         margin: 20px 0;
     }
@@ -275,7 +265,7 @@ section > h1,
     /* Ajusta o preenchimento, o tamanho da fonte e o alinhamento para o botão de currículo (cv) */
     #cv {
         padding: 5px;
-        font-size: 12px;
+        font-size: 20px;
     }
 
     /* Ajusta o estilo da imagem de perfil */
