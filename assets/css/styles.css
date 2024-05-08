@@ -14,10 +14,10 @@
 /* Estilo para o corpo (body) da página */
 body {
     font-family: 'Roboto', sans-serif, 'Ubuntu', sans-serif;
-    background-color:  var(--bg-color);
+    background-color: var(--bg-color);
 }
 
-body > * {
+body>* {
     width: 100%;
     margin: 0 auto;
 }
@@ -28,7 +28,7 @@ section>h1,
 #cv,
 .skills,
 .skill-headers,
-#projects-grid,
+#projects-container,
 .projects,
 .project-btns-container,
 #contacts div a {
@@ -69,7 +69,8 @@ section>h1,
     justify-content: center;
 }
 
-#about-me-section, .projects {
+#about-me-section,
+.projects {
     text-align: center;
 }
 
@@ -105,12 +106,6 @@ section>h1,
     background-color: var(--primary-color);
 }
 
-#projects-grid {
-    grid-column: auto;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
 .projects {
     transition: 0.5s;
     background-size: cover;
@@ -123,18 +118,18 @@ section>h1,
 }
 
 #calculator-project {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.29), rgba(0, 0, 0, 0.816)),
+    background-image: linear-gradient(rgba(0, 0, 0, 0.29), rgba(0, 0, 0, 0.953)),
         url("../images/project_card_background/calculadora.png");
 }
 
 #timer-project {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.29), rgba(0, 0, 0, 0.816)),
+    background-image: linear-gradient(rgba(0, 0, 0, 0.29), rgba(0, 0, 0, 0.889)),
         url("../images/project_card_background/cronometro.png");
 }
 
 #to-do-list-project {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.29), rgba(0, 0, 0, 0.816)),
-        url("../images/project_card_background/cronometro.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.29), rgba(0, 0, 0, 0.882)),
+        url("../images/project_card_background/listadetarefa.png");
 
 }
 
@@ -251,17 +246,12 @@ section>h1,
 
     /* Define a margem superior para as seções */
     section {
-        margin: 80px 0
+        margin: 90px 0
     }
 
     section>h1 {
         font-size: 30px;
         margin: 30px 0;
-    }
-
-    /* Configura a seção "home" para exibir seus elementos em uma coluna */
-    #home {
-        text-align: center;
     }
 
     #heading {
@@ -285,11 +275,9 @@ section>h1,
         margin-bottom: 40px;
         width: 100%;
         gap: 40px;
-        align-items: center;
     }
 
     .skill-headers {
-        justify-content: space-between;
         margin-bottom: 10px;
     }
 
@@ -301,16 +289,16 @@ section>h1,
         height: 25px;
     }
 
-    #projects-grid {
-        gap: 20px;
+    #projects-container {
+        display: block;
+        gap: 10px
+    
     }
 
     .projects {
-        width: 250px;
-        height: 150px;
-        margin: 0 auto;
+      height: 100%;
     }
-
+   
     /* Ajusta o tamanho da imagem dentro do contêiner de informações de contato */
     #contacts div img {
         width: 80px;
@@ -326,15 +314,15 @@ section>h1,
         padding: 0 50px;
     }
 
-    body > * {
+    body>* {
         width: 100%;
         margin: 0 auto;
     }
-    
+
     header {
         margin-top: 10px;
     }
-    
+
     /* Define a cor de fundo ao passar o mouse sobre itens do menu */
     .menu-item:hover {
         background-color: rgba(23, 70, 158, 0.5);
@@ -345,14 +333,14 @@ section>h1,
         display: none;
     }
 
-    section > h1 {
+    section>h1 {
         font-size: 45px;
         margin: 40px 0;
     }
 
     /* Configura a seção "home" para exibir seus elementos em uma coluna */
     #home {
-      margin: 50px 0;
+        margin: 50px 0;
         height: 100vw;
         width: 60%;
 
@@ -372,14 +360,11 @@ section>h1,
     /* Ajusta o preenchimento e o tamanho da fonte para o botão de currículo (cv) */
     #cv {
         padding: 20px;
-        font-size: 2.0em;
     }
 
     /* Ajusta o estilo da imagem de perfil */
     #img-perfil {
-        display: flex;
-        width: 200px;
-        margin: 0 auto;
+        width: 150px;
     }
 
 
@@ -409,13 +394,13 @@ section>h1,
         height: 25px;
     }
 
-    #projects-grid {
-        gap: 20px;
+    section {
+        margin-top: 50px;
     }
 
+
     .projects {
-        width: 400px;
-        height: 200px;
+      width: 100%;
     }
 
     /* Ajusta o tamanho da imagem dentro do contêiner de informações de contato */
@@ -426,20 +411,21 @@ section>h1,
 
 /* Media query para telas com largura mínima de 1200px */
 @media (min-width: 1024px) {
+
     /* Ajusta o tamanho da fonte para o corpo */
     body {
         font-size: 18px;
         padding: 0 80px;
     }
 
-    body > * {
+    body>* {
         margin: 0 auto;
     }
 
     header {
         margin-top: 10px;
     }
-    
+
     #menu {
         display: flex;
         gap: 20px;
@@ -463,15 +449,18 @@ section>h1,
         display: none;
     }
 
-    section > h1 {
+    section {
+        margin-top: 50px;
+    }
+
+    section>h1 {
         font-size: 45px;
         margin: 60px 0;
     }
 
     /* Configura a seção "home" para exibir seus elementos em uma coluna */
     #home {
-        width: 50%;
-
+        width: 55%;
     }
 
     #heading {
@@ -487,20 +476,12 @@ section>h1,
 
     /* Ajusta o preenchimento e o tamanho da fonte para o botão de currículo (cv) */
     #cv {
-        padding: 20px;
-        font-size: 2.0em;
+        padding: 30px;
     }
 
     /* Ajusta o estilo da imagem de perfil */
     #img-perfil {
-        display: flex;
         width: 200px;
-        margin: 0 auto;
-    }
-
-    /* Ajusta o tamanho da fonte para o cabeçalho nível 2 (h2) */
-    h2 {
-        font-size: 1.8em;
     }
 
     .image-border {
@@ -516,8 +497,6 @@ section>h1,
     }
 
     .skill-headers {
-        display: flex;
-        justify-content: space-between;
         margin-bottom: 10px;
     }
 
@@ -529,13 +508,15 @@ section>h1,
         height: 25px;
     }
 
-    #projects-grid {
-        gap: 20px;
+    #projects-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px
     }
 
     .projects {
-        width: 400px;
-        height: 200px;
+        width: 100%;
+        height: 200%
     }
 
     /* Ajusta o tamanho da imagem dentro do contêiner de informações de contato */
