@@ -1,6 +1,7 @@
 :root {
     --primary-color: #32ABFF;
-    --secondary-color: rgb(34, 34, 34);
+    --secondary-color: white;
+    --bg-color: rgb(34, 34, 34);
 }
 
 /* Define regras de estilo para todos os elementos (*) na página */
@@ -13,17 +14,17 @@
 /* Estilo para o corpo (body) da página */
 body {
     font-family: 'Roboto', sans-serif, 'Ubuntu', sans-serif;
-    background-color: var(--secondary-color);
-    color: white;
+    background-color:  var(--bg-color);
 }
 
 body > * {
+    width: 100%;
     margin: 0 auto;
 }
 
 header,
-#menu,
-section > h1,
+#img-perfil,
+section>h1,
 #cv,
 .skills,
 .skill-headers,
@@ -34,8 +35,16 @@ section > h1,
     display: flex;
 }
 
+body,
+a,
+.progress,
+.project-btns-container button {
+    color: rgb(255, 255, 255);
+}
+
 header {
     justify-content: space-between;
+    align-items: center;
 }
 
 /* Estilo para links (âncoras) */
@@ -43,28 +52,28 @@ a {
     text-decoration: none;
 }
 
+#menu li {
+    list-style: none;
+}
+
 /* Estilo para a barra de menu (menu) */
-#menu,
-#about-me-section p,
+#about-me-section,
 .skills,
 .projects {
     align-items: center;
 }
 
-section > h1 {
+section>h1,
+#cv,
+.projects {
     justify-content: center;
 }
 
-#menu {
-    justify-content: right;
+#about-me-section {
+    text-align: center;
 }
 
-/* Estilo para itens de lista não ordenada (li) dentro do menu */
-#menu li {
-    list-style: none;
-}
-
-section > h1,
+section>h1,
 #heading {
     font-family: 'Ubuntu', sans-serif;
 }
@@ -73,19 +82,12 @@ section > h1,
     color: var(--primary-color);
 }
 
-/* Estilo para a seção "doing" */
-a,
-.progress {
-    color: rgb(255, 255, 255);
-}
-
 /* Estilo para o botão de currículo (cv) */
 #cv {
     border: 1px solid var(--primary-color);
     border-radius: 10px;
     font-weight: bolder;
     cursor: pointer;
-    justify-content: center;
     transition: 300ms;
 }
 
@@ -96,7 +98,9 @@ a,
 
 #img-perfil {
     border-radius: 50%;
+    margin: 0 auto;
 }
+
 .progressbar {
     background-color: var(--primary-color);
 }
@@ -104,12 +108,11 @@ a,
 #projects-grid {
     grid-column: auto;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .projects {
     transition: 0.5s;
-    justify-content: center;
-    align-items: center;
     background-size: cover;
     background-position: center;
 }
@@ -135,7 +138,6 @@ a,
 
 }
 
-
 .project-btns-container button,
 .project-btns-container {
     width: 100%;
@@ -144,11 +146,6 @@ a,
 .project-btns-container {
     position: absolute;
     bottom: 0px;
-}
-
-.project-btns-container button {
-    color: white;
-    border: none;
 }
 
 .see-code {
@@ -202,17 +199,16 @@ a,
     display: none;
 }
 
-
 /* Media query para estilos responsivos em telas com largura máxima de 767px */
 @media (max-width: 767px) {
 
     /* Ajusta o tamanho da fonte e o preenchimento para todos os elementos filhos diretos do corpo */
     body {
-        padding: 5px;
+        padding: 0 10px;
     }
 
-    body > * {
-        width: 100%;
+    header h1 {
+        font-size: 18px;
     }
 
     /* Define o tamanho do ícone do menu */
@@ -221,44 +217,60 @@ a,
     }
 
     /* Estilos para o menu quando a tela é pequena */
-    #menu {
-        display: none;
+    .menu-opened {
+        display: block;
         position: absolute;
         background-color: rgb(255, 255, 255);
         color: black;
         font-size: 12px;
         margin: 5px;
+        right: 0;
     }
 
     /* Ajusta o preenchimento para itens de lista (li) dentro do menu */
-    #menu li {
+    .menu-opened li {
         padding: 10px;
     }
 
     /* Define o estilo de fundo ao passar o mouse sobre itens do menu */
-    #menu li:hover {
-        background-color: rgba(48, 100, 177, 0.404);
+    .menu-opened li:hover {
+        background-color: rgb(224, 224, 224);
     }
 
     /* Ajusta o peso da fonte e a cor dos links dentro do menu */
-    #menu li a {
+    .menu-opened li a {
         font-weight: bolder;
         color: rgb(0, 0, 0);
     }
 
-    /* Ajusta o preenchimento e a margem para a seção "home" */
+    /* Ajusta o estilo da imagem de perfil */
+    #img-perfil {
+        width: 150px;
+    }
+
+    /* Define a margem superior para as seções */
+    section {
+        margin: 80px 0
+    }
+
+    section>h1 {
+        font-size: 30px;
+        margin: 30px 0;
+    }
+
+    /* Configura a seção "home" para exibir seus elementos em uma coluna */
     #home {
-        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        padding: 0 20px;
     }
 
-    /* Ajusta o tamanho da fonte para as seções "hello" e "doing" */
     #heading {
-        font-size: 20px;
+        font-size: 36px;
+        letter-spacing: 1px;
+        font-weight: 500;
     }
 
-    /* Ajusta o tamanho da fonte e a margem para a descrição */
     #description {
-        font-family: 'Roboto Condensed', sans-serif;
         margin: 20px 0;
     }
 
@@ -266,60 +278,6 @@ a,
     #cv {
         padding: 5px;
         font-size: 20px;
-    }
-
-    /* Ajusta o estilo da imagem de perfil */
-    #img-perfil {
-        width: 200px;
-        margin: 20px 0;
-    }
-
-    /* Define a margem superior para as seções */
-    section {
-        margin-bottom: 20px;
-    }
-
-    section > h1 {
-        font-size: 20px;
-        margin: 60px 0;
-    }
-
-    /* Configura a seção "home" para exibir seus elementos em uma coluna */
-    #home {
-        text-align: center;
-        height: 100vh;
-    }
-
-    #heading {
-        font-size: 20px;
-        letter-spacing: 2px;
-        font-weight: 500;
-    }
-
-    /* Ajusta a margem para a descrição */
-    #description {
-        margin: 30px 0;
-    }
-
-    /* Ajusta o preenchimento e o tamanho da fonte para o botão de currículo (cv) */
-    #cv {
-        padding: 10px;
-    }
-
-    /* Ajusta o estilo da imagem de perfil */
-    #img-perfil {
-        display: flex;
-        width: 200px;
-        margin: 0 auto;
-    }
-
-    /* Ajusta o tamanho da fonte para o cabeçalho nível 2 (h2) */
-    h2 {
-        font-size: 1.8em;
-    }
-
-    .image-border {
-        padding: 20px;
     }
 
     .skills {
@@ -355,24 +313,142 @@ a,
 
     /* Ajusta o tamanho da imagem dentro do contêiner de informações de contato */
     #contacts div img {
+        width: 80px;
+    }
+}
+
+/* Media query para estilos responsivos em telas com largura máxima de 767px */
+@media (min-width: 768px) {
+
+    /* Ajusta o tamanho da fonte para o corpo */
+    body {
+        font-size: 15px;
+        padding: 0 50px;
+    }
+
+    body > * {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    header {
+        margin-top: 10px;
+    }
+    
+    /* Define a cor de fundo ao passar o mouse sobre itens do menu */
+    .menu-item:hover {
+        background-color: rgba(23, 70, 158, 0.5);
+    }
+
+    /* Oculta o ícone do menu */
+    #menu-icon {
+        display: none;
+    }
+
+    section > h1 {
+        font-size: 45px;
+        margin: 40px 0;
+    }
+
+    /* Configura a seção "home" para exibir seus elementos em uma coluna */
+    #home {
+        align-items: center;
+        display: grid;
+        height: 100vw;
+        grid-template-columns: 3fr 2fr;
+
+    }
+
+    #heading {
+        font-size: 50px;
+        letter-spacing: 2px;
+        font-weight: 500;
+    }
+
+    /* Ajusta a margem para a descrição */
+    #description {
+        margin: 30px 0;
+    }
+
+    /* Ajusta o preenchimento e o tamanho da fonte para o botão de currículo (cv) */
+    #cv {
+        padding: 20px;
+        font-size: 2.0em;
+    }
+
+    /* Ajusta o estilo da imagem de perfil */
+    #img-perfil {
+        display: flex;
+        width: 200px;
+        margin: 0 auto;
+    }
+
+
+    .image-border {
+        padding: 20px;
+    }
+
+    .skills {
+        display: block;
+        margin-bottom: 40px;
+        width: 100%;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .skill-headers {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    .skills h2 {
+        margin-top: 10px;
+    }
+
+    .progress {
+        height: 25px;
+    }
+
+    #projects-grid {
+        gap: 20px;
+    }
+
+    .projects {
+        width: 400px;
+        height: 200px;
+    }
+
+    /* Ajusta o tamanho da imagem dentro do contêiner de informações de contato */
+    #contacts div img {
         width: 130px;
     }
 }
 
 /* Media query para telas com largura mínima de 1200px */
 @media (min-width: 1024px) {
-
     /* Ajusta o tamanho da fonte para o corpo */
     body {
         font-size: 18px;
+        padding: 0 80px;
     }
 
-    body>* {
-        width: 1024px;
+    body > * {
+        margin: 0 auto;
+    }
+
+    header {
+        margin-top: 10px;
+    }
+    
+    #menu {
+        display: flex;
+        gap: 20px;
     }
 
     /* Ajusta o estilo dos itens do menu */
-    #menu li {
+    .menu-opened li {
+        color: var(--secondary-color);
         display: flex;
         padding: 10px;
         transition: 300ms;
@@ -388,12 +464,7 @@ a,
         display: none;
     }
 
-    /* Define a margem superior para as seções */
-    section {
-        margin-bottom: 150px;
-    }
-
-    section>h1 {
+    section > h1 {
         font-size: 45px;
         margin: 60px 0;
     }
