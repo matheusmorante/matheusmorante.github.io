@@ -19,16 +19,16 @@ body {
 
 body>* {
     width: 100%;
-    margin: 0 auto;
 }
 
 header,
+#home,
 #img-perfil,
 section>h1,
 #cv,
 .skills,
 .skill-headers,
-#projects-container,
+#projects-container
 .projects,
 .project-btns-container,
 #contacts div a {
@@ -44,7 +44,6 @@ a,
 
 header {
     justify-content: space-between;
-    align-items: center;
 }
 
 /* Estilo para links (âncoras) */
@@ -57,6 +56,8 @@ a {
 }
 
 /* Estilo para a barra de menu (menu) */
+header,
+#home,
 #about-me-section,
 .skills,
 .projects {
@@ -106,10 +107,27 @@ section>h1,
     background-color: var(--primary-color);
 }
 
+.project-btns-container button,
+.project-btns-container,
+.projects  {
+    width: 100%;
+}
+
 .projects {
+    position: relative;
+    height: auto;
+    padding-bottom: 50%;
     transition: 0.5s;
     background-size: cover;
     background-position: center;
+}
+
+.projects div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
 }
 
 .projects:hover {
@@ -118,24 +136,19 @@ section>h1,
 }
 
 #calculator-project {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.29), rgba(0, 0, 0, 0.953)),
+    background-image: linear-gradient(rgba(0, 0, 0, 0.493), rgba(0, 0, 0, 0.501)),
         url("../images/project_card_background/calculadora.png");
 }
 
 #timer-project {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.29), rgba(0, 0, 0, 0.889)),
+    background-image: linear-gradient(rgba(0, 0, 0, 0.511), rgba(0, 0, 0, 0.494)),
         url("../images/project_card_background/cronometro.png");
 }
 
 #to-do-list-project {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.29), rgba(0, 0, 0, 0.882)),
+    background-image: linear-gradient(rgba(0, 0, 0, 0.504), rgba(0, 0, 0, 0.487)),
         url("../images/project_card_background/listadetarefa.png");
 
-}
-
-.project-btns-container button,
-.project-btns-container {
-    width: 100%;
 }
 
 .project-btns-container {
@@ -199,7 +212,7 @@ section>h1,
 
     /* Ajusta o tamanho da fonte e o preenchimento para todos os elementos filhos diretos do corpo */
     body {
-        padding: 0 10px;
+        padding: 0 10px ;
         font-size: 16px;
     }
 
@@ -241,12 +254,12 @@ section>h1,
 
     /* Ajusta o estilo da imagem de perfil */
     #img-perfil {
-        width: 150px;
+        width: 100px;
     }
 
     /* Define a margem superior para as seções */
     section {
-        margin: 90px 0
+        margin-bottom: 90px;
     }
 
     section>h1 {
@@ -289,16 +302,10 @@ section>h1,
         height: 25px;
     }
 
-    #projects-container {
-        display: block;
-        gap: 10px
-    
+    .projects {
+        margin-bottom: 10px;
     }
 
-    .projects {
-      height: 100%;
-    }
-   
     /* Ajusta o tamanho da imagem dentro do contêiner de informações de contato */
     #contacts div img {
         width: 80px;
@@ -312,11 +319,6 @@ section>h1,
     body {
         font-size: 15px;
         padding: 0 50px;
-    }
-
-    body>* {
-        width: 100%;
-        margin: 0 auto;
     }
 
     header {
@@ -367,7 +369,6 @@ section>h1,
         width: 150px;
     }
 
-
     .image-border {
         padding: 20px;
     }
@@ -398,9 +399,10 @@ section>h1,
         margin-top: 50px;
     }
 
-
-    .projects {
-      width: 100%;
+    #projects-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
     }
 
     /* Ajusta o tamanho da imagem dentro do contêiner de informações de contato */
@@ -416,10 +418,6 @@ section>h1,
     body {
         font-size: 18px;
         padding: 0 80px;
-    }
-
-    body>* {
-        margin: 0 auto;
     }
 
     header {
@@ -514,10 +512,7 @@ section>h1,
         gap: 30px
     }
 
-    .projects {
-        width: 100%;
-        height: 200%
-    }
+ 
 
     /* Ajusta o tamanho da imagem dentro do contêiner de informações de contato */
     #contacts div img {
