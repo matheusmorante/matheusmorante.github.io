@@ -229,13 +229,14 @@ section>h1,
     }
 
     #menu {
-        display: none;
+       
         flex-direction: column;
     }
 
     /* Estilos para o menu quando a tela é pequena */
     .menu-opened {
         position: fixed;
+        display: flex;
         background-color: var(--bg-color);
         width: 100vw;
         height: 100%;
