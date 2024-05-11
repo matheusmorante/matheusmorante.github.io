@@ -17,7 +17,7 @@ function openMenu() {
 document.addEventListener('click', (e) => {
     const targetEL = e.target;
 
-    if (targetEL.id ='menu-icon') {
+    if (targetEL.id === 'menu-icon') {
         openMenu()
      }
 
