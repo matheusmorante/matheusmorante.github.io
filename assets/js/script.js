@@ -1,13 +1,30 @@
 
 
 // Obtém o elemento do ícone do menu e o elemento do menu
-const menu_icon = document.querySelector('#menu-icon');
+const menuIcon = document.querySelector('#menu-icon');
 const menu = document.querySelector('#menu');
+const header = document.querySelector('#header');
+const menuItem = document.querySelector('.menu-item')
 
 // Função para ocultar ou exibir a lista de navegação
-function openNav() {
+function openMenu() {
     menu.classList.toggle('menu-opened');
+    menuIcon.classList.toggle('bi-x');
+    document.body.classList.toggle('overflowHidden')
 }
 
+
 // Adiciona um ouvinte de evento de clique ao ícone do menu
-menu_icon.addEventListener('click', openNav)
+document.addEventListener('click', (e) => {
+    const targetEL = e.target;
+
+    if (targetEL.id ='menu-icon') {
+        openMenu()
+     }
+
+    if (targetEL.classList.contains('menu-item')) {
+       openMenu()
+    }
+})
+
+

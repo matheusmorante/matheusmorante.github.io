@@ -11,7 +11,8 @@
     box-sizing: 0;
 }
 
-body, header {
+body,
+header {
     background-color: var(--bg-color);
 }
 
@@ -20,8 +21,13 @@ body {
     font-family: 'Roboto', sans-serif, 'Ubuntu', sans-serif;
 }
 
-body > * {
+body>* {
     width: 100%;
+}
+
+header {
+    position: fixed;
+    top: 0
 }
 
 header,
@@ -44,7 +50,8 @@ a,
     color: rgb(255, 255, 255);
 }
 
-header, .skill-headers {
+header,
+.skill-headers {
     justify-content: space-between;
 }
 
@@ -53,7 +60,8 @@ a {
     text-decoration: none;
 }
 
-#menu {
+#menu,
+#menu ul {
     padding: 0;
 }
 
@@ -63,7 +71,6 @@ a {
 
 /* Estilo para a barra de menu (menu) */
 header,
-#home,
 #about-me-section,
 .skills,
 .projects {
@@ -209,12 +216,16 @@ section>h1,
     display: none;
 }
 
+.overflowHidden {
+    overflow: hidden;
+}
+
 /* Media query para estilos responsivos em telas com largura máxima de 767px */
 @media (max-width: 767px) {
 
     /* Ajusta o tamanho da fonte e o preenchimento para todos os elementos filhos diretos do corpo */
-    body > * {
-        padding: 5px 10px;
+    body>* {
+        padding: 0 10px;
         font-size: 16px;
     }
 
@@ -223,37 +234,43 @@ section>h1,
         font-size: 18px;
     }
 
+    #home {
+        margin-top: 50px;
+    }
+
     /* Define o tamanho do ícone do menu */
     #menu-icon {
         font-size: 30px;
     }
 
     #menu {
-       
         flex-direction: column;
     }
 
     /* Estilos para o menu quando a tela é pequena */
     .menu-opened {
-        position: fixed;
+        transition: 0,5s ease-in;
         display: flex;
-        background-color: var(--bg-color);
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.846);
         width: 100vw;
-        height: 100%;
-        display: block;
-        font-size: 12px;
-        top: 100px;
+        height: 1000px;
+        font-size: 18px;
+        top: 50px;
         left: 0;
+        align-items: center;
+        z-index: 1;
     }
 
     /* Ajusta o preenchimento para itens de lista (li) dentro do menu */
     .menu-opened li {
-        padding: 10px;
+        text-align: center;
+        margin-top: 50px;
     }
 
     /* Define o estilo de fundo ao passar o mouse sobre itens do menu */
     .menu-opened li:hover {
-        background-color: rgb(207, 205, 205);
+        border-bottom: var(--primary-color);
     }
 
     /* Ajusta o peso da fonte e a cor dos links dentro do menu */
@@ -267,7 +284,7 @@ section>h1,
     }
 
     /* Define a margem superior para as seções */
-    #home, section {
+    section {
         margin: 60px 0;
     }
 
@@ -329,9 +346,7 @@ section>h1,
         padding: 0 50px;
     }
 
-    header {
-        margin-top: 10px;
-    }
+    
 
     /* Define a cor de fundo ao passar o mouse sobre itens do menu */
     .menu-item:hover {
@@ -345,15 +360,13 @@ section>h1,
 
     section>h1 {
         font-size: 45px;
-        margin: 40px 0;
+        margin: 80px 0;
     }
 
     /* Configura a seção "home" para exibir seus elementos em uma coluna */
     #home {
-        margin: 50px 0;
-        height: 100vw;
         width: 60%;
-
+        margin-top: 530px;
     }
 
     #heading {
@@ -428,10 +441,6 @@ section>h1,
         padding: 0 120px;
     }
 
-    header {
-        margin-top: 10px;
-    }
-
     #menu {
         display: flex;
         gap: 20px;
@@ -467,6 +476,7 @@ section>h1,
     /* Configura a seção "home" para exibir seus elementos em uma coluna */
     #home {
         width: 35%;
+        margin-top: 200px;
     }
 
     #heading {
