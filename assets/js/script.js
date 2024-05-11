@@ -4,7 +4,6 @@
 const menuIcon = document.querySelector('#menu-icon');
 const menu = document.querySelector('#menu');
 const header = document.querySelector('#header');
-const menuItem = document.querySelector('.menu-item')
 
 // Função para ocultar ou exibir a lista de navegação
 function openMenu() {
