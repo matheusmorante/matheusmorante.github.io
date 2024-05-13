@@ -248,31 +248,38 @@ section>h1,
         flex-direction: column;
     }
 
-    /* Estilos para o menu quando a tela é pequena */
-    .menu-opened {
-        transition: 0,5s ease-in;
+    
+    .overlay{
+        padding: 0;
         display: flex;
         position: fixed;
-        background-color: rgba(0, 0, 0, 0.846);
-        width: 100vw;
-        height: 1000px;
-        font-size: 18px;
-        top: 30px;
-        left: 0;
-        align-items: center;
-        z-index: 3;
+        background-color: var(--bg-color);
+        width: 100%;
+        height: 100%;
+        top: 40px;
+        z-index: 2;
     }
 
+    /* Estilos para o menu quando a tela é pequena */
+    .open-menu {
+        transition: 0,5s ease-in;
+        display: block;
+        position: fixed;
+        font-size: 18px;
+        top: 30px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+
     /* Ajusta o preenchimento para itens de lista (li) dentro do menu */
-    .menu-opened li {
+    .open-menu li {
         text-align: center;
         margin-top: 50px;
     }
 
-
-
     /* Ajusta o peso da fonte e a cor dos links dentro do menu */
-    .menu-opened li a {
+    .open-menu li a {
         font-weight: bolder;
     }
 
@@ -344,8 +351,6 @@ section>h1,
         padding: 0 50px;
     }
 
-    
-
     /* Define a cor de fundo ao passar o mouse sobre itens do menu */
     .menu-item:hover {
         background-color: rgba(23, 70, 158, 0.5);
@@ -364,7 +369,7 @@ section>h1,
     /* Configura a seção "home" para exibir seus elementos em uma coluna */
     #home {
         width: 60%;
-        margin-top: 530px;
+        margin: 200px 0;
     }
 
     #heading {
@@ -445,7 +450,7 @@ section>h1,
     }
 
     /* Ajusta o estilo dos itens do menu */
-    .menu-opened li {
+    .open-menu li {
         color: var(--secondary-color);
         display: flex;
         padding: 10px;
@@ -474,7 +479,7 @@ section>h1,
     /* Configura a seção "home" para exibir seus elementos em uma coluna */
     #home {
         width: 35%;
-        margin-top: 200px;
+        margin: 20% 0;
     }
 
     #heading {
