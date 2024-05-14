@@ -12,17 +12,15 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 
     <!-- Define o título da página -->
-    <title>Matheus Morante</title>
+    <title>Portfólio Matheus Morante</title>
 </head>
 
 <body>
     <header id="header">
-        <h1>Postifólio</h1>
+        <h1>Portfólio</h1>
         <!-- Navegação principal -->
         <i id="menu-icon" class="bi bi-list" alt="Ícone do menu de navegação"></i>
     </header>
-
-
 
     <!-- Seção "Sobre mim" -->
     <section id="home">
@@ -39,11 +37,10 @@
                 se torna um Desenvolvedor Full-Stack
             </p>
             <!-- Botão para baixar o currículo -->
-            <div id="cv">
-                <a href="https://drive.google.com/file/d/1JgdsenjWsEzuyq4UCBcbFFYCREapuyw1/view?usp=sharing">
-                    Baixar CV
-                </a>
-            </div>
+
+            <a id="cv" href="https://drive.google.com/file/d/1JgdsenjWsEzuyq4UCBcbFFYCREapuyw1/view?usp=sharing">
+                Baixar CV
+            </a>
         </div>
     </section>
 
@@ -103,13 +100,12 @@
         <h1>Projetos</h1>
         <div id="projects-container">
             <div id="calculator-project" class="projects">
-                <div c>
+                <div>
                     <h1>Calculadora</h1>
                     <img src="assets/images/programation_language_icons/html.svg">
                     <img src="assets/images/programation_language_icons/css.svg">
                     <img src="assets/images/programation_language_icons/js.svg">
                 </div>
-                
             </div>
             <div id="timer-project" class="projects">
                 <div>
@@ -118,11 +114,6 @@
                     <img src="assets/images/programation_language_icons/css.svg">
                     <img src="assets/images/programation_language_icons/js.svg">
                 </div>
-                <div class="project-details hidden">
-                    <h1>Calculadora</h1>
-                    <img>
-                    <p></p>
-                </div>
             </div>
             <div id="to-do-list-project" class="projects">
                 <div>
@@ -130,11 +121,6 @@
                     <img src="assets/images/programation_language_icons/html.svg">
                     <img src="assets/images/programation_language_icons/css.svg">
                     <img src="assets/images/programation_language_icons/js.svg">
-                </div>
-                <div class="project-details hidden">
-                    <h1>Calculadora</h1>
-                    <img>
-                    <p></p>
                 </div>
             </div>
         </div>
@@ -151,44 +137,32 @@
         </div>
     </section>
 
-    <div id="calculator-project-modal" class="project-modal hidden">
-        <h1>Calculadora</h1>
-        <div><img></div>
-        <p></p>
-    </div>
+    <div id="overlay"></div>
 
-    <div id="timer-project-modal" class="project-modal hidden">
-        <h1>Cronõmetro</h1>
-        <div><img></div>
-        <p></p>
-    </div>
-
-    <div id="to-do-list-project-modal" class="project-modal hidden">
-        <header><h1>Lista de Tarefa</h1></header>
-        <div>
-            <img>
-            <button></button>
-            <button></button>
-            <button></button>
+    <div id="project-modal">
+        <h1 id="modal-title"></h1>
+        <div id="image-&-actions-container">
+            <img id="project-modal-image">
+            <div id="actions">
+                <a id="test-project"></a>
+                <a id="see-code"></a>
+            </div>
         </div>
-        <p></p>
+        <p id="details"></p>
     </div>
 
+    <nav id="menu" class="hidden">
+        <!-- Lista de itens do menu -->
+        <ul>
+            <!-- Item do menu - Sobre mim -->
+            <li><a class="menu-item" href="#home">Sobre mim</a></li>
+            <!-- Item do menu - Projetos -->
+            <li><a class="menu-item" href="#projects-container">Projetos</a></li>
+            <!-- Item do menu - Contato -->
+            <li><a class="menu-item" href="#contacts">Contato</a></li>
+        </ul>
+    </nav>
 
-    <div id="menu-container">
-        <nav id="menu" class="hidden">
-            <!-- Lista de itens do menu -->
-            <ul>
-                <!-- Item do menu - Sobre mim -->
-                <li><a class="menu-item" href="#home">Sobre mim</a></li>
-                <!-- Item do menu - Projetos -->
-                <li><a class="menu-item" href="#projects-container">Projetos</a></li>
-                <!-- Item do menu - Contato -->
-                <li><a class="menu-item" href="#contacts">Contato</a></li>
-            </ul>
-        </nav>
-    </div>
-    
 
     <!-- Inclusão do arquivo de script JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
