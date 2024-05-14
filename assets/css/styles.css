@@ -244,12 +244,8 @@ section>h1,
         font-size: 30px;
     }
 
-    #menu {
-        flex-direction: column;
-    }
-
     
-    .overlay-bg{
+    .overlay-bg {
         padding: 0;
         position: fixed;
         background-color: rgb(35, 35, 35);
@@ -270,7 +266,6 @@ section>h1,
         margin: 0 auto;
         z-index: 2;
     }
-
 
     /* Ajusta o preenchimento para itens de lista (li) dentro do menu */
     .open-menu li {
@@ -356,9 +351,23 @@ section>h1,
         background-color: rgba(23, 70, 158, 0.5);
     }
 
+
     /* Oculta o ícone do menu */
     #menu-icon {
         display: none;
+    }
+
+    #menu {
+        display: flex;
+        position: fixed;
+        top: 10px;
+        left: 70%;
+    }
+
+    #menu ul {
+        display: flex;
+        gap: 20px;
+        width: 400px;
     }
 
     section>h1 {
@@ -444,18 +453,7 @@ section>h1,
         padding: 0 120px;
     }
 
-    #menu {
-        display: flex;
-        gap: 20px;
-    }
-
-    /* Ajusta o estilo dos itens do menu */
-    .open-menu li {
-        color: var(--secondary-color);
-        display: flex;
-        padding: 10px;
-        transition: 300ms;
-    }
+   
 
     /* Define a cor de fundo ao passar o mouse sobre itens do menu */
     .menu-item:hover {

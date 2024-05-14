@@ -10,21 +10,17 @@ const projectModal = document.querySelector('#project-modal')
 
 // Função para ocultar ou exibir a lista de navegação
 function openMenu() {
-    toogleOverlay();
-    menu.classList.toggle('open-menu');
-    menuIcon.classList.toggle('bi-x');
-}
-
-function toogleOverlay() {
     overlay.classList.toggle('overlay-bg');
     document.body.classList.toggle('overflowHidden')
+    menu.classList.toggle('open-menu');
+    menuIcon.classList.toggle('bi-x');
 }
 
 // Adiciona um ouvinte de evento de clique ao ícone do menu
 document.addEventListener('click', e => {
     const targetEl = e.target;
 
-    if (targetEl.id === 'menu-icon' || targetEL.classList.contains('menu-item')) {
+    if (targetEl.id === 'menu-icon' || targetEl.classList.contains('menu-item')) {
         openMenu()
     }
 
