@@ -10,10 +10,27 @@ const projectModal = document.querySelector('#project-modal')
 
 // Função para ocultar ou exibir a lista de navegação
 function openMenu() {
-    overlay.classList.toggle('overlay-bg');
-    document.body.classList.toggle('overflowHidden')
+    overlay.classList.toggle('open-menu-overlay-bg');
     menu.classList.toggle('open-menu');
     menuIcon.classList.toggle('bi-x');
+}
+
+function openProjectModal(titleText, imagePath, testUrl, codeUrl, descriptionText) {
+    const title = document.querySelector('#modal-title');
+    const image = document.querySelector('#project-modal-image')
+    const testA = document.querySelector('#test-project-a');
+    const codeA = document.querySelector('#see-code-a');
+    const description = document.querySelector('#modal-description');
+
+    title.innerText = titleText;
+    image.src = imagePath;
+    testA.href = testUrl;
+    codeA.href = codeUrl;
+    description.innerText = descriptionText;
+
+    projectModal.classList.remove('hidden');
+    projectModal.classList.add('project-modal-on');
+    overlay.classList.add('project-modal-overlay-bg');
 }
 
 // Adiciona um ouvinte de evento de clique ao ícone do menu
@@ -25,19 +42,34 @@ document.addEventListener('click', e => {
     }
 
     if (targetEl.classList.contains('projects')) {
-        const title = targetEl.querySelector('#modal-title');
-        const image = targetEl.querySelector('project-modal-image')
-        const testUrl = targetEl.querySelector('test-project');
-        const codeUrl = targetEl.querySelector('see-code');
-        const description = targetEl.querySelector('description');
+
 
         if (targetEl.id === 'calculator-project') {
-            title.innerText = 'Calculadora';
-            image.src = 'assets\images\project_card_background\calculadora.png';
-            testUrl.href = 'projects/calculator.index';
-            codeUrl.href = 'https://github.com/matheusmorante/matheusmorante.github.io/tree/f41da9c97987320ee64ea2d2008afaa149a117de/projects/calculadora';
-            description.innerText =
-                'Esse projeto foi muito importante para a consolidação do meu aprendizado sobre'
+            const titleText = 'Calculadora';
+            const imagePath = 'assets/images/project_card_background/calculadora.png';
+            const testUrl = 'projects/calculator.index';
+            const codeUrl = 'https://github.com/matheusmorante/matheusmorante.github.io/tree/f41da9c97987320ee64ea2d2008afaa149a117de/projects/calculadora';
+            const descriptionText =
+                'Esse projeto foi muito importante para a consolidação do meu aprendizado sobre';
+
+            openProjectModal(titleText, imagePath, testUrl, codeUrl, descriptionText)
+        }
+
+        if (targetEl.id === 'to-do-list-project') {
+            const titleText = 'Lista de tarefa';
+            const imagePath = 'assets/images/project_card_background/listadetarefa.png';
+            const testUrl = 'projects/lista-de-atividade.index';
+            const codeUrl = 'https://github.com/matheusmorante/matheusmorante.github.io/tree/4b6324ee0955443e604b2256cd3b83bde48d465c/projects/lista-de-atividade';
+            const descriptionText =
+                'Esse projeto foi muito importante para a consolidação do meu aprendizado sobre';
+
+            openProjectModal(titleText, imagePath, testUrl, codeUrl, descriptionText)
         }
     }
-})
+});
+
+overlay.addEventListener('click', () => {
+    projectModal.classList.add('hidden');
+    projectModal.classList.remove('project-modal-on');
+    overlay.classList.remove('project-modal-overlay-bg');
+});
