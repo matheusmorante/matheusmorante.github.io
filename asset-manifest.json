@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.020931a8.css",
-    "main.js": "/portfolio/static/js/main.929d61f1.js",
-    "static/js/488.9561f9b8.chunk.js": "/portfolio/static/js/488.9561f9b8.chunk.js",
-    "static/media/calculadora.png": "/portfolio/static/media/calculadora.a3f199112ec4d7c09bf6.png",
-    "static/media/cronometro.png": "/portfolio/static/media/cronometro.026e254960b065e7dea5.png",
-    "static/media/perfil.jpg": "/portfolio/static/media/perfil.ecfa4a47aacaf58ba2b4.jpg",
-    "static/media/listadetarefa.png": "/portfolio/static/media/listadetarefa.17c67a7d8fc010545bdd.png",
-    "static/media/whatsapp.png": "/portfolio/static/media/whatsapp.1dd8ca2765f1f177ab22.png",
-    "static/media/linkedin.png": "/portfolio/static/media/linkedin.6892b3ae328c7a1e055f.png",
-    "static/media/facebook.png": "/portfolio/static/media/facebook.4f037d961598aff2a0a4.png",
-    "index.html": "/portfolio/index.html",
-    "static/media/js.svg": "/portfolio/static/media/js.77d2418c7da542646dca4a350d83bcf9.svg",
-    "static/media/css.svg": "/portfolio/static/media/css.455a790e501b91d72a5a0910a5af68d7.svg",
-    "static/media/html.svg": "/portfolio/static/media/html.4f651a70911b5a7c512d900acddcdd22.svg",
-    "main.020931a8.css.map": "/portfolio/static/css/main.020931a8.css.map",
-    "main.929d61f1.js.map": "/portfolio/static/js/main.929d61f1.js.map",
-    "488.9561f9b8.chunk.js.map": "/portfolio/static/js/488.9561f9b8.chunk.js.map"
+    "main.css": "/matheusmorante.io/static/css/main.42a89c60.css",
+    "main.js": "/matheusmorante.io/static/js/main.8a52d3ab.js",
+    "static/js/488.9561f9b8.chunk.js": "/matheusmorante.io/static/js/488.9561f9b8.chunk.js",
+    "static/media/calculadora.png": "/matheusmorante.io/static/media/calculadora.a3f199112ec4d7c09bf6.png",
+    "static/media/cronometro.png": "/matheusmorante.io/static/media/cronometro.026e254960b065e7dea5.png",
+    "static/media/perfil.jpg": "/matheusmorante.io/static/media/perfil.ecfa4a47aacaf58ba2b4.jpg",
+    "static/media/listadetarefa.png": "/matheusmorante.io/static/media/listadetarefa.17c67a7d8fc010545bdd.png",
+    "static/media/whatsapp.png": "/matheusmorante.io/static/media/whatsapp.1dd8ca2765f1f177ab22.png",
+    "static/media/linkedin.png": "/matheusmorante.io/static/media/linkedin.6892b3ae328c7a1e055f.png",
+    "static/media/facebook.png": "/matheusmorante.io/static/media/facebook.4f037d961598aff2a0a4.png",
+    "index.html": "/matheusmorante.io/index.html",
+    "static/media/js.svg": "/matheusmorante.io/static/media/js.77d2418c7da542646dca4a350d83bcf9.svg",
+    "static/media/css.svg": "/matheusmorante.io/static/media/css.455a790e501b91d72a5a0910a5af68d7.svg",
+    "static/media/html.svg": "/matheusmorante.io/static/media/html.4f651a70911b5a7c512d900acddcdd22.svg",
+    "main.42a89c60.css.map": "/matheusmorante.io/static/css/main.42a89c60.css.map",
+    "main.8a52d3ab.js.map": "/matheusmorante.io/static/js/main.8a52d3ab.js.map",
+    "488.9561f9b8.chunk.js.map": "/matheusmorante.io/static/js/488.9561f9b8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.020931a8.css",
-    "static/js/main.929d61f1.js"
+    "static/css/main.42a89c60.css",
+    "static/js/main.8a52d3ab.js"
   ]
 }
