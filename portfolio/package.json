@@ -17,7 +17,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "homepage": "https://matheusmorante.github.io/matheusmorante.io",
+  "homepage": "https://matheusmorante.github.io/portfolio",
   "eslintConfig": {
     "extends": [
       "react-app",
