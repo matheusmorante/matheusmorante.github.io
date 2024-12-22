@@ -511,15 +511,12 @@ section>h1,
         padding: 20px;
     }
     #skills-container {
+        width: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 40px;
     }
-    .skills {
-        display: block;
-        margin-bottom: 40px;
-        width: 100%;
-        gap: 40px;
+    .skill {
         align-items: center;
     }
 

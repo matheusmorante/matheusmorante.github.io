@@ -6,9 +6,12 @@ import facebookImg from '../assets/images/facebook.png';
 import htmlImg from '../assets/images/programation_language_icons/html.svg';
 import cssImg from '../assets/images/programation_language_icons/css.svg';
 import jsImg from '../assets/images/programation_language_icons/js.svg';
+import reactImg from '../assets/images/programation_language_icons/react.svg';
+import expressImg from '../assets/images/programation_language_icons/express.svg';
+import nodeImg from '../assets/images/programation_language_icons/node.svg';
 
 export default function Home() {
-    
+
     return (
         <>
             <section id="home">
@@ -48,23 +51,30 @@ export default function Home() {
             <section id="skills-section">
                 <h1>Habilidades</h1>
                 <div id="skills-container">
-                    {[
-                        { title: 'HTML', percentage: 70 },
-                        { title: 'CSS', percentage: 70 },
-                        { title: 'Javascript', percentage: 70 },
-                        { title: 'React', percentage: 50 },
-                        { title: 'Express.js', percentage: 50 },
-                    ].map((skill) => (
-                        <div key={skill.title} className="skills">
-                            <div className="skill-headers">
-                                <div className="title">{skill.title}</div>
-                                <div>{skill.percentage}%</div>
-                            </div>
-                            <div className="progress" role="progressbar">
-                                <div className="progress-bar" style={{ width: `${skill.percentage}%` }}></div>
-                            </div>
+                   
+
+                        <div className='skill'>
+                            <img src={htmlImg} alt="HTML" />
+                            <p>HTML5</p>
                         </div>
-                    ))}
+
+                        <div>
+                            <img src={jsImg} alt="js" />
+                            <p>JS</p>
+                        </div>
+                        <div>
+                            <img src={reactImg} alt="React.js" />
+                            <p>React.js</p>
+                        </div>
+
+                        <div>
+                            <img src={expressImg} alt="Express.js" />
+                            <p>Express.js</p>
+                        </div>
+                        <div>
+                            <img src={nodeImg} alt="Node.js" />
+                            <p>Node.js</p>
+                        </div>
                 </div>
             </section>
 
