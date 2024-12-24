@@ -1,5 +1,5 @@
 import Home from './components/Home';
-import './assets/css/styles.css';
+import './assets/css/style.css';
 import Header from './components/Header';
 
 function App() {

@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "react": "^19.0.0"
+    "react": "^19.0.0",
+    "sass": "^1.83.0",
+    "scss": "^0.2.4"
   }
 }

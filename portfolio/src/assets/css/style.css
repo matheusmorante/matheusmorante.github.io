@@ -1,0 +1,370 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+header {
+  background-color: rgb(34, 34, 34);
+  font-family: "Roboto", sans-serif, "Ubuntu", sans-serif;
+}
+
+body {
+  padding: 100px 10%;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 0 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  width: 300px;
+}
+
+header,
+#home,
+#img-perfil,
+section > h1,
+#cv,
+#skills-section,
+#skills-container,
+#projects-container .projects,
+#project-modal,
+.project-modal-on,
+.project-btns-container,
+#contacts div a {
+  display: flex;
+}
+
+#skills-section {
+  flex-direction: column;
+}
+
+body,
+a,
+.progress,
+.project-btns-container button {
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+#menu,
+#menu ul,
+#overlay {
+  padding: 0;
+}
+
+#menu li {
+  list-style: none;
+  border-bottom: 1px solid rgb(34, 34, 34);
+  transition: 0.5s;
+}
+
+#menu li:hover {
+  border-bottom: 1px solid #32ABFF;
+}
+
+header,
+#about-me-section,
+#skills-section,
+.projects {
+  align-items: center;
+}
+
+section > h1,
+#cv,
+.projects {
+  justify-content: center;
+}
+
+#about-me-section,
+#skills-container,
+.projects {
+  text-align: center;
+}
+
+section > h1,
+#heading {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.apresentation-strings {
+  color: #32ABFF;
+}
+
+#cv {
+  border: 1px solid #32ABFF;
+  border-radius: 10px;
+  font-weight: bolder;
+  cursor: pointer;
+  transition: 300ms;
+}
+
+#cv:hover,
+.progressbar {
+  background-color: #32ABFF;
+}
+
+#img-perfil {
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.project-btns-container button,
+.project-btns-container,
+.projects {
+  width: 100%;
+}
+
+.projects {
+  position: relative;
+  padding-bottom: 50%;
+  transition: 0.5s;
+  background-size: cover;
+  background-position: center;
+}
+
+.projects div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.projects:hover {
+  transition: 0.5s;
+  transform: scale(1.05);
+}
+
+#calculator-project {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/project_card_background/calculadora.png");
+}
+
+#timer-project {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/project_card_background/cronometro.png");
+}
+
+#to-do-list-project {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/project_card_background/listadetarefa.png");
+}
+
+.project-btns-container {
+  position: absolute;
+  bottom: 0px;
+}
+
+#contacts div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+#contacts div a {
+  justify-content: space-evenly;
+}
+
+.project-modal-overlay-bg {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.928);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 3;
+}
+
+#project-modal {
+  flex-direction: column;
+  transition: 0, 5s ease-in;
+  position: fixed;
+  font-size: 18px;
+  margin: 0 auto;
+  top: 50%;
+  background-color: rgb(34, 34, 34);
+  transform: translatey(-50%);
+  z-index: 6;
+}
+
+#test-project-a {
+  background-color: rgb(0, 18, 219);
+}
+
+#test-project-a:hover {
+  background-color: rgb(4, 17, 163);
+}
+
+#see-code-a {
+  background-color: #035114;
+}
+
+.see-code:hover {
+  background-color: #099227;
+}
+
+.hidden {
+  display: none;
+}
+
+.overflowHidden {
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  body > * {
+    font-size: 16px;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 18px;
+  }
+  #menu-btn {
+    font-size: 30px;
+  }
+  .open-menu-overlay-bg {
+    padding: 0;
+    position: fixed;
+    background-color: rgb(35, 35, 35);
+    width: 100%;
+    height: 100%;
+    top: 40px;
+    z-index: 1;
+  }
+  #menu-list {
+    transition: 0, 5s ease-in;
+    display: block;
+    position: fixed;
+    margin: 0 auto;
+    z-index: 3;
+  }
+  #menu-list li {
+    text-align: center;
+    margin-top: 50px;
+  }
+  #menu-list li a {
+    font-weight: bolder;
+  }
+  #img-perfil {
+    width: 120px;
+  }
+  section > h1 {
+    font-size: 30px;
+    margin: 30px 0;
+  }
+  #heading {
+    font-size: 38px;
+    letter-spacing: 3px;
+    font-weight: 500;
+  }
+  #description {
+    margin: 20px 0;
+  }
+  #cv {
+    padding: 10px;
+    font-size: 20px;
+  }
+  .skills {
+    display: block;
+    margin-bottom: 40px;
+    gap: 40px;
+  }
+  .skill-headers {
+    margin-bottom: 10px;
+  }
+  .skills h2 {
+    margin-top: 10px;
+  }
+  .progress {
+    height: 25px;
+  }
+  .projects {
+    margin-bottom: 10px;
+  }
+  #project-modal {
+    padding: 10px;
+  }
+  #project-modal img {
+    display: none;
+  }
+  #contacts div img {
+    width: 80px;
+  }
+}
+@media (min-width: 1024px) {
+  body {
+    font-size: 18px;
+  }
+  #menu-icon {
+    display: none;
+  }
+  section > h1 {
+    font-size: 45px;
+    margin: 60px 0;
+  }
+  #home {
+    height: 90vh;
+    width: 35%;
+    margin: 0;
+  }
+  #heading {
+    font-size: 60px;
+    letter-spacing: 2px;
+    font-weight: 500;
+  }
+  #description {
+    margin: 30px 0;
+  }
+  #cv {
+    padding: 25px;
+    font-size: 30px;
+  }
+  #img-perfil {
+    width: 200px;
+  }
+  .image-border {
+    padding: 20px;
+  }
+  #skills-container {
+    width: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+  }
+  #skills-container img {
+    width: 80px;
+  }
+  .skill-headers {
+    margin-bottom: 10px;
+  }
+  .skills h2 {
+    margin-top: 10px;
+  }
+  .progress {
+    height: 25px;
+  }
+  #projects-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+  }
+  #project-modal img {
+    width: 900px;
+  }
+  #contacts div img {
+    width: 130px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

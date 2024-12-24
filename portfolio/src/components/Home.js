@@ -83,6 +83,10 @@ export default function Home() {
                             <img src={gitImg} alt="git" />
                             <p>Git</p>
                         </div>
+                        <div>
+                            <img src={gitImg} alt="git" />
+                            <p>Git</p>
+                        </div>
                 </div>
             </section>
 
