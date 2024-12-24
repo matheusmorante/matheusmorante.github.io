@@ -9,6 +9,7 @@ import jsImg from '../assets/images/programation_language_icons/js.svg';
 import reactImg from '../assets/images/programation_language_icons/react.svg';
 import expressImg from '../assets/images/programation_language_icons/express.svg';
 import nodeImg from '../assets/images/programation_language_icons/node.svg';
+import gitImg from '../assets/images/programation_language_icons/git.svg';
 
 export default function Home() {
 
@@ -54,10 +55,13 @@ export default function Home() {
                    
 
                         <div className='skill'>
-                            <img src={htmlImg} alt="HTML" />
+                            <img src={htmlImg} alt="HTML5" />
                             <p>HTML5</p>
                         </div>
-
+                        <div>
+                            <img src={cssImg} alt="CSS3" />
+                            <p>CSS3</p>
+                        </div>
                         <div>
                             <img src={jsImg} alt="js" />
                             <p>JS</p>
@@ -74,6 +78,10 @@ export default function Home() {
                         <div>
                             <img src={nodeImg} alt="Node.js" />
                             <p>Node.js</p>
+                        </div>
+                        <div>
+                            <img src={gitImg} alt="git" />
+                            <p>Git</p>
                         </div>
                 </div>
             </section>

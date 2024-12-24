@@ -19,12 +19,24 @@ header {
 /* Estilo para o corpo (body) da página */
 body {
     font-family: 'Roboto', sans-serif, 'Ubuntu', sans-serif;
-    padding: 10%;
+    padding: 100px 10%;
 }
 
 header {
     position: fixed;
+    width: 100%;
     top: 0;
+    left: 0;
+    padding: 0 10%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    width: 300px;
 }
 
 header,
@@ -32,8 +44,8 @@ header,
 #img-perfil,
 section>h1,
 #cv,
-.skills,
-.skill-headers,
+#skills-section,
+#skills-container,
 #projects-container .projects,
 .project-modal-on,
 .project-btns-container,
@@ -41,16 +53,15 @@ section>h1,
     display: flex;
 }
 
+#skills-section {
+    flex-direction: column;
+}
+
 body,
 a,
 .progress,
 .project-btns-container button {
     color: rgb(255, 255, 255);
-}
-
-header,
-.skill-headers {
-    justify-content: space-between;
 }
 
 /* Estilo para links (âncoras) */
@@ -78,9 +89,9 @@ a {
 }
 
 /* Estilo para a barra de menu (menu) */
-header,
+header
 #about-me-section,
-.skills,
+#skills-section,
 .projects {
     align-items: center;
 }
@@ -92,6 +103,7 @@ section>h1,
 }
 
 #about-me-section,
+#skills-container,
 .projects {
     text-align: center;
 }
@@ -417,7 +429,7 @@ section>h1,
     }
 
     .skills {
-        display: block;
+
         margin-bottom: 40px;
         width: 100%;
         gap: 40px;
@@ -467,7 +479,7 @@ section>h1,
         font-size: 18px;
 
     }
-
+    
     /* Oculta o ícone do menu */
     #menu-icon {
         display: none;
@@ -511,15 +523,16 @@ section>h1,
         padding: 20px;
     }
     #skills-container {
-        width: 100%;
+        width: 500px;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         gap: 40px;
     }
-    .skill {
-        align-items: center;
-    }
 
+    #skills-container img {
+        width: 80px;
+    }
+  
     .skill-headers {
         margin-bottom: 10px;
     }
