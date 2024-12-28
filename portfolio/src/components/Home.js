@@ -3,62 +3,12 @@ import perfilImg from '../assets/images/perfil.jpg';
 import linkedinImg from '../assets/images/linkedin.png';
 import whatsappImg from '../assets/images/whatsapp.png';
 import facebookImg from '../assets/images/facebook.png';
-import htmlImg from '../assets/images/programation_language_icons/html.svg';
-import cssImg from '../assets/images/programation_language_icons/css.svg';
-import jsImg from '../assets/images/programation_language_icons/js.svg';
-import reactImg from '../assets/images/programation_language_icons/react.svg';
-import expressImg from '../assets/images/programation_language_icons/express.svg';
-import nodeImg from '../assets/images/programation_language_icons/node.svg';
-import gitImg from '../assets/images/programation_language_icons/git.svg';
-import todolistImg from '../assets/images/project_card_background/listadetarefa.png';
-import calculatorImg from '../assets/images/project_card_background/calculadora.png';
-import timerImg from '../assets/images/project_card_background/cronometro.png';
-import SkillCard from './SkillCard';
-import ProjectCard from './ProjectCard';
+import Projects from './Projects';
+import Skills from './Skills';
+
 
 export default function Home() {
-    const skills = [
-        { name: 'HTML5', img: htmlImg },
-        { name: 'CSS3', img: cssImg },
-        { name: 'JavaScript', img: jsImg },
-        { name: 'React.js', img: reactImg },
-        { name: 'Express.js', img: expressImg },
-        { name: 'Node.js', img: nodeImg },
-        { name: 'Git', img: gitImg },
-    ];
-
-    const projects = [
-        { 
-            id: 'calculator', 
-            title: 'Calculadora', 
-            img: calculatorImg, 
-            languages: [
-                {name: 'HTML', img: htmlImg},
-                {name: 'CSS', img: cssImg},
-                {name: 'JS', img: jsImg},
-            ]
-        },
-        { 
-            id: 'timer', 
-            title: 'Cronômetro', 
-            img: timerImg, 
-            languages: [
-                {name: 'HTML', img: htmlImg},
-                {name: 'CSS', img: cssImg},
-                {name: 'JS', img: jsImg},
-            ]
-        },
-        { 
-            id: 'to-do-list', 
-            title: 'Lista de Tarefas', 
-            img: todolistImg, 
-            languages: [
-                {name: 'HTML', img: htmlImg},
-                {name: 'CSS', img: cssImg},
-                {name: 'JS', img: jsImg},
-            ]
-        }
-    ];
+   
 
     return (
         <>
@@ -91,23 +41,9 @@ export default function Home() {
                 </p>
             </section>
 
-            <section id="skills-section">
-                <h1>Habilidades</h1>
-                <div id="skills-container">
-                    {skills.map((skill) => (
-                        <SkillCard key={skill.name} skill={skill} />
-                    ))}
-                </div>
-            </section>
+            <Skills />
 
-            <section id="projects-section">
-                <h1>Projetos</h1>
-                <div id="projects-container">
-                    {projects.map((project) => (
-                        <ProjectCard key={project.id} project={project} />
-                    ))}
-                </div>
-            </section>
+            <Projects />
 
             <section id="contacts">
                 <h1>Contato</h1>

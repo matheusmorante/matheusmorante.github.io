@@ -75,6 +75,11 @@ header,
 #skills-section,
 .project {
   align-items: center;
+  text-align: center;
+}
+
+#heading {
+  margin-top: 75px;
 }
 
 section > h1,
@@ -99,9 +104,7 @@ section > h1,
   cursor: pointer;
   transition: 300ms;
 }
-
-#cv:hover,
-.progressbar {
+#cv:hover {
   background-color: #32ABFF;
 }
 
@@ -119,7 +122,6 @@ section > h1,
 .project {
   position: relative;
   width: 600px;
-  /* Defina o tamanho desejado */
   height: 400px;
 }
 
@@ -136,7 +138,6 @@ section > h1,
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  /* Centraliza o texto */
 }
 
 .project:hover {
@@ -156,28 +157,6 @@ section > h1,
 
 #contacts div a {
   justify-content: space-evenly;
-}
-
-.project-modal-overlay-bg {
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.928);
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  z-index: 3;
-}
-
-#project-modal {
-  flex-direction: column;
-  transition: 0, 5s ease-in;
-  position: fixed;
-  font-size: 18px;
-  margin: 0 auto;
-  top: 50%;
-  background-color: rgb(34, 34, 34);
-  transform: translatey(-50%);
-  z-index: 6;
 }
 
 #test-project-a {
@@ -263,11 +242,7 @@ section > h1,
   }
   .skills {
     display: block;
-    margin-bottom: 40px;
     gap: 40px;
-  }
-  .skill-headers {
-    margin-bottom: 10px;
   }
   #skills-container {
     display: grid;
