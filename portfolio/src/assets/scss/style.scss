@@ -25,6 +25,7 @@ header {
   left: 0;
   position: fixed;
   z-index: 1000;
+
   ul {
     list-style: none;
     gap: 15px;
@@ -32,7 +33,6 @@ header {
   }
 }
 
-// Define elementos que devem ser exibidos como flexbox
 @mixin flex-container {
   display: flex;
 }
@@ -62,7 +62,6 @@ a,
 .progress,
 .project-btns-container button {
   color: $secondary-color;
-  ;
 }
 
 // Estilos para links (âncoras)
@@ -80,16 +79,16 @@ a {
   list-style: none;
   border-bottom: 1px solid $bg-color;
   transition: 0.5s;
-}
 
-// Define a cor de fundo ao passar o mouse sobre itens do menu
-#menu li:hover {
-  border-bottom: 1px solid $primary-color;
+  &:hover {
+    border-bottom: 1px solid $primary-color;
+  }
 }
 
 // Estilos para a barra de menu (menu)
 header,
 #about-me-section,
+#skills-container,
 #skills-section,
 .project {
   align-items: center;
@@ -99,12 +98,6 @@ section>h1,
 #cv,
 .project {
   justify-content: center;
-}
-
-#about-me-section,
-#skills-container,
-.project {
-  text-align: center;
 }
 
 section>h1,
@@ -173,7 +166,7 @@ section>h1,
 
 .project-btns-container {
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
 }
 
 // Estilos para o contêiner de informações de contato (contacts)
@@ -253,41 +246,33 @@ section>h1,
   }
 
   .overlay {
+    justify-content: center;
     position: fixed;
-    background-color: rgb(35, 35, 35);
+    background-color: rgb(37, 37, 37);
     width: 100%;
     height: 100%;
-    align-items: center;
-    justify-content: center;
     top: 50;
     left: 0;
-
   }
 
   // Estilos para o menu quando a tela é pequena
   .menu-list {
     position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 3;
-    transition: 0, 5s ease-in;
-    margin: 0 auto;
+    justify-content: center;
+    transition: 0.5s;
     display: block;
-
+    padding: 0;
+    li {
+      text-align: center;
+      margin-top: 50px;
+      a {
+        font-weight: bolder;
+      }
+    }
   }
 
-  // Ajusta o preenchimento para itens de lista (li) dentro do menu
-  .menu-list li {
-    text-align: center;
-    margin-top: 50px;
-  }
-
-  // Ajusta o peso da fonte e a cor dos links dentro do menu
-  .menu-list li a {
-    font-weight: bolder;
-  }
-
-  #presentation, #img-perfil {
+  .menu-list li #presentation,
+  #img-perfil {
     margin-top: 50px;
   }
 

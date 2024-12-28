@@ -65,13 +65,13 @@ a {
   border-bottom: 1px solid rgb(34, 34, 34);
   transition: 0.5s;
 }
-
 #menu li:hover {
   border-bottom: 1px solid #32ABFF;
 }
 
 header,
 #about-me-section,
+#skills-container,
 #skills-section,
 .project {
   align-items: center;
@@ -81,12 +81,6 @@ section > h1,
 #cv,
 .project {
   justify-content: center;
-}
-
-#about-me-section,
-#skills-container,
-.project {
-  text-align: center;
 }
 
 section > h1,
@@ -152,7 +146,7 @@ section > h1,
 
 .project-btns-container {
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
 }
 
 #contacts div {
@@ -222,23 +216,20 @@ section > h1,
     display: flex;
   }
   .overlay {
+    justify-content: center;
     position: fixed;
-    background-color: rgb(35, 35, 35);
+    background-color: rgb(37, 37, 37);
     width: 100%;
     height: 100%;
-    align-items: center;
-    justify-content: center;
     top: 50;
     left: 0;
   }
   .menu-list {
     position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 3;
-    transition: 0, 5s ease-in;
-    margin: 0 auto;
+    justify-content: center;
+    transition: 0.5s;
     display: block;
+    padding: 0;
   }
   .menu-list li {
     text-align: center;
@@ -247,7 +238,8 @@ section > h1,
   .menu-list li a {
     font-weight: bolder;
   }
-  #presentation, #img-perfil {
+  .menu-list li #presentation,
+  #img-perfil {
     margin-top: 50px;
   }
   #img-perfil {
