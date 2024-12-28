@@ -10,36 +10,28 @@ header {
   font-family: "Roboto", sans-serif, "Ubuntu", sans-serif;
 }
 
-body {
-  padding: 100px 10%;
-}
-
 header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  padding: 0 10%;
-  display: flex;
   justify-content: space-between;
-  align-items: center;
+  width: 100%;
+  left: 0;
+  position: fixed;
+  z-index: 1000;
 }
-
 header ul {
   list-style: none;
-  display: flex;
   gap: 15px;
   width: 300px;
 }
 
 header,
+header ul,
 #home,
 #img-perfil,
 section > h1,
 #cv,
 #skills-section,
 #skills-container,
-#projects-container .projects,
+#projects-container .project,
 #project-modal,
 .project-modal-on,
 .project-btns-container,
@@ -81,19 +73,19 @@ a {
 header,
 #about-me-section,
 #skills-section,
-.projects {
+.project {
   align-items: center;
 }
 
 section > h1,
 #cv,
-.projects {
+.project {
   justify-content: center;
 }
 
 #about-me-section,
 #skills-container,
-.projects {
+.project {
   text-align: center;
 }
 
@@ -126,40 +118,36 @@ section > h1,
 
 .project-btns-container button,
 .project-btns-container,
-.projects {
+.project {
   width: 100%;
 }
 
-.projects {
+.project {
   position: relative;
-  padding-bottom: 50%;
-  transition: 0.5s;
-  background-size: cover;
-  background-position: center;
+  width: 600px;
+  /* Defina o tamanho desejado */
+  height: 400px;
 }
 
-.projects div {
+.background-project {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  image-rendering: crisp-edges;
+}
+
+.project div {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
+  /* Centraliza o texto */
 }
 
-.projects:hover {
+.project:hover {
   transition: 0.5s;
   transform: scale(1.05);
-}
-
-#calculator-project {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/project_card_background/calculadora.png");
-}
-
-#timer-project {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/project_card_background/cronometro.png");
-}
-
-#to-do-list-project {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/project_card_background/listadetarefa.png");
 }
 
 .project-btns-container {
@@ -214,17 +202,13 @@ section > h1,
   background-color: #099227;
 }
 
-.hidden {
-  display: none;
-}
-
-.overflowHidden {
-  overflow: hidden;
-}
-
 @media (max-width: 767px) {
   body > * {
     font-size: 16px;
+    padding: 0 10px;
+  }
+  header {
+    padding: 0 10px;
   }
   header h1 {
     margin: 0;
@@ -233,28 +217,38 @@ section > h1,
   #menu-btn {
     font-size: 30px;
   }
-  .open-menu-overlay-bg {
-    padding: 0;
+  .overlay,
+  #projects-container {
+    display: flex;
+  }
+  .overlay {
     position: fixed;
     background-color: rgb(35, 35, 35);
     width: 100%;
     height: 100%;
-    top: 40px;
-    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    top: 50;
+    left: 0;
   }
-  #menu-list {
-    transition: 0, 5s ease-in;
-    display: block;
-    position: fixed;
-    margin: 0 auto;
+  .menu-list {
+    position: absolute;
+    left: 0;
+    top: 0;
     z-index: 3;
+    transition: 0, 5s ease-in;
+    margin: 0 auto;
+    display: block;
   }
-  #menu-list li {
+  .menu-list li {
     text-align: center;
     margin-top: 50px;
   }
-  #menu-list li a {
+  .menu-list li a {
     font-weight: bolder;
+  }
+  #presentation, #img-perfil {
+    margin-top: 50px;
   }
   #img-perfil {
     width: 120px;
@@ -283,14 +277,30 @@ section > h1,
   .skill-headers {
     margin-bottom: 10px;
   }
+  #skills-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+  }
   .skills h2 {
     margin-top: 10px;
   }
   .progress {
     height: 25px;
   }
-  .projects {
+  .project {
     margin-bottom: 10px;
+    width: 100%;
+    height: 50%;
+  }
+  .project .background-project {
+    filter: brightness(0.4);
+  }
+  .project .program-lang-img {
+    width: 40px;
+  }
+  #projects-container {
+    flex-wrap: wrap;
   }
   #project-modal {
     padding: 10px;
@@ -301,12 +311,15 @@ section > h1,
   #contacts div img {
     width: 80px;
   }
+  .hidden {
+    display: none;
+  }
 }
 @media (min-width: 1024px) {
   body {
     font-size: 18px;
   }
-  #menu-icon {
+  #menu-btn {
     display: none;
   }
   section > h1 {

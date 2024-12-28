@@ -1,28 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-export default function header() {
+export default function Header() {
+    const [menuOpen, setMenuOpen] = useState(false);
 
-    function toogle(){
-        const menuList = document.querySelector('#menu-list');
-        menuList.classList.toggle('hidden')
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    };
 
-
-    }
     return (
-        <>
-            <header>
-                <h1>Portfólio</h1>
-                <nav>
-                    <i id="menu-btn" onClick={toogle} class="bi bi-list" alt="botão de menu de navegação"></i>
+        <header>
+            <h1>Portfólio</h1>
+            <nav>
+                <i
+                    id="menu-btn"
+                    onClick={toggleMenu}
+                    className={`bi bi-list ${menuOpen ? 'active' : ''}`}
+                    aria-label="botão de menu de navegação"
+                ></i>
 
-                    <ul id='menu-list'>
-                        <li><a href="#"  target="_blank" rel="noopener noreferrer">Inicio</a></li>
-                        <li><a href="#"  target="_blank" rel="noopener noreferrer">Habilidades</a></li>
-                        <li><a href="#" target="_blank" rel="noopener noreferrer">Contato</a></li>
-
-                    </ul>
-                </nav>
-            </header>
-        </>
-    )
+                {menuOpen && (
+                    <div id="overlay" className="overlay">
+                        <ul id="menu-list" className="menu-list">
+                            <li>
+                                <a onClick={toggleMenu} href="#home">Inicio</a>
+                            </li>
+                            <li>
+                                <a onClick={toggleMenu} href="#skills-section">Habilidades</a>
+                            </li>
+                            <li>
+                                <a onClick={toggleMenu} href="#contact">Contato</a>
+                            </li>
+                        </ul>
+                    </div>
+                )}
+            </nav>
+        </header>
+    );
 }

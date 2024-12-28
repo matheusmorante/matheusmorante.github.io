@@ -19,27 +19,17 @@ header {
   font-family: 'Roboto', sans-serif, 'Ubuntu', sans-serif;
 }
 
-// Estilos para o corpo da página
-body {
-  padding: 100px 10%;
-}
-
 header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  padding: 0 10%;
-  display: flex;
   justify-content: space-between;
-  align-items: center;
-}
-
-header ul {
-  list-style: none;
-  display: flex;
-  gap: 15px;
-  width: 300px;
+  width: 100%;
+  left: 0;
+  position: fixed;
+  z-index: 1000;
+  ul {
+    list-style: none;
+    gap: 15px;
+    width: 300px;
+  }
 }
 
 // Define elementos que devem ser exibidos como flexbox
@@ -48,13 +38,14 @@ header ul {
 }
 
 header,
+header ul,
 #home,
 #img-perfil,
-section > h1,
+section>h1,
 #cv,
 #skills-section,
 #skills-container,
-#projects-container .projects,
+#projects-container .project,
 #project-modal,
 .project-modal-on,
 .project-btns-container,
@@ -70,7 +61,8 @@ body,
 a,
 .progress,
 .project-btns-container button {
-  color: $secondary-color;;
+  color: $secondary-color;
+  ;
 }
 
 // Estilos para links (âncoras)
@@ -99,23 +91,23 @@ a {
 header,
 #about-me-section,
 #skills-section,
-.projects {
+.project {
   align-items: center;
 }
 
-section > h1,
+section>h1,
 #cv,
-.projects {
+.project {
   justify-content: center;
 }
 
 #about-me-section,
 #skills-container,
-.projects {
+.project {
   text-align: center;
 }
 
-section > h1,
+section>h1,
 #heading {
   font-family: 'Ubuntu', sans-serif;
 }
@@ -146,44 +138,37 @@ section > h1,
 
 .project-btns-container button,
 .project-btns-container,
-.projects {
+.project {
   width: 100%;
 }
 
-.projects {
+.project {
   position: relative;
-  padding-bottom: 50%;
-  transition: 0.5s;
-  background-size: cover;
-  background-position: center;
+
+  width: 600px;
+  /* Defina o tamanho desejado */
+  height: 400px;
 }
 
-.projects div {
+.background-project {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  image-rendering: crisp-edges;
+}
+
+.project div {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
+  /* Centraliza o texto */
 }
 
-.projects:hover {
+.project:hover {
   transition: 0.5s;
   transform: scale(1.05);
-}
-
-@function project-background($image) {
-  @return linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/project_card_background/#{$image}');
-}
-
-#calculator-project {
-  background-image: project-background('calculadora.png');
-}
-
-#timer-project {
-  background-image: project-background('cronometro.png');
-}
-
-#to-do-list-project {
-  background-image: project-background('listadetarefa.png');
 }
 
 .project-btns-container {
@@ -240,211 +225,247 @@ section > h1,
   background-color: #099227;
 }
 
-.hidden {
-  display: none;
-}
-
-.overflowHidden {
-  overflow: hidden;
-}
-
-  // Media query para estilos responsivos em telas com largura máxima de 767px
+// Media query para estilos responsivos em telas com largura máxima de 767px
 @media (max-width: 767px) {
-    // Ajusta o tamanho da fonte e o preenchimento para todos os elementos filhos diretos do corpo
-    body > * {
-      font-size: 16px;
-    }
-  
-    header h1 {
+
+  // Ajusta o tamanho da fonte e o preenchimento para todos os elementos filhos diretos do corpo
+  body>* {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  header {
+    padding: 0 10px;
+    h1 {
       margin: 0;
       font-size: 18px;
     }
-  
-    // Define o tamanho do ícone do menu
-    #menu-btn {
-      font-size: 30px;
+  }
+
+  // Define o tamanho do ícone do menu
+  #menu-btn {
+    font-size: 30px;
+  }
+
+  .overlay,
+  #projects-container {
+    @include flex-container();
+  }
+
+  .overlay {
+    position: fixed;
+    background-color: rgb(35, 35, 35);
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    top: 50;
+    left: 0;
+
+  }
+
+  // Estilos para o menu quando a tela é pequena
+  .menu-list {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    transition: 0, 5s ease-in;
+    margin: 0 auto;
+    display: block;
+
+  }
+
+  // Ajusta o preenchimento para itens de lista (li) dentro do menu
+  .menu-list li {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  // Ajusta o peso da fonte e a cor dos links dentro do menu
+  .menu-list li a {
+    font-weight: bolder;
+  }
+
+  #presentation, #img-perfil {
+    margin-top: 50px;
+  }
+
+  // Ajusta o estilo da imagem de perfil
+  #img-perfil {
+    width: 120px;
+  }
+
+  section>h1 {
+    font-size: 30px;
+    margin: 30px 0;
+  }
+
+  #heading {
+    font-size: 38px;
+    letter-spacing: 3px;
+    font-weight: 500;
+  }
+
+  #description {
+    margin: 20px 0;
+  }
+
+  // Ajusta o preenchimento, o tamanho da fonte e o alinhamento para o botão de currículo (cv)
+  #cv {
+    padding: 10px;
+    font-size: 20px;
+  }
+
+  .skills {
+    display: block;
+    margin-bottom: 40px;
+    gap: 40px;
+  }
+
+  .skill-headers {
+    margin-bottom: 10px;
+  }
+
+  #skills-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px
+  }
+
+  .skills h2 {
+    margin-top: 10px;
+  }
+
+  .progress {
+    height: 25px;
+  }
+
+  .project {
+    margin-bottom: 10px;
+    width: 100%;
+    height: 50%;
+
+    .background-project {
+      filter: brightness(0.4);
     }
-  
-    .open-menu-overlay-bg {
-      padding: 0;
-      position: fixed;
-      background-color: rgb(35, 35, 35);
-      width: 100%;
-      height: 100%;
-      top: 40px;
-      z-index: 1;
-    }
-  
-    // Estilos para o menu quando a tela é pequena
-    #menu-list {
-      transition: 0, 5s ease-in;
-      display: block;
-      position: fixed;
-    
-      margin: 0 auto;
-      z-index: 3;
-    }
-  
-    // Ajusta o preenchimento para itens de lista (li) dentro do menu
-    #menu-list li {
-      text-align: center;
-      margin-top: 50px;
-    }
-  
-    // Ajusta o peso da fonte e a cor dos links dentro do menu
-    #menu-list li a {
-      font-weight: bolder;
-    }
-  
-    // Ajusta o estilo da imagem de perfil
-    #img-perfil {
-      width: 120px;
-    }
-  
-    section > h1 {
-      font-size: 30px;
-      margin: 30px 0;
-    }
-  
-    #heading {
-      font-size: 38px;
-      letter-spacing: 3px;
-      font-weight: 500;
-    }
-  
-    #description {
-      margin: 20px 0;
-    }
-  
-    // Ajusta o preenchimento, o tamanho da fonte e o alinhamento para o botão de currículo (cv)
-    #cv {
-      padding: 10px;
-      font-size: 20px;
-    }
-  
-    .skills {
-      display: block;
-      margin-bottom: 40px;
-      gap: 40px;
-    }
-  
-    .skill-headers {
-      margin-bottom: 10px;
-    }
-  
-    .skills h2 {
-      margin-top: 10px;
-    }
-  
-    .progress {
-      height: 25px;
-    }
-  
-    .projects {
-      margin-bottom: 10px;
-    }
-  
-    #project-modal {
-      padding: 10px;
-    }
-  
-    #project-modal img {
-      display: none;
-    }
-  
-    // Ajusta o tamanho da imagem dentro do contêiner de informações de contato
-    #contacts div img {
-      width: 80px;
+
+    .program-lang-img {
+      width: 40px;
     }
   }
-  
-  
-  
-  // Media query para telas com largura mínima de 1200px
+
+
+  #projects-container {
+    flex-wrap: wrap;
+  }
+
+  #project-modal {
+    padding: 10px;
+  }
+
+  #project-modal img {
+    display: none;
+  }
+
+  // Ajusta o tamanho da imagem dentro do contêiner de informações de contato
+  #contacts div img {
+    width: 80px;
+  }
+
+  .hidden {
+    display: none;
+  }
+}
+
+
+
+// Media query para telas com largura mínima de 1200px
 @media (min-width: 1024px) {
-    // Ajusta o tamanho da fonte para o corpo
-    body {
-      font-size: 18px;
-    }
-  
-    // Oculta o ícone do menu
-    #menu-icon {
-      display: none;
-    }
-  
-    section > h1 {
-      font-size: 45px;
-      margin: 60px 0;
-    }
-  
-    // Configura a seção "home" para exibir seus elementos em uma coluna
-    #home {
-      height: 90vh;
-      width: 35%;
-      margin: 0;
-    }
-  
-    #heading {
-      font-size: 60px;
-      letter-spacing: 2px;
-      font-weight: 500;
-    }
-  
-    // Ajusta a margem para a descrição
-    #description {
-      margin: 30px 0;
-    }
-  
-    // Ajusta o preenchimento e o tamanho da fonte para o botão de currículo (cv)
-    #cv {
-      padding: 25px;
-      font-size: 30px;
-    }
-  
-    // Ajusta o estilo da imagem de perfil
-    #img-perfil {
-      width: 200px;
-    }
-  
-    .image-border {
-      padding: 20px;
-    }
-  
-    #skills-container {
-      width: 500px;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 40px;
-    }
-  
-    #skills-container img {
-      width: 80px;
-    }
-  
-    .skill-headers {
-      margin-bottom: 10px;
-    }
-  
-    .skills h2 {
-      margin-top: 10px;
-    }
-  
-    .progress {
-      height: 25px;
-    }
-  
-    #projects-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 30px;
-    }
-  
-    #project-modal img {
-      width: 900px;
-    }
-  
-    // Ajusta o tamanho da imagem dentro do contêiner de informações de contato
-    #contacts div img {
-      width: 130px;
-    }
+
+  // Ajusta o tamanho da fonte para o corpo
+  body {
+    font-size: 18px;
   }
+
+  // Oculta o ícone do menu
+  #menu-btn {
+    display: none;
+  }
+
+  section>h1 {
+    font-size: 45px;
+    margin: 60px 0;
+  }
+
+  // Configura a seção "home" para exibir seus elementos em uma coluna
+  #home {
+    height: 90vh;
+    width: 35%;
+    margin: 0;
+  }
+
+  #heading {
+    font-size: 60px;
+    letter-spacing: 2px;
+    font-weight: 500;
+  }
+
+  // Ajusta a margem para a descrição
+  #description {
+    margin: 30px 0;
+  }
+
+  // Ajusta o preenchimento e o tamanho da fonte para o botão de currículo (cv)
+  #cv {
+    padding: 25px;
+    font-size: 30px;
+  }
+
+  // Ajusta o estilo da imagem de perfil
+  #img-perfil {
+    width: 200px;
+  }
+
+  .image-border {
+    padding: 20px;
+  }
+
+  #skills-container {
+    width: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+  }
+
+  #skills-container img {
+    width: 80px;
+  }
+
+  .skill-headers {
+    margin-bottom: 10px;
+  }
+
+  .skills h2 {
+    margin-top: 10px;
+  }
+
+  .progress {
+    height: 25px;
+  }
+
+  #projects-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+  }
+
+  #project-modal img {
+    width: 900px;
+  }
+
+  // Ajusta o tamanho da imagem dentro do contêiner de informações de contato
+  #contacts div img {
+    width: 130px;
+  }
+}

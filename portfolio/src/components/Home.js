@@ -10,21 +10,66 @@ import reactImg from '../assets/images/programation_language_icons/react.svg';
 import expressImg from '../assets/images/programation_language_icons/express.svg';
 import nodeImg from '../assets/images/programation_language_icons/node.svg';
 import gitImg from '../assets/images/programation_language_icons/git.svg';
+import todolistImg from '../assets/images/project_card_background/listadetarefa.png';
+import calculatorImg from '../assets/images/project_card_background/calculadora.png';
+import timerImg from '../assets/images/project_card_background/cronometro.png';
+import SkillCard from './SkillCard';
+import ProjectCard from './ProjectCard';
 
 export default function Home() {
+    const skills = [
+        { name: 'HTML5', img: htmlImg },
+        { name: 'CSS3', img: cssImg },
+        { name: 'JavaScript', img: jsImg },
+        { name: 'React.js', img: reactImg },
+        { name: 'Express.js', img: expressImg },
+        { name: 'Node.js', img: nodeImg },
+        { name: 'Git', img: gitImg },
+    ];
+
+    const projects = [
+        { 
+            id: 'calculator', 
+            title: 'Calculadora', 
+            img: calculatorImg, 
+            languages: [
+                {name: 'HTML', img: htmlImg},
+                {name: 'CSS', img: cssImg},
+                {name: 'JS', img: jsImg},
+            ]
+        },
+        { 
+            id: 'timer', 
+            title: 'Cronômetro', 
+            img: timerImg, 
+            languages: [
+                {name: 'HTML', img: htmlImg},
+                {name: 'CSS', img: cssImg},
+                {name: 'JS', img: jsImg},
+            ]
+        },
+        { 
+            id: 'to-do-list', 
+            title: 'Lista de Tarefas', 
+            img: todolistImg, 
+            languages: [
+                {name: 'HTML', img: htmlImg},
+                {name: 'CSS', img: cssImg},
+                {name: 'JS', img: jsImg},
+            ]
+        }
+    ];
 
     return (
         <>
             <section id="home">
-                {/* Apresentação pessoal */}
                 <div id="presentation">
                     <div id="heading">
                         Olá, meu nome é <span className="apresentation-strings">Matheus Morante.</span>
                     </div>
                     <p id="description">
-                        Sou um estudante de programação se capacitando para se tornar um Desenvolvedor Full-Stack
+                        Sou um estudante de programação se capacitando para se tornar um Desenvolvedor Full-Stack.
                     </p>
-                    {/* Botão para baixar o currículo */}
                     <a
                         id="cv"
                         href="https://drive.google.com/file/d/1JgdsenjWsEzuyq4UCBcbFFYCREapuyw1/view?usp=sharing"
@@ -37,75 +82,29 @@ export default function Home() {
             </section>
 
             <section id="about-me-section">
-                {/* Imagem de perfil */}
                 <img src={perfilImg} id="img-perfil" alt="Perfil" />
                 <h1>Sobre mim</h1>
                 <p>
                     Sempre fui apaixonado pela liberdade que a tecnologia nos proporciona para resolver os mais diversos
                     problemas. Foi em 2022 que comecei a estudar a área e, desde então, tenho trabalhado continuamente para
-                    aprimorar minhas habilidades em programação. Estou entusiasmado em continuar aprendendo e crescendo em um
-                    campo que está em constante evolução, e estou em busca de minha primeira oportunidade de trabalho para
-                    aplicar e expandir meus conhecimentos.
+                    aprimorar minhas habilidades em programação.
                 </p>
             </section>
 
             <section id="skills-section">
                 <h1>Habilidades</h1>
                 <div id="skills-container">
-                   
-
-                        <div className='skill'>
-                            <img src={htmlImg} alt="HTML5" />
-                            <p>HTML5</p>
-                        </div>
-                        <div>
-                            <img src={cssImg} alt="CSS3" />
-                            <p>CSS3</p>
-                        </div>
-                        <div>
-                            <img src={jsImg} alt="js" />
-                            <p>JS</p>
-                        </div>
-                        <div>
-                            <img src={reactImg} alt="React.js" />
-                            <p>React.js</p>
-                        </div>
-
-                        <div>
-                            <img src={expressImg} alt="Express.js" />
-                            <p>Express.js</p>
-                        </div>
-                        <div>
-                            <img src={nodeImg} alt="Node.js" />
-                            <p>Node.js</p>
-                        </div>
-                        <div>
-                            <img src={gitImg} alt="git" />
-                            <p>Git</p>
-                        </div>
-                        <div>
-                            <img src={gitImg} alt="git" />
-                            <p>Git</p>
-                        </div>
+                    {skills.map((skill) => (
+                        <SkillCard key={skill.name} skill={skill} />
+                    ))}
                 </div>
             </section>
 
             <section id="projects-section">
                 <h1>Projetos</h1>
                 <div id="projects-container">
-                    {[
-                        { id: 'calculator', title: 'Calculadora' },
-                        { id: 'timer', title: 'Cronômetro' },
-                        { id: 'to-do-list', title: 'Lista de Tarefas' },
-                    ].map((project) => (
-                        <div key={project.id} id={`${project.id}-project`} className="projects">
-                            <div>
-                                <h1>{project.title}</h1>
-                                <img src={htmlImg} alt="HTML" />
-                                <img src={cssImg} alt="CSS" />
-                                <img src={jsImg} alt="JS" />
-                            </div>
-                        </div>
+                    {projects.map((project) => (
+                        <ProjectCard key={project.id} project={project} />
                     ))}
                 </div>
             </section>
