@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useContext} from 'react';
 import ProjectCard from './ProjectCard';
 import htmlImg from '../assets/images/programation_language_icons/html.svg';
 import cssImg from '../assets/images/programation_language_icons/css.svg';
@@ -7,18 +7,13 @@ import todolistImg from '../assets/images/project_card_background/listadetarefa.
 import calculatorImg from '../assets/images/project_card_background/calculadora.png';
 import timerImg from '../assets/images/project_card_background/cronometro.png';
 import ProjectDetails from './ProjectDetails';
+import { ProjectContext } from '../contexts/ProjectContext';
 
 
 export default function Projects() {
-    const [detailsDisplay, setDetailsDisplay] = useState(null);
-
-    const toggleDetailsDisplay = (id) => {
-        setDetailsDisplay(detailsDisplay === id);
-    }
-
+    const { detailsDisplay, toggleDetailsDisplay } = useContext(ProjectContext);
     const projects = [
         {
-            id: 'calculator',
             title: 'Calculadora',
             img: calculatorImg,
             languages: [
@@ -26,10 +21,15 @@ export default function Projects() {
                 { name: 'CSS', img: cssImg },
                 { name: 'JS', img: jsImg },
             ],
-            description: ''
+            description: `Lorem 
+            ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pharetra eu velit sed hendrerit. Morbi nec eleifend nisl. Mauris sit amet commodo odio. Donec venenatis volutpat vehicula. Sed vestibulum arcu purus, non aliquet diam pretium vel. Nam sagittis pharetra maximus. Fusce sapien est, accumsan sollicitudin laoreet sit amet, varius sit amet quam. Proin libero nibh, blandit in elit eu, tempus accumsan velit. Aenean imperdiet non augue non tempor. Pellentesque non elit vitae libero vestibulum commodo ut eget arcu. Curabitur imperdiet, turpis vel imperdiet molestie, ligula lectus scelerisque orci, ut malesuada lectus neque sit amet nulla. 
+            Etiam eu ante quis ipsum rutrum pharetra nec non massa. 
+            Maecenas semper justo eros, in pretium odio cursus vel.
+             Aenean sagittis, erat facilisis porta condimentum, ex
+              tortor consequat est, vitae porta turpis lorem ut est.
+               Vestibulum at nunc id nibh blandit varius.`
         },
         {
-            id: 'timer',
             title: 'Cronômetro',
             img: timerImg,
             languages: [
@@ -40,7 +40,6 @@ export default function Projects() {
             description: ''
         },
         {
-            id: 'to-do-list',
             title: 'Lista de Tarefas',
             img: todolistImg,
             languages: [
@@ -55,15 +54,15 @@ export default function Projects() {
         <section id="projects-section">
             <h1>Projetos</h1>
             <div id="projects-container">
-                {projects.map(( project, index) => (
+                {projects.map((project, index) => (
                     <>
                         <ProjectCard 
                             key={index} 
                             project={project} 
-                            toggleDetailsDisplay={toggleDetailsDisplay}
+                            toggleDetailsDisplay={() => toggleDetailsDisplay(index)}
                         />
                         
-                        { detailsDisplay && 
+                        { detailsDisplay === index && 
                             <ProjectDetails key={index} project={project} />
                         }
                         
