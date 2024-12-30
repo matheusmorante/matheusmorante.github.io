@@ -4,10 +4,18 @@ export const ProjectContext = createContext();
 
 export const ProjectProvider = ({ children }) => {
     const [detailsDisplay, setDetailsDisplay] = useState(null);
+
     const toggleDetailsDisplay = (index) => {
         setDetailsDisplay(index);
-        document.body.classList.toggle('overflow-hidden')
-    }
+        
+            if (index === null) {
+                document.body.classList.add('overflow-hidden');
+            } else {
+                document.body.classList.remove('overflow-hidden');
+            }
+        }
+    
+
     return (
         <ProjectContext.Provider value={{detailsDisplay, toggleDetailsDisplay}}>
             {children}

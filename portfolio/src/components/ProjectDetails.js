@@ -4,15 +4,12 @@ import { ProjectContext } from '../contexts/ProjectContext';
 export default function ProjectDetails({ project }) {
     const { toggleDetailsDisplay } = useContext(ProjectContext);
 
-    const onToggleDetailsDisplay = () => {
-        toggleDetailsDisplay(null);
-        document.body.classList.toggle('overflow-hidden')
-    }
+    
     return (
-        <div className='overlay' onClick={onToggleDetailsDisplay}>
+        <div className='overlay' onClick={() => toggleDetailsDisplay(null)}>
             <div className='card project-details'>
                 <div className="card-header d-flex bg-transparent border-success">
-                    <i onClick={onToggleDetailsDisplay} className='bi bi-x-lg ms-auto' alt='close' />
+                    <i onClick={() => toggleDetailsDisplay(null)} className='bi bi-x-lg ms-auto' alt='close' />
 
                 </div>
                 <img src={project.img} className="card-img-top" alt={project.title} />

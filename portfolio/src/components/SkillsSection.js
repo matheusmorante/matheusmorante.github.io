@@ -7,18 +7,20 @@ import expressIcon from '../assets/images/programation_language_icons/express.sv
 import nodeIcon from '../assets/images/programation_language_icons/node.svg';
 import gitIcon from '../assets/images/programation_language_icons/git.svg';
 import sassIcon from '../assets/images/programation_language_icons/sass.svg';
+import bootstrapIcon from '../assets/images/programation_language_icons/bootstrap.svg';
 import Skill from './Skill'
 
 export default function Skills() {
 
     const skills = [
-        { name: 'HTML5', Icon: htmlIcon },
-        { name: 'CSS3', Icon: cssIcon },
-        { name: 'JavaScript', Icon: jsIcon },
-        { name: 'React.js', Icon: reactIcon },
-        { name: 'Express.js', Icon: expressIcon },
-        { name: 'Node.js', Icon: nodeIcon },
-        { name: 'Git', Icon: gitIcon },
+        { name: 'HTML5', icon: htmlIcon },
+        { name: 'CSS3', icon: cssIcon },
+        { name: 'JavaScript', icon: jsIcon },
+        { name: 'React.js', icon: reactIcon },
+        { name: 'Express.js', icon: expressIcon },
+        { name: 'SASS', icon: sassIcon },
+        { name: 'Git', icon: gitIcon },
+        { name: 'Bootstrap', icon: bootstrapIcon }
     ]; 
     
     return (

@@ -12,7 +12,7 @@ import { ProjectContext } from '../contexts/ProjectContext';
 
 
 export default function Projects() {
-    const { detailsDisplay, toggleDetailsDisplay } = useContext(ProjectContext);
+    const { detailsDisplay } = useContext(ProjectContext);
     const projects = [
         {
             title: 'Calculadora',
