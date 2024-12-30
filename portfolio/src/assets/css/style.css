@@ -279,7 +279,12 @@ section > h1,
   .project-details p {
     max-height: 370px;
   }
-  #contacts div img {
+  #contacts {
+    background-image: url(../images/contact_background.jpg);
+    background-size: cover;
+    padding: 0;
+  }
+  #contacts img {
     width: 80px;
   }
   .hidden {

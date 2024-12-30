@@ -331,11 +331,15 @@ section>h1,
       max-height: 370px;
     }
   }
-  // Ajusta o tamanho da imagem dentro do contêiner de informações de contato
-  #contacts div img {
-    width: 80px;
-  }
 
+  #contacts {
+    background-image: url(../images/contact_background.jpg);
+    background-size: cover;
+    padding: 0;
+    img {
+      width: 80px;
+    }
+  }
   .hidden {
     display: none;
   }
