@@ -19,7 +19,7 @@ export default function Header() {
                 ></i>
 
                 {menuOpen && (
-                    <div id="overlay" className="overlay">
+                    <div className="overlay">
                         <ul id="menu-list" className="menu-list">
                             <li>
                                 <a onClick={toggleMenu} href="#home">Inicio</a>

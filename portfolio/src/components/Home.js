@@ -3,8 +3,8 @@ import perfilImg from '../assets/images/perfil.jpg';
 import linkedinImg from '../assets/images/linkedin.png';
 import whatsappImg from '../assets/images/whatsapp.png';
 import facebookImg from '../assets/images/facebook.png';
-import Projects from './Projects';
-import Skills from './Skills';
+import Projects from './ProjectsSection';
+import Skills from './SkillsSection';
 
 
 export default function Home() {
