@@ -4,9 +4,9 @@ import htmlIcon from '../assets/images/programation_language_icons/html.svg';
 import cssIcon from '../assets/images/programation_language_icons/css.svg';
 import jsIcon from '../assets/images/programation_language_icons/js.svg';
 import sassIcon from '../assets/images/programation_language_icons/sass.svg';
-import todolistImg from '../assets/images/project_card_background/listadetarefa.png';
-import calculatorImg from '../assets/images/project_card_background/calculadora.png';
-import timerImg from '../assets/images/project_card_background/cronometro.png';
+import todolistImg from '../assets/images/project/listadetarefa.png';
+import calculatorImg from '../assets/images/project/calculadora.png';
+import timerImg from '../assets/images/project/cronometro.png';
 import ProjectDetails from './ProjectDetails';
 import { ProjectContext } from '../contexts/ProjectContext';
 
