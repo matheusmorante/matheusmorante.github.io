@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, { useContext } from 'react';
 import ProjectCard from './Project';
 import htmlIcon from '../assets/images/programation_language_icons/html.svg';
 import cssIcon from '../assets/images/programation_language_icons/css.svg';
@@ -28,7 +28,10 @@ export default function Projects() {
             Maecenas semper justo eros, in pretium odio cursus vel.
              Aenean sagittis, erat facilisis porta condimentum, ex
               tortor consequat est, vitae porta turpis lorem ut est.
-               Vestibulum at nunc id nibh blandit varius.`
+               Vestibulum at nunc id nibh blandit varius.`,
+            sourceCodeLink: 'github.com/matheusmorante/calculadora',
+            testProjectLink: '../projects/calculadora'
+
         },
         {
             title: 'Cronômetro',
@@ -44,7 +47,9 @@ export default function Projects() {
             Maecenas semper justo eros, in pretium odio cursus vel.
              Aenean sagittis, erat facilisis porta condimentum, ex
               tortor consequat est, vitae porta turpis lorem ut est.
-               Vestibulum at nunc id nibh blandit varius.`
+               Vestibulum at nunc id nibh blandit varius.`,
+            sourceCodeLink: 'github.com/matheusmorante/cronometro',
+            testProjectLink: 'projects/cronometro'
         },
         {
             title: 'Lista de Tarefas',
@@ -60,7 +65,9 @@ export default function Projects() {
             Maecenas semper justo eros, in pretium odio cursus vel.
              Aenean sagittis, erat facilisis porta condimentum, ex
               tortor consequat est, vitae porta turpis lorem ut est.
-               Vestibulum at nunc id nibh blandit varius.`
+               Vestibulum at nunc id nibh blandit varius.`,
+            sourceCodeLink: 'github.com/matheusmorante/todolist',
+            testProjectLink: 'portfolio/projects/todolist'
         }
     ];
     return (
@@ -69,16 +76,16 @@ export default function Projects() {
             <div id="projects-container">
                 {projects.map((project, index) => (
                     <>
-                        <ProjectCard 
+                        <ProjectCard
                             key={index}
-                            index={index} 
+                            index={index}
                             project={project}
                         />
-                        
-                        { detailsDisplay === index && 
+
+                        {detailsDisplay === index &&
                             <ProjectDetails key={index} project={project} />
                         }
-                        
+
                     </>
                 ))}
 
