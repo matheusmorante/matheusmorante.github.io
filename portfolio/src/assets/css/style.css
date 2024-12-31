@@ -6,7 +6,7 @@
 
 body,
 header {
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(36, 36, 36);
   font-family: "Roboto", sans-serif, "Ubuntu", sans-serif;
 }
 
@@ -44,9 +44,7 @@ section > h1,
 }
 
 body,
-a,
-.progress,
-.project-btns-container button {
+a {
   color: white;
 }
 
@@ -62,7 +60,7 @@ a {
 
 #menu li {
   list-style: none;
-  border-bottom: 1px solid rgb(0, 0, 0);
+  border-bottom: 1px solid rgb(36, 36, 36);
   transition: 0.5s;
 }
 #menu li:hover {
@@ -159,18 +157,17 @@ section > h1,
   transform: scale(1.05);
 }
 
-.project-btns-container {
-  position: absolute;
-  bottom: 0;
+#contact {
+  background-image: url(../images/contact_background.jpg);
+  background-size: cover;
+  width: 100vw;
 }
-
-#contacts div {
+#contact div {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
-
-#contacts div a {
-  justify-content: space-evenly;
+#contact div a {
+  text-align: center;
 }
 
 .overlay {
@@ -189,7 +186,7 @@ section > h1,
 }
 
 @media (max-width: 767px) {
-  body > * {
+  #root > * {
     font-size: 16px;
     padding: 0 10px;
   }
@@ -279,13 +276,14 @@ section > h1,
   .project-details p {
     max-height: 370px;
   }
-  #contacts {
-    background-image: url(../images/contact_background.jpg);
-    background-size: cover;
-    padding: 0;
+  #contact {
+    padding: 10px 0;
   }
-  #contacts img {
-    width: 80px;
+  #contact h1 {
+    margin-top: 0;
+  }
+  #contact img {
+    width: 40px;
   }
   .hidden {
     display: none;
@@ -347,9 +345,6 @@ section > h1,
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
-  }
-  #project-modal img {
-    width: 900px;
   }
   #contacts div img {
     width: 130px;

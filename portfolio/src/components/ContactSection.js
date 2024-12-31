@@ -6,7 +6,7 @@ import facebookImg from '../assets/images/facebook.png';
 export default function Contact() {
 
     return (
-        <section id="contacts">
+        <section id="contact">
             <h1>Contato</h1>
             <div>
                 <a href="https://github.com/matheusmorante" target="_blank" rel="noopener noreferrer">
