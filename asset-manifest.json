@@ -1,29 +1,32 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.2e1f5fa1.css",
-    "main.js": "/portfolio/static/js/main.a6291451.js",
+    "main.css": "/portfolio/static/css/main.bbe187f5.css",
+    "main.js": "/portfolio/static/js/main.b643c63b.js",
     "static/js/488.9561f9b8.chunk.js": "/portfolio/static/js/488.9561f9b8.chunk.js",
     "static/media/calculadora.png": "/portfolio/static/media/calculadora.a3f199112ec4d7c09bf6.png",
     "static/media/cronometro.png": "/portfolio/static/media/cronometro.026e254960b065e7dea5.png",
     "static/media/perfil.jpg": "/portfolio/static/media/perfil.ecfa4a47aacaf58ba2b4.jpg",
+    "static/media/contact_background.jpg": "/portfolio/static/media/contact_background.d8b85281ee86d8837a24.jpg",
     "static/media/listadetarefa.png": "/portfolio/static/media/listadetarefa.17c67a7d8fc010545bdd.png",
     "static/media/whatsapp.png": "/portfolio/static/media/whatsapp.1dd8ca2765f1f177ab22.png",
     "static/media/linkedin.png": "/portfolio/static/media/linkedin.6892b3ae328c7a1e055f.png",
     "static/media/facebook.png": "/portfolio/static/media/facebook.4f037d961598aff2a0a4.png",
+    "static/media/sass.svg": "/portfolio/static/media/sass.adf3c9aa8ce519f0f5da583fde19d061.svg",
     "static/media/react.svg": "/portfolio/static/media/react.8ab748cd6b8d8c0437edeeddffb9121b.svg",
     "index.html": "/portfolio/index.html",
     "static/media/node.svg": "/portfolio/static/media/node.dee9b42708a64761f9e5937009425253.svg",
+    "static/media/bootstrap.svg": "/portfolio/static/media/bootstrap.5a709edee8d9152ed1f01e3c717307af.svg",
     "static/media/express.svg": "/portfolio/static/media/express.3360749fca697975a7197cdae868993d.svg",
     "static/media/git.svg": "/portfolio/static/media/git.0ded7a229bea42748eb5c23e9b32fd96.svg",
     "static/media/js.svg": "/portfolio/static/media/js.d099b1ae1f7e63ad60037098eeb717df.svg",
     "static/media/css.svg": "/portfolio/static/media/css.da897e989cafcf57bae0d30f4582a73b.svg",
     "static/media/html.svg": "/portfolio/static/media/html.2cbbb50d0273460008f7f22392064acc.svg",
-    "main.2e1f5fa1.css.map": "/portfolio/static/css/main.2e1f5fa1.css.map",
-    "main.a6291451.js.map": "/portfolio/static/js/main.a6291451.js.map",
+    "main.bbe187f5.css.map": "/portfolio/static/css/main.bbe187f5.css.map",
+    "main.b643c63b.js.map": "/portfolio/static/js/main.b643c63b.js.map",
     "488.9561f9b8.chunk.js.map": "/portfolio/static/js/488.9561f9b8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2e1f5fa1.css",
-    "static/js/main.a6291451.js"
+    "static/css/main.bbe187f5.css",
+    "static/js/main.b643c63b.js"
   ]
 }
