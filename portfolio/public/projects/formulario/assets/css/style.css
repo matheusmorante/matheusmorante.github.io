@@ -1,0 +1,144 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+}
+
+#form-title {
+    margin: 10px auto;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    border: 1px solid rgb(223, 223, 223);
+}
+
+#submit-btn {
+    background-color: rgb(30, 145, 252);
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+#submit-btn:hover {
+    background-color: rgb(22, 107, 187);
+}
+
+.text-error {
+    color: red;
+}
+
+@media screen and (min-width: 0px) {
+    body {
+        background-color: rgb(236, 236, 236);
+    }
+
+    #form {
+        padding: 10px;
+    }
+
+    label {
+        font-size: 18px;
+        margin-top: 20px;
+    }
+
+    input {
+        border-radius: 5px;
+        font-size: 14px;
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    #submit-btn {
+        margin-top: 30px;
+        padding: 12px;
+        font-size: 25px;
+    }
+
+    .text-error {
+        font-size: 12px;
+        margin-top: 3px;
+    }
+}
+
+@media screen and (min-width: 376px) {
+    body {
+        background-color: rgb(236, 236, 236);
+    }
+
+    #form {
+        padding: 15px;
+    }
+
+    label {
+        font-size: 20px;
+    }
+
+    input {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    #submit-btn {
+        padding: 14px;
+    }
+
+    .text-error {
+        font-size: 14px;
+        margin-top: 6px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        background-color: rgb(255, 255, 255);
+    }
+
+    #form {
+        margin: 30px auto;
+        padding: 20px;
+        background-color: rgb(236, 236, 236);
+        width: 500px;
+        border-radius: 10px;
+        box-shadow: 10px 10px 15px rgb(199, 199, 199);
+    }
+
+    label {
+        font-size: 22px;
+        margin-top: 26px;
+    }
+
+    input {
+        border-radius: 5px;
+        padding: 16px;
+        font-size: 18px;
+        margin-top: 12px;
+    }
+
+    #submit-btn {
+        background-color: rgb(30, 145, 252);
+        border: none;
+        margin-top: 36px;
+        padding: 16px;
+    }
+
+    #submit-btn:hover {
+        background-color: rgb(22, 107, 187);
+    }
+
+    .text-error {
+        font-size: 16px;
+        margin-top: 9px;
+    }
+}
