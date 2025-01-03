@@ -8,11 +8,11 @@ var interval = null;
 
 /* função para incrementar '0' ao elementos númericos do crônometro que forem menores
  que 10 */
-function Zero(number) {
-    if (number < 10) {
-        return ('0' + number)
+function Zero(num) {
+    if (num < 10) {
+        return ('0' + num)
     } else {
-        return (number)
+        return (num)
     }
 }
 
@@ -39,7 +39,7 @@ function Count() {
 /* A função Start() é executado ao clicar no botão 'Início', ela verifica se não há
 outra contagem sendo executada no momento (através da condição de a variavel interval
  ser nula) para então iniciar de fato uma contagem */
-function Start() {
+function start() {
     if (interval === null) {
         interval = setInterval(Count, 1000);
         console.log('Cronômetro iniciado');
@@ -51,7 +51,7 @@ função Clearinterval() que interromperá a contagem, no entanto sem zerar os v
 tempo. Além disso, anulará o valor da variavel i
 
  */
-function Pause() {
+function pause() {
     clearInterval(interval);
     interval = null;
     console.log('Cronômetro pausado');
@@ -62,7 +62,7 @@ da contagem assim como o Pause(), no entanto, além disso, irá zerar os valores
  minutos e horas para próxima contagem ser iniciada do zero, também irá zerar o atual 
  display, por fim, irá anular o valor da variavel interval para que possa ser iniciado uma
   nova contagem através do botão 'Start' */
-function Reset() {
+function reset() {
     clearInterval(interval);
     seconds = 0;
     minutes = 0;

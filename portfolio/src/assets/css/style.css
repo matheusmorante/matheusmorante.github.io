@@ -276,7 +276,7 @@ section > h1,
     gap: 5px;
   }
   .project-details p {
-    max-height: 370px;
+    max-height: 300px;
   }
   #contact {
     padding: 10px 0;

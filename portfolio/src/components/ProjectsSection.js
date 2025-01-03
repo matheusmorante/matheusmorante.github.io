@@ -67,7 +67,7 @@ export default function Projects() {
               tortor consequat est, vitae porta turpis lorem ut est.
                Vestibulum at nunc id nibh blandit varius.`,
             sourceCodeLink: 'github.com/matheusmorante/todolist',
-            testProjectLink: 'portfolio/projects/todolist'
+            testProjectLink: 'portfolio/projects/lista-de-tarefa'
         }
     ];
     return (
