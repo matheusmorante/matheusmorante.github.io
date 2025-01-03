@@ -83,29 +83,36 @@ body #display {
     padding: 3px;
     font-size: 30px;
   }
-  #display {
+  body #display {
     border: 5px solid rgb(0, 255, 157);
     font-size: 50px;
-    width: 240px;
-    height: 240px;
+    width: 270px;
+    height: 270px;
     margin-bottom: 10px;
   }
-  #buttons-container div {
+  body #buttons-container div {
     padding: 20px;
     margin: 10px;
   }
 }
 /* Define o estilo do cronômetro quando a tela tiver largura igual ou maior que 768 pixels */
 @media (min-width: 769px) {
-  #display {
+  body {
+    height: 100vh;
+    /* Ocupa a altura total da janela de visualização */
+    padding: 10px;
+    font-size: 85px;
+  }
+  body #display {
     border: 8px solid rgb(0, 255, 157);
-    font-size: 54px;
-    width: 900px;
+    font-size: 100px;
+    width: 600px;
+    height: 600px;
     margin-bottom: 50px;
   }
-  #buttons-container div {
+  body #buttons-container div {
     padding: 30px;
-    margin: 15px;
+    margin: 25px;
   }
 }
 

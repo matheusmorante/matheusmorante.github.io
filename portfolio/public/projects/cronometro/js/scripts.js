@@ -1,5 +1,5 @@
 // criando variaveis para as manipular dentro das funções definidas adiante
-var display = document.getElementById('display');
+var display = document.querySelector('#display');
 var seconds = 0;
 var minutes = 0;
 var hours = 0;

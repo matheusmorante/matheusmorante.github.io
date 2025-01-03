@@ -38,7 +38,7 @@ export default function Projects() {
             img: timerImg,
             languages: [
                 { name: 'HTML', icon: htmlIcon },
-                { name: 'CSS', icon: cssIcon },
+                { name: 'SASS', icon: sassIcon },
                 { name: 'JS', icon: jsIcon },
             ],
             description: `Lorem 
