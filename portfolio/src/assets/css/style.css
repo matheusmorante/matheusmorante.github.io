@@ -254,28 +254,29 @@ section > h1,
   .progress {
     height: 25px;
   }
-  .project {
+  #projects-container {
+    flex-wrap: wrap;
+  }
+  #projects-container .project {
     margin-bottom: 10px;
     width: 100%;
     height: 50%;
   }
-  .project .background-project {
+  #projects-container .project .background-project {
     filter: brightness(0.4);
   }
-  .project .program-lang-img {
+  #projects-container .project .program-lang-img {
+    margin: 0 3px;
     width: 40px;
   }
-  #projects-container {
-    flex-wrap: wrap;
-  }
-  .project-details {
+  #projects-container .project-details {
     width: 90vw;
     height: auto;
   }
-  .project-details div {
+  #projects-container .project-details div {
     gap: 5px;
   }
-  .project-details p {
+  #projects-container .project-details p {
     max-height: 300px;
   }
   #contact {
