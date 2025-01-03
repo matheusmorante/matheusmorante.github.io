@@ -4,29 +4,31 @@
 <head>
     <title>Cronômetro</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="assets/styles.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
-    <!-- container que conterá o display e os botões-->
+    <div>
         <!-- container para caber o conteudo de contagem do display -->
         <div id="display">00:00:00</div>
         <!-- definição do container para os botões e dos botões do cronômetro 
          e com evento de clique para a chamada de funções de iniciar, pausar e 
          resetar a contagem do display -->
-        <div id="buttons">
+        <div id="buttons-container">
             <div id="start">
-                <img src="assets/images\play.png" onclick="Start()">
+                <i class="bi bi-play-fill" onclick="start()"></i>
             </div>
             <div id="pause">
-                <img src="assets/images\pause.png" onclick="Pause()">
+                <i class="bi bi-pause-fill" onclick="pause()"></i>
             </div>
             <div id="reset">
-                <img src="assets/images\reset.png" onclick="Reset()">
+                <i class="bi bi-stop-fill" onclick="reset()"></i>
             </div>
         </div>
-    <script src="assets/scripts.js"></script>
+    </div>
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>

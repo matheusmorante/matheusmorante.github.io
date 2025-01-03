@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.bbe187f5.css",
-    "main.js": "/portfolio/static/js/main.b643c63b.js",
+    "main.js": "/portfolio/static/js/main.8c0a0a9f.js",
     "static/js/488.9561f9b8.chunk.js": "/portfolio/static/js/488.9561f9b8.chunk.js",
     "static/media/calculadora.png": "/portfolio/static/media/calculadora.a3f199112ec4d7c09bf6.png",
     "static/media/cronometro.png": "/portfolio/static/media/cronometro.026e254960b065e7dea5.png",
@@ -22,11 +22,11 @@
     "static/media/css.svg": "/portfolio/static/media/css.da897e989cafcf57bae0d30f4582a73b.svg",
     "static/media/html.svg": "/portfolio/static/media/html.2cbbb50d0273460008f7f22392064acc.svg",
     "main.bbe187f5.css.map": "/portfolio/static/css/main.bbe187f5.css.map",
-    "main.b643c63b.js.map": "/portfolio/static/js/main.b643c63b.js.map",
+    "main.8c0a0a9f.js.map": "/portfolio/static/js/main.8c0a0a9f.js.map",
     "488.9561f9b8.chunk.js.map": "/portfolio/static/js/488.9561f9b8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bbe187f5.css",
-    "static/js/main.b643c63b.js"
+    "static/js/main.8c0a0a9f.js"
   ]
 }

@@ -1,0 +1,112 @@
+@charset "UTF-8";
+/* Define a cor de fundo do corpo da página e regras gerais para todos os elementos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* Define o modelo de caixa para incluir margens e bordas */
+}
+
+/* Define o estilo do corpo da página */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Define o estilo do display principal */
+}
+body div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body #display {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: rgb(82, 81, 81);
+  border-radius: 50%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Define o estilo dos botões de controle */
+#buttons-container {
+  flex-direction: row;
+  /* Define o estilo para os botões de início, pausa e reset */
+  /* Define o estilo do botão de início */
+  /* Define o estilo do botão de pausa */
+  /* Define o estilo do botão de reset */
+}
+#buttons-container div {
+  border-radius: 50%;
+  transition: 100ms;
+  /* Transição suave de 100 milissegundos para animações */
+}
+#buttons-container #start {
+  background-color: rgb(50, 160, 65);
+  /* Define o estilo dos botões quando passam o mouse por cima */
+}
+#buttons-container #start:hover {
+  background-color: rgb(22, 114, 35);
+  transform: translateY(3px);
+  /* Efeito de levantamento quando hover */
+}
+#buttons-container #startstart:active {
+  background-color: rgb(50, 160, 65);
+}
+#buttons-container #pause {
+  background-color: rgb(83, 139, 245);
+}
+#buttons-container #pause:hover {
+  background-color: rgb(56, 96, 170);
+  transform: translateY(3px);
+}
+#buttons-container #pause:active {
+  background-color: rgb(83, 139, 245);
+}
+#buttons-container #reset {
+  background-color: rgb(255, 87, 87);
+}
+#buttons-container #reset:hover {
+  background-color: rgb(141, 80, 80);
+  transform: translateY(3px);
+}
+#buttons-container #reset:active {
+  background-color: rgb(255, 87, 87);
+}
+
+/* Define o estilo do cronômetro quando a tela tiver largura menor que 768 pixels */
+@media (max-width: 768px) {
+  body {
+    height: 100vh;
+    /* Ocupa a altura total da janela de visualização */
+    padding: 3px;
+    font-size: 30px;
+  }
+  #display {
+    border: 5px solid rgb(0, 255, 157);
+    font-size: 50px;
+    width: 240px;
+    height: 240px;
+    margin-bottom: 10px;
+  }
+  #buttons-container div {
+    padding: 20px;
+    margin: 10px;
+  }
+}
+/* Define o estilo do cronômetro quando a tela tiver largura igual ou maior que 768 pixels */
+@media (min-width: 769px) {
+  #display {
+    border: 8px solid rgb(0, 255, 157);
+    font-size: 54px;
+    width: 900px;
+    margin-bottom: 50px;
+  }
+  #buttons-container div {
+    padding: 30px;
+    margin: 15px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
