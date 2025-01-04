@@ -19,6 +19,7 @@
   },
   "homepage": "https://matheusmorante.github.io/portfolio",
   "eslintConfig": {
+    
     "extends": [
       "react-app",
       "react-app/jest"
