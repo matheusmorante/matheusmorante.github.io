@@ -94,13 +94,14 @@ body {
 @media (min-width: 768px) {
   /* Altera o fundo do corpo para uma cor mais escura e ajusta o tamanho da fonte para dispositivos maiores. */
   body {
-    background-color: #1b1b1b;
+    background-color: #ffffff;
     align-items: center;
   }
   /* Ajusta a margem e o preenchimento da calculadora para dispositivos maiores. */
   #calculator {
     width: 500px;
     padding: 30px;
+    box-shadow: 0px 5px 30PX rgba(68, 68, 68, 0.444);
     /* Espaçamento interno */
     /* Redefine a altura e o tamanho da fonte do display para dispositivos maiores, permitindo a quebra de palavra. */
     /* Define o tamanho dos botões para dispositivos maiores. */
