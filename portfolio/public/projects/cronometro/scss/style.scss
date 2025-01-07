@@ -1,0 +1,115 @@
+/* Reset básico e configuração do modelo de caixa para incluir margens e bordas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Mixin para criar bordas dinâmicas */
+@mixin DisplayBorder($w) {
+    border: $w solid rgb(0, 255, 157);
+}
+
+/* Corpo da página */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #display {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        color: rgb(82, 81, 81);
+        border-radius: 50%;
+
+        /* Estilo responsivo do display */
+        @media (max-width: 768px) {
+            @include DisplayBorder(5px);
+            font-size: 50px;
+            width: 270px;
+            height: 270px;
+            margin-bottom: 10px;
+        }
+
+        @media (min-width: 769px) {
+            @include DisplayBorder(8px);
+            font-size: 100px;
+            width: 600px;
+            height: 600px;
+            margin-bottom: 50px;
+        }
+    }
+
+    #buttons-container {
+        display: flex;
+        flex-direction: row;
+
+        div {
+            border-radius: 50%;
+            transition: 100ms;
+
+            /* Botões responsivos */
+            @media (max-width: 768px) {
+                padding: 20px;
+                font-size: 30px;
+                margin: 10px;
+            }
+
+            @media (min-width: 769px) {
+                padding: 40px;
+                font-size: 60px;
+                margin: 25px;
+            }
+        }
+
+        #start {
+            background-color: rgb(50, 160, 65);
+
+            &:hover {
+                background-color: rgb(22, 114, 35);
+                transform: translateY(3px);
+            }
+
+            &:active {
+                background-color: rgb(50, 160, 65);
+            }
+        }
+
+        #pause {
+            background-color: rgb(83, 139, 245);
+
+            &:hover {
+                background-color: rgb(56, 96, 170);
+                transform: translateY(3px);
+            }
+
+            &:active {
+                background-color: rgb(83, 139, 245);
+            }
+        }
+
+        #reset {
+            background-color: rgb(255, 87, 87);
+
+            &:hover {
+                background-color: rgb(141, 80, 80);
+                transform: translateY(3px);
+            }
+
+            &:active {
+                background-color: rgb(255, 87, 87);
+            }
+        }
+    }
+}
