@@ -8,6 +8,9 @@ import todolistImg from '../assets/images/project/listadetarefa.png';
 import calculatorImg from '../assets/images/project/calculadora.png';
 import timerImg from '../assets/images/project/cronometro.png';
 import ProjectDetails from './ProjectDetails';
+import CalculatorDescrition from './projectDescritions/calculator';
+import TimerDescrition from './projectDescritions/timer';
+import TodoListDescrition from './projectDescritions/todolist';
 import { ProjectContext } from '../contexts/ProjectContext';
 
 
@@ -19,16 +22,10 @@ export default function Projects() {
             img: calculatorImg,
             languages: [
                 { name: 'HTML', icon: htmlIcon },
-                { name: 'CSS', icon: cssIcon },
+                { name: 'SASS', icon: sassIcon },
                 { name: 'JS', icon: jsIcon },
             ],
-            description: `Lorem 
-            ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pharetra eu velit sed hendrerit. Morbi nec eleifend nisl. Mauris sit amet commodo odio. Donec venenatis volutpat vehicula. Sed vestibulum arcu purus, non aliquet diam pretium vel. Nam sagittis pharetra maximus. Fusce sapien est, accumsan sollicitudin laoreet sit amet, varius sit amet quam. Proin libero nibh, blandit in elit eu, tempus accumsan velit. Aenean imperdiet non augue non tempor. Pellentesque non elit vitae libero vestibulum commodo ut eget arcu. Curabitur imperdiet, turpis vel imperdiet molestie, ligula lectus scelerisque orci, ut malesuada lectus neque sit amet nulla. 
-            Etiam eu ante quis ipsum rutrum pharetra nec non massa. 
-            Maecenas semper justo eros, in pretium odio cursus vel.
-             Aenean sagittis, erat facilisis porta condimentum, ex
-              tortor consequat est, vitae porta turpis lorem ut est.
-               Vestibulum at nunc id nibh blandit varius.`,
+            description: <CalculatorDescrition />,
             sourceCodeLink: 'github.com/matheusmorante/calculadora',
             testProjectLink: '../projects/calculadora'
 
@@ -41,13 +38,7 @@ export default function Projects() {
                 { name: 'SASS', icon: sassIcon },
                 { name: 'JS', icon: jsIcon },
             ],
-            description: `Lorem 
-            ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pharetra eu velit sed hendrerit. Morbi nec eleifend nisl. Mauris sit amet commodo odio. Donec venenatis volutpat vehicula. Sed vestibulum arcu purus, non aliquet diam pretium vel. Nam sagittis pharetra maximus. Fusce sapien est, accumsan sollicitudin laoreet sit amet, varius sit amet quam. Proin libero nibh, blandit in elit eu, tempus accumsan velit. Aenean imperdiet non augue non tempor. Pellentesque non elit vitae libero vestibulum commodo ut eget arcu. Curabitur imperdiet, turpis vel imperdiet molestie, ligula lectus scelerisque orci, ut malesuada lectus neque sit amet nulla. 
-            Etiam eu ante quis ipsum rutrum pharetra nec non massa. 
-            Maecenas semper justo eros, in pretium odio cursus vel.
-             Aenean sagittis, erat facilisis porta condimentum, ex
-              tortor consequat est, vitae porta turpis lorem ut est.
-               Vestibulum at nunc id nibh blandit varius.`,
+            description: <TimerDescrition />,
             sourceCodeLink: 'github.com/matheusmorante/cronometro',
             testProjectLink: 'projects/cronometro'
         },
@@ -59,13 +50,7 @@ export default function Projects() {
                 { name: 'CSS', icon: cssIcon },
                 { name: 'JS', icon: jsIcon },
             ],
-            description: `Lorem 
-            ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pharetra eu velit sed hendrerit. Morbi nec eleifend nisl. Mauris sit amet commodo odio. Donec venenatis volutpat vehicula. Sed vestibulum arcu purus, non aliquet diam pretium vel. Nam sagittis pharetra maximus. Fusce sapien est, accumsan sollicitudin laoreet sit amet, varius sit amet quam. Proin libero nibh, blandit in elit eu, tempus accumsan velit. Aenean imperdiet non augue non tempor. Pellentesque non elit vitae libero vestibulum commodo ut eget arcu. Curabitur imperdiet, turpis vel imperdiet molestie, ligula lectus scelerisque orci, ut malesuada lectus neque sit amet nulla. 
-            Etiam eu ante quis ipsum rutrum pharetra nec non massa. 
-            Maecenas semper justo eros, in pretium odio cursus vel.
-             Aenean sagittis, erat facilisis porta condimentum, ex
-              tortor consequat est, vitae porta turpis lorem ut est.
-               Vestibulum at nunc id nibh blandit varius.`,
+            description: <TodoListDescrition />,
             sourceCodeLink: 'github.com/matheusmorante/todolist',
             testProjectLink: 'portfolio/projects/lista-de-tarefa'
         }

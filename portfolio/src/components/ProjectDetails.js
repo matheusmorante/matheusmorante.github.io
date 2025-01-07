@@ -15,7 +15,7 @@ export default function ProjectDetails({ project }) {
                 <img src={project.img} className="card-img-top" alt={project.title} />
                 <div className="card-body">
                     <h1 className="card-title">{project.title}</h1>
-                    <p className="card-text">{project.description}</p>
+                    {project.description}
                     <div id='actions-btn'>
                         <a href={project.sourceCodeLink} className='btn btn-primary m-2'>Ver codigo fonte</a>
                         <a href={project.testProjectLink} className='btn btn-primary m-2'>Ver em ação</a>
