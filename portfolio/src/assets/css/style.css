@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+@media (max-width: 767px) {
+  #root > * {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+}
+
 body,
 header {
   background-color: rgb(36, 36, 36);
@@ -22,6 +29,15 @@ header ul {
   gap: 15px;
   width: 300px;
 }
+@media (max-width: 767px) {
+  header {
+    padding: 0 10px;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 18px;
+  }
+}
 
 header,
 header ul,
@@ -39,6 +55,23 @@ section > h1,
   display: flex;
 }
 
+@media (max-width: 767px) {
+  .menu-list {
+    position: absolute;
+    justify-content: center;
+    transition: 0.5s;
+    display: block;
+    padding: 0;
+  }
+  .menu-list li {
+    text-align: center;
+    margin-top: 50px;
+  }
+  .menu-list li a {
+    font-weight: bolder;
+  }
+}
+
 #skills-section {
   flex-direction: column;
 }
@@ -48,23 +81,36 @@ a {
   color: white;
 }
 
+@media (min-width: 1024px) {
+  body {
+    font-size: 18px;
+  }
+}
+
 a {
   text-decoration: none;
 }
 
-#menu,
-#menu ul,
-#overlay {
-  padding: 0;
+.overlay {
+  justify-content: center;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.507);
+  width: 100%;
+  height: 100%;
+  top: 40px;
+  left: 0;
+  z-index: 1000;
 }
 
-#menu li {
-  list-style: none;
-  border-bottom: 1px solid rgb(36, 36, 36);
-  transition: 0.5s;
+@media (max-width: 767px) {
+  #menu-btn {
+    font-size: 30px;
+  }
 }
-#menu li:hover {
-  border-bottom: 1px solid #32ABFF;
+@media (min-width: 1024px) {
+  #menu-btn {
+    display: none;
+  }
 }
 
 header,
@@ -76,8 +122,30 @@ header,
   text-align: center;
 }
 
+@media (min-width: 1024px) {
+  #home {
+    height: 90vh;
+    width: 35%;
+    margin: 0;
+  }
+}
+
 #heading {
   margin-top: 75px;
+}
+@media (max-width: 767px) {
+  #heading {
+    font-size: 48px;
+    letter-spacing: 3px;
+    font-weight: 500;
+  }
+}
+@media (min-width: 1024px) {
+  #heading {
+    font-size: 60px;
+    letter-spacing: 2px;
+    font-weight: 500;
+  }
 }
 
 section > h1,
@@ -89,6 +157,17 @@ section > h1,
 section > h1,
 #heading {
   font-family: "Ubuntu", sans-serif;
+}
+
+@media (max-width: 767px) {
+  #description {
+    margin: 20px 0;
+  }
+}
+@media (min-width: 1024px) {
+  #description {
+    margin: 30px 0;
+  }
 }
 
 .apresentation-strings {
@@ -105,150 +184,94 @@ section > h1,
 #cv:hover {
   background-color: #32ABFF;
 }
+@media (max-width: 767px) {
+  #cv {
+    padding: 10px;
+    font-size: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  #cv {
+    padding: 25px;
+    font-size: 30px;
+  }
+}
 
 #img-perfil {
   border-radius: 50%;
   margin: 0 auto;
 }
-
-.project-btns-container button,
-.project-btns-container,
-.project {
-  width: 100%;
+@media (max-width: 767px) {
+  #img-perfil {
+    width: 120px;
+  }
+}
+@media (min-width: 1024px) {
+  #img-perfil {
+    width: 200px;
+  }
 }
 
-.project {
+#skills-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 767px) {
+  #skills-container {
+    gap: 15px;
+  }
+  #skills-container .skills {
+    display: block;
+    gap: 40px;
+  }
+  #skills-container .skills h2 {
+    margin-top: 10px;
+  }
+}
+@media (min-width: 1024px) {
+  #skills-container {
+    width: 500px;
+    gap: 40px;
+  }
+  #skills-container img {
+    width: 80px;
+  }
+}
+
+#projects-container .project {
   position: relative;
   width: 600px;
   height: 400px;
   z-index: 3;
 }
-.project .background-project {
+#projects-container .project .background-project {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.project div {
+#projects-container .project div {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
 }
-.project:hover {
+#projects-container .project:hover {
   transition: 0.5s;
   transform: scale(1.05);
 }
-
-.project-details {
+#projects-container .project-details {
   top: 50px;
   position: fixed;
   background-color: rgb(56, 56, 56);
   color: white;
 }
-.project-details .project-description {
+#projects-container .project-details .project-description {
   overflow: auto visible;
 }
-
-#contact {
-  background-image: url(../images/contact_background.jpg);
-  background-size: cover;
-  width: 100vw;
-}
-#contact div {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-#contact div a {
-  text-align: center;
-}
-
-.overlay {
-  justify-content: center;
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.507);
-  width: 100%;
-  height: 100%;
-  top: 40px;
-  left: 0;
-  z-index: 1000;
-}
-
-.overflow-hidden {
-  overflow: hidden;
-}
-
 @media (max-width: 767px) {
-  #root > * {
-    font-size: 16px;
-    padding: 0 10px;
-  }
-  header {
-    padding: 0 10px;
-  }
-  header h1 {
-    margin: 0;
-    font-size: 18px;
-  }
-  #menu-btn {
-    font-size: 30px;
-  }
   #projects-container {
     display: flex;
-  }
-  .menu-list {
-    position: absolute;
-    justify-content: center;
-    transition: 0.5s;
-    display: block;
-    padding: 0;
-  }
-  .menu-list li {
-    text-align: center;
-    margin-top: 50px;
-  }
-  .menu-list li a {
-    font-weight: bolder;
-  }
-  .menu-list li #presentation,
-  #img-perfil {
-    margin-top: 50px;
-  }
-  #img-perfil {
-    width: 120px;
-  }
-  section > h1 {
-    font-size: 30px;
-    margin: 30px 0;
-  }
-  #heading {
-    font-size: 48px;
-    letter-spacing: 3px;
-    font-weight: 500;
-  }
-  #description {
-    margin: 20px 0;
-  }
-  #cv {
-    padding: 10px;
-    font-size: 20px;
-  }
-  .skills {
-    display: block;
-    gap: 40px;
-  }
-  #skills-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-  }
-  .skills h2 {
-    margin-top: 10px;
-  }
-  .progress {
-    height: 25px;
-  }
-  #projects-container {
     flex-wrap: wrap;
   }
   #projects-container .project {
@@ -268,14 +291,42 @@ section > h1,
     height: 80vh;
   }
   #projects-container .project-details .project-description {
-    height: 300px;
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 10px;
   }
   #projects-container #actions-btn {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: auto;
   }
+  #projects-container #actions-btn a {
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+}
+@media (min-width: 1024px) {
+  #projects-container #projects-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+#contact {
+  background-image: url(../images/contact_background.jpg);
+  background-size: cover;
+  width: 100vw;
+}
+#contact div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+#contact div a {
+  text-align: center;
+}
+@media (max-width: 767px) {
   #contact {
     padding: 10px 0;
   }
@@ -288,70 +339,19 @@ section > h1,
   #contact img {
     width: 50px;
   }
-  .hidden {
-    display: none;
-  }
 }
 @media (min-width: 1024px) {
-  body {
-    font-size: 18px;
-  }
-  #menu-btn {
-    display: none;
-  }
-  section > h1 {
-    font-size: 45px;
-    margin: 60px 0;
-  }
-  #home {
-    height: 90vh;
-    width: 35%;
-    margin: 0;
-  }
-  #heading {
-    font-size: 60px;
-    letter-spacing: 2px;
-    font-weight: 500;
-  }
-  #description {
-    margin: 30px 0;
-  }
-  #cv {
-    padding: 25px;
-    font-size: 30px;
-  }
-  #img-perfil {
-    width: 200px;
-  }
-  .image-border {
-    padding: 20px;
-  }
-  #skills-container {
-    width: 500px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 40px;
-  }
-  #skills-container img {
-    width: 80px;
-  }
-  .skill-headers {
-    margin-bottom: 10px;
-  }
-  .skills h2 {
-    margin-top: 10px;
-  }
-  .progress {
-    height: 25px;
-  }
-  #projects-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 30px;
-  }
-  #contacts div img {
+  #contact #contacts div img {
     width: 130px;
   }
+}
+
+.hidden {
+  display: none;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 /*# sourceMappingURL=style.css.map */
