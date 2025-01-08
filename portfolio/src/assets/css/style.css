@@ -11,18 +11,46 @@
   }
 }
 
-body,
-header {
+body, a {
+  color: white;
+  text-decoration: none;
+}
+
+body {
   background-color: rgb(36, 36, 36);
   font-family: "Roboto", sans-serif, "Ubuntu", sans-serif;
 }
+@media (max-width: 767px) {
+  body {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1024px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+#about-me-section,
+#presentation,
+#skills-container,
+#skills-section,
+.project,
+.project div,
+#contact {
+  text-align: center;
+}
 
 header {
+  display: flex;
+  align-items: center;
   justify-content: space-between;
   width: 100%;
+  top: 0;
   left: 0;
   position: fixed;
   z-index: 999;
+  background-color: rgb(36, 36, 36);
 }
 header ul {
   list-style: none;
@@ -38,21 +66,15 @@ header ul {
     font-size: 18px;
   }
 }
-
-header,
-header ul,
-.overlay,
-#home,
-#img-perfil,
-section > h1,
-#cv,
-#skills-section,
-#skills-container,
-#projects-container .project,
-.project-details p,
-.project-btns-container,
-#contacts div a {
-  display: flex;
+@media (max-width: 767px) {
+  header #menu-btn {
+    font-size: 30px;
+  }
+}
+@media (min-width: 1024px) {
+  header #menu-btn {
+    display: none;
+  }
 }
 
 @media (max-width: 767px) {
@@ -68,23 +90,62 @@ section > h1,
     margin-top: 50px;
   }
   .menu-list li a {
-    font-weight: bolder;
+    font-weight: bold;
   }
 }
 
-#skills-section {
+@media (max-width: 767px) {
+  section {
+    margin-top: 50px;
+  }
+}
+
+#presentation {
   flex-direction: column;
 }
-
-body,
-a {
-  color: white;
-}
-
-@media (min-width: 1024px) {
-  body {
-    font-size: 18px;
+@media (max-width: 767px) {
+  #presentation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5%;
   }
+  #presentation #heading {
+    font-size: 40px;
+  }
+  #presentation #description {
+    margin: 20px 0;
+  }
+  #presentation #cv {
+    padding: 10px;
+    font-size: 20px;
+    width: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  #presentation {
+    height: 90vh;
+    width: 35%;
+    margin: 0;
+  }
+}
+#presentation #description {
+  margin: 30px 0;
+}
+#presentation .apresentation-strings {
+  color: #32ABFF;
+}
+#presentation #cv {
+  border: 1px solid #32ABFF;
+  border-radius: 10px;
+  font-weight: bolder;
+  cursor: pointer;
+  transition: 300ms;
+  padding: 25px;
+  font-size: 30px;
+}
+#presentation #cv:hover {
+  background-color: #32ABFF;
 }
 
 a {
@@ -92,109 +153,15 @@ a {
 }
 
 .overlay {
+  display: flex;
+  align-items: none;
   justify-content: center;
   position: fixed;
   background-color: rgba(0, 0, 0, 0.507);
   width: 100%;
   height: 100%;
   top: 40px;
-  left: 0;
   z-index: 1000;
-}
-
-@media (max-width: 767px) {
-  #menu-btn {
-    font-size: 30px;
-  }
-}
-@media (min-width: 1024px) {
-  #menu-btn {
-    display: none;
-  }
-}
-
-header,
-#about-me-section,
-#skills-container,
-#skills-section,
-.project {
-  align-items: center;
-  text-align: center;
-}
-
-@media (min-width: 1024px) {
-  #home {
-    height: 90vh;
-    width: 35%;
-    margin: 0;
-  }
-}
-
-#heading {
-  margin-top: 75px;
-}
-@media (max-width: 767px) {
-  #heading {
-    font-size: 48px;
-    letter-spacing: 3px;
-    font-weight: 500;
-  }
-}
-@media (min-width: 1024px) {
-  #heading {
-    font-size: 60px;
-    letter-spacing: 2px;
-    font-weight: 500;
-  }
-}
-
-section > h1,
-#cv,
-.project {
-  justify-content: center;
-}
-
-section > h1,
-#heading {
-  font-family: "Ubuntu", sans-serif;
-}
-
-@media (max-width: 767px) {
-  #description {
-    margin: 20px 0;
-  }
-}
-@media (min-width: 1024px) {
-  #description {
-    margin: 30px 0;
-  }
-}
-
-.apresentation-strings {
-  color: #32ABFF;
-}
-
-#cv {
-  border: 1px solid #32ABFF;
-  border-radius: 10px;
-  font-weight: bolder;
-  cursor: pointer;
-  transition: 300ms;
-}
-#cv:hover {
-  background-color: #32ABFF;
-}
-@media (max-width: 767px) {
-  #cv {
-    padding: 10px;
-    font-size: 20px;
-  }
-}
-@media (min-width: 1024px) {
-  #cv {
-    padding: 25px;
-    font-size: 30px;
-  }
 }
 
 #img-perfil {
@@ -203,13 +170,18 @@ section > h1,
 }
 @media (max-width: 767px) {
   #img-perfil {
-    width: 120px;
+    width: 150px;
+    margin: 20px 0;
   }
 }
 @media (min-width: 1024px) {
   #img-perfil {
     width: 200px;
   }
+}
+
+#skills-section {
+  flex-direction: column;
 }
 
 #skills-container {
@@ -240,9 +212,6 @@ section > h1,
 
 #projects-container .project {
   position: relative;
-  width: 600px;
-  height: 400px;
-  z-index: 3;
 }
 #projects-container .project .background-project {
   width: 100%;
@@ -254,13 +223,13 @@ section > h1,
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
 }
 #projects-container .project:hover {
   transition: 0.5s;
   transform: scale(1.05);
 }
 #projects-container .project-details {
+  position: relative;
   top: 50px;
   position: fixed;
   background-color: rgb(56, 56, 56);
@@ -272,6 +241,8 @@ section > h1,
 @media (max-width: 767px) {
   #projects-container {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
   }
   #projects-container .project {
@@ -286,6 +257,321 @@ section > h1,
     margin: 0 3px;
     width: 40px;
   }
+  #projects-container .project .program-lang-img * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+}
+@media (max-width: 767px) and (max-width: 767px) {
+  #projects-container .project .program-lang-img #root > * {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+}
+@media (max-width: 767px) {
+  #projects-container .project .program-lang-img body, #projects-container .project .program-lang-img a {
+    color: white;
+    text-decoration: none;
+  }
+  #projects-container .project .program-lang-img body {
+    background-color: rgb(36, 36, 36);
+    font-family: "Roboto", sans-serif, "Ubuntu", sans-serif;
+  }
+}
+@media (max-width: 767px) and (max-width: 767px) {
+  #projects-container .project .program-lang-img body {
+    font-size: 16px;
+  }
+}
+@media (max-width: 767px) and (min-width: 1024px) {
+  #projects-container .project .program-lang-img body {
+    font-size: 18px;
+  }
+}
+@media (max-width: 767px) {
+  #projects-container .project .program-lang-img #about-me-section,
+  #projects-container .project .program-lang-img #presentation,
+  #projects-container .project .program-lang-img #skills-container,
+  #projects-container .project .program-lang-img #skills-section,
+  #projects-container .project .program-lang-img .project,
+  #projects-container .project .program-lang-img .project div,
+  #projects-container .project .program-lang-img #contact {
+    text-align: center;
+  }
+  #projects-container .project .program-lang-img header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 999;
+    background-color: rgb(36, 36, 36);
+  }
+  #projects-container .project .program-lang-img header ul {
+    list-style: none;
+    gap: 15px;
+    width: 300px;
+  }
+}
+@media (max-width: 767px) and (max-width: 767px) {
+  #projects-container .project .program-lang-img header {
+    padding: 0 10px;
+  }
+  #projects-container .project .program-lang-img header h1 {
+    margin: 0;
+    font-size: 18px;
+  }
+}
+@media (max-width: 767px) and (max-width: 767px) {
+  #projects-container .project .program-lang-img header #menu-btn {
+    font-size: 30px;
+  }
+}
+@media (max-width: 767px) and (min-width: 1024px) {
+  #projects-container .project .program-lang-img header #menu-btn {
+    display: none;
+  }
+}
+@media (max-width: 767px) and (max-width: 767px) {
+  #projects-container .project .program-lang-img .menu-list {
+    position: absolute;
+    justify-content: center;
+    transition: 0.5s;
+    display: block;
+    padding: 0;
+  }
+  #projects-container .project .program-lang-img .menu-list li {
+    text-align: center;
+    margin-top: 50px;
+  }
+  #projects-container .project .program-lang-img .menu-list li a {
+    font-weight: bold;
+  }
+}
+@media (max-width: 767px) and (max-width: 767px) {
+  #projects-container .project .program-lang-img section {
+    margin-top: 50px;
+  }
+}
+@media (max-width: 767px) {
+  #projects-container .project .program-lang-img #presentation {
+    flex-direction: column;
+  }
+}
+@media (max-width: 767px) and (max-width: 767px) {
+  #projects-container .project .program-lang-img #presentation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5%;
+  }
+  #projects-container .project .program-lang-img #presentation #heading {
+    font-size: 40px;
+  }
+  #projects-container .project .program-lang-img #presentation #description {
+    margin: 20px 0;
+  }
+  #projects-container .project .program-lang-img #presentation #cv {
+    padding: 10px;
+    font-size: 20px;
+    width: 100%;
+  }
+}
+@media (max-width: 767px) and (min-width: 1024px) {
+  #projects-container .project .program-lang-img #presentation {
+    height: 90vh;
+    width: 35%;
+    margin: 0;
+  }
+}
+@media (max-width: 767px) {
+  #projects-container .project .program-lang-img #presentation #description {
+    margin: 30px 0;
+  }
+  #projects-container .project .program-lang-img #presentation .apresentation-strings {
+    color: #32ABFF;
+  }
+  #projects-container .project .program-lang-img #presentation #cv {
+    border: 1px solid #32ABFF;
+    border-radius: 10px;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: 300ms;
+    padding: 25px;
+    font-size: 30px;
+  }
+  #projects-container .project .program-lang-img #presentation #cv:hover {
+    background-color: #32ABFF;
+  }
+  #projects-container .project .program-lang-img a {
+    text-decoration: none;
+  }
+  #projects-container .project .program-lang-img .overlay {
+    justify-content: center;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.507);
+    width: 100%;
+    height: 100%;
+    top: 40px;
+    z-index: 1000;
+  }
+  #projects-container .project .program-lang-img #img-perfil {
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 767px) and (max-width: 767px) {
+  #projects-container .project .program-lang-img #img-perfil {
+    width: 150px;
+    margin: 20px 0;
+  }
+}
+@media (max-width: 767px) and (min-width: 1024px) {
+  #projects-container .project .program-lang-img #img-perfil {
+    width: 200px;
+  }
+}
+@media (max-width: 767px) {
+  #projects-container .project .program-lang-img #skills-section {
+    flex-direction: column;
+  }
+  #projects-container .project .program-lang-img #skills-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 767px) and (max-width: 767px) {
+  #projects-container .project .program-lang-img #skills-container {
+    gap: 15px;
+  }
+  #projects-container .project .program-lang-img #skills-container .skills {
+    display: block;
+    gap: 40px;
+  }
+  #projects-container .project .program-lang-img #skills-container .skills h2 {
+    margin-top: 10px;
+  }
+}
+@media (max-width: 767px) and (min-width: 1024px) {
+  #projects-container .project .program-lang-img #skills-container {
+    width: 500px;
+    gap: 40px;
+  }
+  #projects-container .project .program-lang-img #skills-container img {
+    width: 80px;
+  }
+}
+@media (max-width: 767px) {
+  #projects-container .project .program-lang-img #projects-container .project {
+    position: relative;
+  }
+  #projects-container .project .program-lang-img #projects-container .project .background-project {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  #projects-container .project .program-lang-img #projects-container .project div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #projects-container .project .program-lang-img #projects-container .project:hover {
+    transition: 0.5s;
+    transform: scale(1.05);
+  }
+  #projects-container .project .program-lang-img #projects-container .project-details {
+    top: 50px;
+    position: fixed;
+    background-color: rgb(56, 56, 56);
+    color: white;
+  }
+  #projects-container .project .program-lang-img #projects-container .project-details .project-description {
+    overflow: auto visible;
+  }
+}
+@media (max-width: 767px) and (max-width: 767px) {
+  #projects-container .project .program-lang-img #projects-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  #projects-container .project .program-lang-img #projects-container .project {
+    margin-bottom: 10px;
+    width: 100%;
+    height: 50%;
+  }
+  #projects-container .project .program-lang-img #projects-container .project .background-project {
+    filter: brightness(0.4);
+  }
+  #projects-container .project .program-lang-img #projects-container .project .program-lang-img {
+    margin: 0 3px;
+    width: 40px;
+  }
+  #projects-container .project .program-lang-img #projects-container .project-details {
+    width: 90vw;
+    height: 80vh;
+  }
+  #projects-container .project .program-lang-img #projects-container .project-details .project-description {
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+  }
+  #projects-container .project .program-lang-img #projects-container #actions-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+@media (max-width: 767px) and (min-width: 1024px) {
+  #projects-container .project .program-lang-img #projects-container {
+    width: 600px;
+    height: 400px;
+  }
+  #projects-container .project .program-lang-img #projects-container #projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+}
+@media (max-width: 767px) {
+  #projects-container .project .program-lang-img #contact {
+    background-image: url(../images/contact_background.jpg);
+    background-size: cover;
+    width: 100vw;
+  }
+  #projects-container .project .program-lang-img #contact div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 767px) and (max-width: 767px) {
+  #projects-container .project .program-lang-img #contact {
+    padding: 10px 0;
+  }
+  #projects-container .project .program-lang-img #contact div {
+    margin: 50px 0px;
+  }
+  #projects-container .project .program-lang-img #contact img {
+    width: 60px;
+  }
+}
+@media (max-width: 767px) and (min-width: 1024px) {
+  #projects-container .project .program-lang-img #contact #contacts div img {
+    width: 130px;
+  }
+}
+@media (max-width: 767px) {
+  #projects-container .project .program-lang-img .hidden {
+    display: none;
+  }
+  #projects-container .project .program-lang-img .overflow-hidden {
+    overflow: hidden;
+  }
   #projects-container .project-details {
     width: 90vw;
     height: 80vh;
@@ -297,19 +583,18 @@ section > h1,
   }
   #projects-container #actions-btn {
     display: flex;
-    justify-content: space-around;
-    margin-top: auto;
-  }
-  #projects-container #actions-btn a {
-    justify-content: center;
     align-items: center;
-    padding: 10px;
+    justify-content: space-around;
   }
 }
 @media (min-width: 1024px) {
+  #projects-container {
+    width: 600px;
+    height: 400px;
+  }
   #projects-container #projects-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
   }
 }
@@ -323,21 +608,15 @@ section > h1,
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
-#contact div a {
-  text-align: center;
-}
 @media (max-width: 767px) {
   #contact {
     padding: 10px 0;
   }
-  #contact h1 {
-    margin-top: 0;
-  }
   #contact div {
-    margin-top: 50px;
+    margin: 50px 0px;
   }
   #contact img {
-    width: 50px;
+    width: 60px;
   }
 }
 @media (min-width: 1024px) {

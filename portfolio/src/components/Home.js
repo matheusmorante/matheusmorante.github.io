@@ -9,8 +9,8 @@ import Contact from './ContactSection';
 export default function Home() {
     return (
         <>
-            <section id="home">
-                <div id="presentation">
+            <section id="presentation">
+               
                     <div id="heading">
                         Olá, meu nome é <span className="apresentation-strings">Matheus Morante.</span>
                     </div>
@@ -25,7 +25,7 @@ export default function Home() {
                     >
                         Baixar CV
                     </a>
-                </div>
+               
             </section>
 
             <section id="about-me-section">
