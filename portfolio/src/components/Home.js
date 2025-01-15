@@ -10,7 +10,8 @@ export default function Home() {
     return (
         <>
             <section id="presentation">
-               
+                <div>
+
                     <div id="heading">
                         Olá, meu nome é <span className="apresentation-strings">Matheus Morante.</span>
                     </div>
@@ -25,11 +26,12 @@ export default function Home() {
                     >
                         Baixar CV
                     </a>
-               
+                </div>
+                <img src={perfilImg} class="perfil-img" alt="Perfil" />
             </section>
 
             <section id="about-me-section">
-                <img src={perfilImg} id="img-perfil" alt="Perfil" />
+                <img src={perfilImg} class="perfil-img" alt="Perfil" />
                 <h1>Sobre mim</h1>
                 <p>
                     Sempre fui apaixonado pela liberdade que a tecnologia nos proporciona para resolver os mais diversos
