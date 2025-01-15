@@ -144,11 +144,9 @@ section {
 }
 
 #presentation {
-  flex-direction: column;
-
-
   @include flex-container(center, center);
-  padding: 0 5%;
+  flex-direction: column;
+  padding: 0 10px;
 
   #heading {
     font-size: 40px;
@@ -156,6 +154,10 @@ section {
 
   #description {
     margin: 20px 0;
+  }
+
+  .apresentation-strings {
+    color: $primary-color;
   }
 
   #cv {
@@ -172,8 +174,10 @@ section {
     }
   }
 
-  .apresentation-strings {
-    color: $primary-color;
+
+  @media (min-width: 768px) {
+    padding: 0 100px;
+    
   }
 
   @media (min-width: 1000px) {
@@ -303,6 +307,13 @@ a {
   }
 
   @media (min-width: 768px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    
+      .project {
+        height: 100%;
+      }
     .project-details {
       width: 60vw;
     }
@@ -312,12 +323,6 @@ a {
   @media (min-width: 1000px) {
     width: 600px;
     height: 400px;
-
-    #projects-container {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
-    }
   }
 }
 
@@ -328,7 +333,7 @@ a {
   width: 100vw;
   bottom: 0;
   height: auto;
-  padding: 2cqw 10px;
+  padding:  10px;
 
 
   h1 {
@@ -348,7 +353,7 @@ a {
   }
 
   @media (min-width: 768px) {
-    padding: 0px 40px;
+    padding: 20px;
 
     div {
       margin: 70px 0px;

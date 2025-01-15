@@ -1,6 +1,6 @@
 import React from 'react';
 import linkedinImg from '../assets/images/linkedin.png';
-import whatsappImg from '../assets/images/whatsapp.png';
+import githubImg from '../assets/images/github.png';
 import facebookImg from '../assets/images/facebook.png';
 
 export default function Contact() {
@@ -12,8 +12,8 @@ export default function Contact() {
                 <a href="https://github.com/matheusmorante" target="_blank" rel="noopener noreferrer">
                     <img src={linkedinImg} alt="LinkedIn" />
                 </a>
-                <a href="https://api.whatsapp.com/send?phone=5541997493547" target="_blank" rel="noopener noreferrer">
-                    <img src={whatsappImg} alt="WhatsApp" />
+                <a href="https://github.com/matheusmorante" target="_blank" rel="noopener noreferrer">
+                    <img src={githubImg} alt="Github" />
                 </a>
                 <a href="https://www.facebook.com/matheusmorante002/" target="_blank" rel="noopener noreferrer">
                     <img src={facebookImg} alt="Facebook" />

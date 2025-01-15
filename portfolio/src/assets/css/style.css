@@ -112,17 +112,20 @@ section > h1 {
 }
 
 #presentation {
-  flex-direction: column;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 5%;
+  flex-direction: column;
+  padding: 0 10px;
 }
 #presentation #heading {
   font-size: 40px;
 }
 #presentation #description {
   margin: 20px 0;
+}
+#presentation .apresentation-strings {
+  color: #32ABFF;
 }
 #presentation #cv {
   border: 2px solid #32ABFF;
@@ -149,8 +152,10 @@ section > h1 {
 #presentation #cv:hover {
   background-color: #32ABFF;
 }
-#presentation .apresentation-strings {
-  color: #32ABFF;
+@media (min-width: 768px) {
+  #presentation {
+    padding: 0 100px;
+  }
 }
 @media (min-width: 1000px) {
   #presentation {
@@ -268,6 +273,14 @@ a {
   padding: 10px;
 }
 @media (min-width: 768px) {
+  #projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  #projects-container .project {
+    height: 100%;
+  }
   #projects-container .project-details {
     width: 60vw;
   }
@@ -277,11 +290,6 @@ a {
     width: 600px;
     height: 400px;
   }
-  #projects-container #projects-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-  }
 }
 
 #contact {
@@ -290,7 +298,7 @@ a {
   width: 100vw;
   bottom: 0;
   height: auto;
-  padding: 2cqw 10px;
+  padding: 10px;
 }
 #contact h1 {
   margin: 0;
@@ -306,7 +314,7 @@ a {
 }
 @media (min-width: 768px) {
   #contact {
-    padding: 0px 40px;
+    padding: 20px;
   }
   #contact div {
     margin: 70px 0px;
