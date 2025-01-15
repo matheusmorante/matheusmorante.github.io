@@ -26,8 +26,12 @@ body {
 }
 @media (min-width: 1000px) {
   body {
-    font-size: 20px;
+    font-size: 22px;
   }
+}
+
+a {
+  text-decoration: none;
 }
 
 #presentation,
@@ -121,11 +125,11 @@ section > h1 {
 #presentation #heading {
   font-size: 40px;
 }
-#presentation #description {
-  margin: 20px 0;
-}
 #presentation .apresentation-strings {
   color: #32ABFF;
+}
+#presentation #description {
+  margin: 40px 0;
 }
 #presentation #cv {
   border: 2px solid #32ABFF;
@@ -133,6 +137,7 @@ section > h1 {
   font-weight: bolder;
   cursor: pointer;
   transition: 300ms;
+  margin-top: 50px;
   padding: 20px;
   font-size: 20px;
   width: 200px;
@@ -152,6 +157,9 @@ section > h1 {
 #presentation #cv:hover {
   background-color: #32ABFF;
 }
+#presentation img {
+  display: none;
+}
 @media (min-width: 768px) {
   #presentation {
     padding: 0 100px;
@@ -167,17 +175,17 @@ section > h1 {
     width: 100%;
     margin: 0;
   }
+  #presentation #heading {
+    font-size: 60px;
+  }
   #presentation #description {
     margin: 30px 0;
   }
   #presentation img {
+    display: flex;
     margin: 0 auto;
     width: 300px;
   }
-}
-
-a {
-  text-decoration: none;
 }
 
 .overlay {
@@ -193,16 +201,17 @@ a {
   z-index: 1000;
 }
 
+@media (min-width: 1000px) {
+  #about-me-section img {
+    display: none;
+  }
+}
+
 .perfil-img {
   border-radius: 50%;
   margin: 0 auto;
   width: 150px;
   margin: 20px 0;
-}
-@media (min-width: 1000px) {
-  .perfil-img {
-    width: 200px;
-  }
 }
 
 #skills-section {
@@ -228,7 +237,6 @@ a {
 }
 @media (min-width: 1000px) {
   #skills-container {
-    width: 500px;
     gap: 40px;
   }
   #skills-container img {
@@ -295,8 +303,7 @@ a {
 }
 @media (min-width: 1000px) {
   #projects-container {
-    width: 600px;
-    height: 400px;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 

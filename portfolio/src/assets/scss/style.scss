@@ -50,7 +50,6 @@ $font-family: 'Roboto', sans-serif, 'Ubuntu', sans-serif;
 
 // Ajusta o tamanho da fonte e o preenchimento para todos os elementos filhos diretos do corpo
 #root>* {
-
   padding: 0 10px;
 }
 
@@ -63,9 +62,13 @@ a {
 body {
   background-color: $bg-color;
   font-family: $font-family;
-  @include responsive-font(16px, 18px, 20px);
+  @include responsive-font(16px, 18px, 22px);
 }
 
+// Estilos para links (âncoras)
+a {
+  text-decoration: none;
+}
 
 #presentation,
 #about-me-section,
@@ -101,8 +104,6 @@ header {
   #menu-btn {
     @include responsive-font(26px, 32px, null)
   }
-
-  @media (min-width: 768px) {}
 
   @media (min-width: 1000px) {
     #menu-btn {
@@ -152,32 +153,38 @@ section {
     font-size: 40px;
   }
 
-  #description {
-    margin: 20px 0;
-  }
-
   .apresentation-strings {
     color: $primary-color;
   }
+
+  #description {
+    margin: 40px 0;
+  }
+
+ 
 
   #cv {
     @include responsive-border(2px, 10px, 3px, 12px, 4px, 16px);
     font-weight: bolder;
     cursor: pointer;
     transition: 300ms;
+    margin-top: 50px;
     padding: 20px;
     font-size: 20px;
     width: 200px;
+    
 
     &:hover {
       background-color: $primary-color;
     }
   }
 
+  img {
+    display: none
+  }
 
   @media (min-width: 768px) {
     padding: 0 100px;
-
   }
 
   @media (min-width: 1000px) {
@@ -189,20 +196,20 @@ section {
     width: 100%;
     margin: 0;
 
+    #heading {
+      font-size: 60px;
+    }
+
     #description {
       margin: 30px 0;
     }
 
     img {
+      display: flex;
       margin: 0 auto;
       width: 300px;
     }
   }
-}
-
-// Estilos para links (âncoras)
-a {
-  text-decoration: none;
 }
 
 .overlay {
@@ -216,17 +223,20 @@ a {
   z-index: 1000;
 }
 
+#about-me-section {
+  @media (min-width: 1000px) {
+    img {
+      display: none
+    }
+  }
+}
+
 .perfil-img {
   border-radius: 50%;
   margin: 0 auto;
 
   width: 150px;
   margin: 20px 0;
-
-
-  @media (min-width: 1000px) {
-    width: 200px;
-  }
 }
 
 #skills-section {
@@ -254,7 +264,6 @@ a {
   }
 
   @media (min-width: 1000px) {
-    width: 500px;
     gap: 40px;
 
     img {
@@ -331,8 +340,8 @@ a {
   }
 
   @media (min-width: 1000px) {
-    width: 600px;
-    height: 400px;
+    grid-template-columns: repeat(3, 1fr);
+
   }
 }
 
