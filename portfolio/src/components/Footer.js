@@ -3,10 +3,10 @@ import linkedinImg from '../assets/images/linkedin.png';
 import githubImg from '../assets/images/github.png';
 import facebookImg from '../assets/images/facebook.png';
 
-export default function Contact() {
+export default function Footer() {
 
     return (
-        <section id="contact">
+        <footer>
             <h1>Contato</h1>
             <div>
                 <a href="https://github.com/matheusmorante" target="_blank" rel="noopener noreferrer">
@@ -19,6 +19,6 @@ export default function Contact() {
                     <img src={facebookImg} alt="Facebook" />
                 </a>
             </div>
-        </section>
+        </footer>
     );
 }

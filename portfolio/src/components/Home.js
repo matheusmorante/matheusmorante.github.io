@@ -3,7 +3,7 @@ import perfilImg from '../assets/images/perfil.jpg';
 
 import Projects from './ProjectsSection';
 import Skills from './SkillsSection';
-import Contact from './ContactSection';
+import Footer from './Footer';
 
 
 export default function Home() {
@@ -44,7 +44,7 @@ export default function Home() {
 
             <Projects />
 
-            <Contact />
+                <Footer />
         </>
     );
 }
