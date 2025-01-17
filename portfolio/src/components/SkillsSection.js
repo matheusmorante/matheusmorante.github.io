@@ -4,7 +4,7 @@ import cssIcon from '../assets/images/programation_language_icons/css.svg';
 import jsIcon from '../assets/images/programation_language_icons/js.svg';
 import reactIcon from '../assets/images/programation_language_icons/react.svg';
 import expressIcon from '../assets/images/programation_language_icons/express.svg';
-import nodeIcon from '../assets/images/programation_language_icons/node.svg';
+import mysqlIcon from '../assets/images/programation_language_icons/mysql.svg';
 import gitIcon from '../assets/images/programation_language_icons/git.svg';
 import sassIcon from '../assets/images/programation_language_icons/sass.svg';
 import bootstrapIcon from '../assets/images/programation_language_icons/bootstrap.svg';
@@ -20,7 +20,8 @@ export default function Skills() {
         { name: 'Express.js', icon: expressIcon },
         { name: 'SASS', icon: sassIcon },
         { name: 'Git', icon: gitIcon },
-        { name: 'Bootstrap', icon: bootstrapIcon }
+        { name: 'Bootstrap', icon: bootstrapIcon },
+        { name: 'Mysql', icon: mysqlIcon }
     ]; 
     
     return (

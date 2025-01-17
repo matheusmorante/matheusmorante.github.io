@@ -6,15 +6,14 @@ export default function ProjectDetails({ project }) {
 
     
     return (
-        <div className='overlay'>
-            <div className='card project-details'>
-                <div className="card-header d-flex bg-transparent border-success">
+        <div className='overlay active'>
+            <div className='project-details'>
+                <div id='heading'>
                     <i onClick={() => toggleDetailsDisplay(null)} className='bi bi-x-lg ms-auto' alt='close' />
-
                 </div>
-                <img src={project.img} className="card-img-top" alt={project.title} />
-                <div className="card-body">
-                    <h1 className="card-title">{project.title}</h1>
+                <img src={project.img} alt={project.title} />
+                <div>
+                    <h1>{project.title}</h1>
                     {project.description}
                     <div id='actions-btn'>
                         <a href={project.sourceCodeLink} className='btn btn-primary m-2'>Ver codigo fonte</a>

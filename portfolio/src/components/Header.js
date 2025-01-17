@@ -7,6 +7,10 @@ export default function Header() {
         setMenuOpen(!menuOpen);
     };
 
+    const closeMenu = () => {
+        setMenuOpen(false);
+    };
+
     return (
         <header>
             <h1>Portfólio</h1>
@@ -22,13 +26,13 @@ export default function Header() {
                 <div className={`overlay ${menuOpen ? 'active' : ''}`}></div>
                 <ul className={`menu-list ${menuOpen ? 'active' : ''}`}>
                     <li>
-                        <a onClick={toggleMenu} href="#home">Inicio</a>
+                        <a onClick={closeMenu} href="#home">Inicio</a>
                     </li>
                     <li>
-                        <a onClick={toggleMenu} href="#skills-section">Habilidades</a>
+                        <a onClick={closeMenu} href="#skills-section">Habilidades</a>
                     </li>
                     <li>
-                        <a onClick={toggleMenu} href="#contact">Contato</a>
+                        <a onClick={closeMenu} href="#contact">Contato</a>
                     </li>
                 </ul>
 
