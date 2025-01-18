@@ -14,13 +14,13 @@ $font-family: 'Roboto', sans-serif, 'Ubuntu', sans-serif;
 }
 
 @mixin tablet {
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     @content;
   }
 }
 
 @mixin desktop {
-  @media (min-width: 1000px) {
+  @media screen and (min-width: 1000px) {
     @content;
   }
 }
@@ -442,7 +442,7 @@ section {
 
       .project-description {
         overflow: auto visible;
-        height: 590px;
+        height: 580px;
         overflow-y: auto;
         padding: 0;
       }
