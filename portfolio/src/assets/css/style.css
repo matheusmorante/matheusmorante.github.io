@@ -319,7 +319,7 @@ section > h1 {
 }
 #projects-container .project-details .project-description {
   overflow: auto visible;
-  height: 340px;
+  height: 380px;
   overflow-y: auto;
 }
 #projects-container .project-details #actions-btn a {

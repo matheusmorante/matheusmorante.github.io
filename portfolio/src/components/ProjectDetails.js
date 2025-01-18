@@ -9,7 +9,7 @@ export default function ProjectDetails({ project }) {
         <div className='overlay active'>
             <div className='project-details'>
                 <div id='heading'>
-                    <i onClick={() => toggleDetailsDisplay(null)} className='bi bi-x-lg ms-auto' alt='close' />
+                    <i onClick={() => toggleDetailsDisplay(null)} className='bi bi-x' alt='close' />
                 </div>
                 <div id='content-grid'>
                     <img src={project.img} alt={project.title} />
