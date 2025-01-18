@@ -20,7 +20,7 @@ a {
 }
 
 body {
-  background-color: rgb(36, 36, 36);
+  background-color: rgb(26, 26, 26);
   font-family: "Roboto", sans-serif, "Ubuntu", sans-serif;
   font-size: 16px;
 }
@@ -58,7 +58,7 @@ header {
   left: 0;
   position: fixed;
   z-index: 999;
-  background-color: rgb(46, 46, 46);
+  background-color: rgb(36, 36, 36);
 }
 header h1 {
   margin: 0;
@@ -116,7 +116,7 @@ header .menu-list li a {
     justify-content: center;
     width: 100%;
     position: relative;
-    gap: 15px;
+    gap: 30px;
     margin: 0;
   }
   header .menu-list.active {
@@ -124,6 +124,11 @@ header .menu-list li a {
   }
   header .menu-list li {
     margin-bottom: 0px;
+    border-bottom: 1px solid rgba(50, 170, 255, 0);
+  }
+  header .menu-list li:hover {
+    transition: ease 500ms;
+    border-bottom: 1px solid #32ABFF;
   }
 }
 
@@ -187,6 +192,10 @@ section > h1 {
 @media (min-width: 768px) {
   #presentation {
     padding: 0 100px;
+  }
+  #presentation #heading {
+    margin-top: 30px;
+    font-size: 60px;
   }
 }
 @media (min-width: 1000px) {
@@ -288,7 +297,7 @@ section > h1 {
   height: 760px;
   top: 50px;
   position: fixed;
-  background-color: rgb(56, 56, 56);
+  background-color: rgb(46, 46, 46);
   color: white;
 }
 #projects-container .project-details #heading, #projects-container .project-details #content-grid > div {
@@ -332,11 +341,15 @@ section > h1 {
     height: 100%;
   }
   #projects-container .project-details {
+    height: 960px;
     width: 500px;
     top: 60px;
   }
+  #projects-container .project-details #heading, #projects-container .project-details #content-grid > div {
+    padding: 0 20px;
+  }
   #projects-container .project-details .project-description {
-    height: 250px;
+    height: 450px;
   }
   #projects-container .project-details #actions-btn {
     display: flex;
@@ -385,7 +398,7 @@ footer {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: rgb(46, 46, 46);
+  background-color: rgb(36, 36, 36);
   color: #fff;
   font-family: Arial, sans-serif;
   height: 140px;
@@ -454,7 +467,7 @@ footer div a img {
   align-items: none;
   justify-content: center;
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.842);
+  background-color: rgb(36, 36, 36);
   width: 100%;
   height: 100%;
   top: 35px;

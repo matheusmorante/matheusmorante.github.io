@@ -26,7 +26,7 @@ export default function Header() {
                 <div className={`overlay ${menuOpen ? 'active' : ''}`}></div>
                 <ul className={`menu-list ${menuOpen ? 'active' : ''}`}>
                     <li>
-                        <a onClick={closeMenu} href="#home">Inicio</a>
+                        <a onClick={closeMenu} href="#heading">Inicio</a>
                     </li>
                     <li>
                         <a onClick={closeMenu} href="#skills-section">Habilidades</a>
