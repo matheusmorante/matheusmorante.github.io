@@ -14,12 +14,12 @@ export default function ProjectDetails({ project }) {
                 <div id='content-grid'>
                     <img src={project.img} alt={project.title} />
                     <div>
-                        <h1>{project.title}</h1>
-                        {project.description}
                         <div id='actions-btn'>
                             <a href={project.sourceCodeLink} className='btn'>Ver codigo fonte</a>
                             <a href={project.testProjectLink} className='btn'>Ver em ação</a>
                         </div>
+                        <h1>{project.title}</h1>
+                        {project.description}
                     </div>
                 </div>
             </div>

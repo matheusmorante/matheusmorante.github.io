@@ -7,7 +7,7 @@
 #root > * {
   padding: 0 10px;
 }
-@media screen and (min-width: 1000px) {
+@media (min-width: 1000px) {
   #root > * {
     padding: 0 10%;
   }
@@ -22,16 +22,16 @@ a {
 body {
   background-color: rgb(26, 26, 26);
   font-family: "Roboto", sans-serif, "Ubuntu", sans-serif;
-  font-size: 16px;
+  font-size: 14px;
 }
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   body {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
-@media screen and (min-width: 1000px) {
+@media (min-width: 1000px) {
   body {
-    font-size: 22px;
+    font-size: 18px;
   }
 }
 
@@ -62,22 +62,22 @@ header {
 }
 header h1 {
   margin: 0;
-  font-size: 18px;
+  font-size: 16px;
 }
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   header h1 {
-    font-size: 24px;
+    font-size: 22px;
   }
 }
-@media screen and (min-width: 1000px) {
+@media (min-width: 1000px) {
   header h1 {
-    font-size: 28px;
+    font-size: 26px;
   }
 }
 header #menu-btn {
   font-size: 26px;
 }
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   header #menu-btn {
     font-size: 32px;
   }
@@ -103,7 +103,7 @@ header .menu-list li {
 header .menu-list li a {
   font-weight: bold;
 }
-@media screen and (min-width: 1000px) {
+@media (min-width: 1000px) {
   header nav {
     padding: 10px 0;
   }
@@ -138,7 +138,7 @@ section {
 section > h1 {
   margin: 30px auto;
 }
-@media screen and (min-width: 1000px) {
+@media (min-width: 1000px) {
   section > h1 {
     margin: 40px auto;
   }
@@ -171,13 +171,13 @@ section > h1 {
   font-size: 20px;
   width: 200px;
 }
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   #presentation #cv {
     border: 2px solid #32ABFF;
     border-radius: 12px;
   }
 }
-@media screen and (min-width: 1000px) {
+@media (min-width: 1000px) {
   #presentation #cv {
     border: 2px solid #32ABFF;
     border-radius: 16px;
@@ -189,7 +189,7 @@ section > h1 {
 #presentation img {
   display: none;
 }
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   #presentation {
     padding: 0 100px;
   }
@@ -198,7 +198,7 @@ section > h1 {
     font-size: 60px;
   }
 }
-@media screen and (min-width: 1000px) {
+@media (min-width: 1000px) {
   #presentation {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -207,7 +207,7 @@ section > h1 {
     margin: 0;
   }
   #presentation #heading {
-    font-size: 60px;
+    font-size: 70px;
   }
   #presentation #description {
     margin: 30px 0;
@@ -219,7 +219,7 @@ section > h1 {
   }
 }
 
-@media screen and (min-width: 1000px) {
+@media (min-width: 1000px) {
   #about-me-section img {
     display: none;
   }
@@ -248,12 +248,12 @@ section > h1 {
 #skills-container .skills h2 {
   margin-top: 10px;
 }
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   #skills-container img {
     width: 80px;
   }
 }
-@media screen and (min-width: 1000px) {
+@media (min-width: 1000px) {
   #skills-container {
     gap: 40px;
   }
@@ -293,14 +293,18 @@ section > h1 {
   transform: scale(1.05);
 }
 #projects-container .project-details {
-  width: 300px;
-  height: 760px;
-  top: 50px;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-height: 90vh;
+  height: auto;
+  top: 40px;
   position: fixed;
   background-color: rgb(46, 46, 46);
   color: white;
+  padding-bottom: 10px;
 }
-#projects-container .project-details #heading, #projects-container .project-details #content-grid > div {
+#projects-container .project-details #content-grid > div {
   padding: 0 10px;
 }
 #projects-container .project-details #heading {
@@ -308,19 +312,16 @@ section > h1 {
   display: flex;
   align-items: center;
   justify-content: end;
-  margin: 10px 0;
-  font-size: 20px;
+  font-size: 30px;
+}
+#projects-container .project-details #content-grid {
+  overflow-y: auto;
 }
 #projects-container .project-details img {
   width: 100%;
 }
 #projects-container .project-details h1 {
   margin-top: 10px;
-}
-#projects-container .project-details .project-description {
-  overflow: auto visible;
-  height: 380px;
-  overflow-y: auto;
 }
 #projects-container .project-details #actions-btn a {
   width: 100%;
@@ -331,7 +332,7 @@ section > h1 {
   margin-top: 10px;
   font-weight: bold;
 }
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   #projects-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -340,56 +341,30 @@ section > h1 {
   #projects-container .project {
     height: 100%;
   }
-  #projects-container .project-details {
-    height: 960px;
-    width: 500px;
-    top: 60px;
-  }
-  #projects-container .project-details #heading, #projects-container .project-details #content-grid > div {
-    padding: 0 20px;
-  }
-  #projects-container .project-details .project-description {
-    height: 450px;
-  }
   #projects-container .project-details #actions-btn {
     display: flex;
     gap: 10px;
   }
 }
-@media screen and (min-width: 1000px) {
+@media (min-width: 1000px) {
   #projects-container {
     grid-template-columns: repeat(3, 1fr);
   }
   #projects-container .project-details {
-    width: 80%;
+    padding: 15px;
     height: 800px;
-    top: 80px;
     background-color: rgb(56, 56, 56);
     color: white;
-  }
-  #projects-container .project-details div {
-    padding: 0 20px;
-  }
-  #projects-container .project-details #heading {
-    margin: 10px 0;
-    font-size: 30px;
   }
   #projects-container .project-details #content-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
   }
-  #projects-container .project-details .project-description {
-    overflow: auto visible;
-    height: 580px;
+  #projects-container .project-details #content-grid > div {
     overflow-y: auto;
-    padding: 0;
-  }
-  #projects-container .project-details #actions-btn {
-    margin-top: 10px;
-    display: flex;
   }
   #projects-container .project-details #actions-btn a {
+    margin: 0;
     font-size: 20px;
   }
 }
@@ -429,7 +404,7 @@ footer div a img {
   border-radius: 50%;
   border: 2px solid #fff;
 }
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   footer {
     height: 180px;
   }
@@ -446,7 +421,7 @@ footer div a img {
     border: 3px solid #fff;
   }
 }
-@media screen and (min-width: 1000px) {
+@media (min-width: 1000px) {
   footer {
     height: 200px;
   }
